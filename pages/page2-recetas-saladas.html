@@ -7,48 +7,89 @@
     <title>Recetas saladas</title>
 </head>
 <body>
-    <header>
-        <nav class="menu-superior">
-            <ul>
-                <li><a href="#">Español</a></li>
-                <li><a href="#">Iniciar sesión</a></li>
-                <li><a href="#">Crear cuenta</a></li>
-            </ul>
+    <!-- BLOQUE 1: HEADER -->
+    <header id="top"> <!-- Este id es para que el botón del footer vaya al tope de la página -->
+        <!-- Sub-bloque 1: HEADER 1 (idioma/login) -->
+        <nav class="header-1"> <!-- Esta estructura permite fondo full-width -->
+            <div class="page-grid"> <!-- Aplica el sistema de columnas y márgenes -->
+                <ul>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">Iniciar sesión</a></li>
+                    <li>I</li>
+                    <li><a href="#">Crear cuenta</a></li>
+                </ul>
+            </div>
         </nav>
 
-        <img src="../../img/logo-benot.png" alt="Logo Benot">
-        <img src="../../img/logo-sin-gluten.png" alt="Logo Sin gluten">
+        <!-- Sub-bloque 2: HEADER 2 (logos, búsqueda, navbar) -->
+        <section class="header-2">
+            <div class="page-grid header-2-grid-12">
+                <!-- LOGOS -->
+                <div class="header-pages-logos">
+                    <img class="header-pages-logo-benot" src="../../img/logo-benot.png" alt="Logo Benot">
+                    <img class="header-pages-logo-sin-gluten" src="../../img/logo-sin-gluten.png" alt="Logo Sin gluten">
+                </div>
+                
+                <!-- BARRA DE BÚSQUEDA -->
+                <!-- 
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                 -->
 
-        <form action="" method="post">
-            <input type="text" name="busqueda" value="Buscar productos o recetas sin gluten">
-            <!-- cómo se inserta un ícono de lupa dentro del input?? -->
-        </form>
+                <!-- BARRA DE BÚSQUEDA (tipo línea) -->
+                <!-- Versión con form (es la más recomendada porque  permite enviar datos con Enter o botón)-->
+                <form class="search-bar" action="/resultados.html" method="GET">
+                    <input type="text" name="q" placeholder="Buscá productos o recetas sin gluten" />
+                    <button type="submit" class="search-btn">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </button>
+                </form>
 
-        <nav class="menu-categorias">
-            <ul>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="page1-recetas.html">Recetas</a></li>
-                <li><a href="#">Dónde comprar</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+                <!-- Versión con div (solo visual, sin función de envío nativa):
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscá productos o recetas sin gluten" />
+                    <button class="search-btn">🔍</button>
+                </div>  -->
 
-        <nav class="menu-subcategorias-paso-a-paso">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li class="separador">></li>
-                <li><a href="page1-recetas.html">Recetas</a></li>
-                <li class="separador">></li>
-                <li>Saladas</li>
-            </ul>
-        </nav>
-
-        <section class="banner">
-            <h1>Descubrí nuestras recetas saladas sin gluten</h1>
-            <img src="../../img/page2-banner-recetas-saladas.png" alt="pizza cuatro quesos y raviolones de zapallo">
+                <!-- NAVBAR -->
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Recetas</a></li>
+                        <li><a href="#">Dónde comprar</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
         </section>
+
+        <!-- Sub-bloque 3: MENU BACK -->
+        <nav class="menu-back page-grid">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="separador">></li>
+                    <li><a href="../../pages/page1-recetas.html">Recetas</a></li>
+                    <li class="separador">></li>
+                    <li>Saladas</li>
+                </ul>  
+        </nav>
+
+        <!-- Sub-bloque 4: BANNER (imagen + título) -->
+        <section class="banner">
+            <div class="banner-container">
+                <img src="../../img/page2-banner-recetas-saladas.jpg" alt="pancitos y tarta de frutillas">
+    
+                <div class="page-grid banner-grid-12">
+                    <div class="banner-text">
+                        <h1>Disfrutá nuestras recetas saladas sin gluten</h1>
+                    </div>
+                </div>
+            </div>
+        </section>        
     </header>
 
     <main>
