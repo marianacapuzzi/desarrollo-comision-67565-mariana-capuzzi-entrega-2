@@ -8,264 +8,339 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <title>Recetas</title>
-</head>
+</head> 
+
 <body>
-    <header>
-        <nav class="menu-superior">
-            <ul>
-                <li><a href="#">Español</a></li>
-                <li><a href="#">Iniciar sesión</a></li>
-                <li>I</li>
-                <li><a href="#">Crear cuenta</a></li>
-            </ul>
-        </nav>
-
-        <section class="navbar">
-            <img src="../../img/logo-benot.png" alt="Logo Benot">
-            <img src="../../img/logo-sin-gluten.png" alt="Logo Sin gluten">
-
-            <form action="" method="post">
-                <input type="text" name="busqueda" value="Buscar productos o recetas sin gluten">
-            <!-- cómo se inserta un ícono de lupa dentro del input?? -->
-            </form>
-
-            <nav class="categorias">
+    <!-- BLOQUE 1: HEADER -->
+    <header id="top"> <!-- Este id es para que el botón del footer vaya al tope de la página -->
+        <!-- Sub-bloque 1: HEADER 1 (idioma/login) -->
+        <nav class="header-1"> <!-- Esta estructura permite fondo full-width -->
+            <div class="page-grid"> <!-- Aplica el sistema de columnas y márgenes -->
                 <ul>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="page1-recetas.html">Recetas</a></li>
-                    <li><a href="#">Dónde comprar</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">Iniciar sesión</a></li>
+                    <li>I</li>
+                    <li><a href="#">Crear cuenta</a></li>
                 </ul>
-            </nav>
-        </section>
-
-        <nav class="menu-back">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li class="separador">></li>
-                <li>Recetas</li>
-                </ul>
+            </div>
         </nav>
 
-        <section class="banner">
-            <img src="../../img/page1-banner-recetas.png" alt="pancitos y tarta de frutillas">
+        <!-- Sub-bloque 2: HEADER 2 (logos, búsqueda, navbar) -->
+        <section class="header-2">
+            <div class="page-grid header-2-grid-12">
+                <!-- LOGOS -->
+                <div class="header-pages-logos">
+                    <img class="header-pages-logo-benot" src="../../img/logo-benot.png" alt="Logo Benot">
+                    <img class="header-pages-logo-sin-gluten" src="../../img/logo-sin-gluten.png" alt="Logo Sin gluten">
+                </div>
+                
+                <!-- BARRA DE BÚSQUEDA -->
+                <!-- 
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                 -->
 
-            <div class="banner-text">
-                <h1>Descubrí nuestras recetas sin gluten</h1>
+                <!-- BARRA DE BÚSQUEDA (tipo línea) -->
+                <!-- Versión con form (es la más recomendada porque  permite enviar datos con Enter o botón)-->
+                <form class="search-bar" action="/resultados.html" method="GET">
+                    <input type="text" name="q" placeholder="Buscá productos o recetas sin gluten" />
+                    <button type="submit" class="search-btn">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </button>
+                </form>
+
+                <!-- Versión con div (solo visual, sin función de envío nativa):
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscá productos o recetas sin gluten" />
+                    <button class="search-btn">🔍</button>
+                </div>  -->
+
+                <!-- NAVBAR -->
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Recetas</a></li>
+                        <li><a href="#">Dónde comprar</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
             </div>
         </section>
+
+        <!-- Sub-bloque 3: MENU BACK -->
+        <nav class="menu-back page-grid">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="separador">></li>
+                    <li>Recetas</li>
+                </ul>  
+        </nav>
+
+        <!-- Sub-bloque 4: BANNER (imagen + título) -->
+        <section class="banner">
+            <div class="banner-container">
+                <img src="../../img/page1-banner-recetas.jpg" alt="pancitos y tarta de frutillas">
+    
+                <div class="page-grid banner-grid-12">
+                    <div class="banner-text">
+                        <h1>Descubrí nuestras recetas sin gluten</h1>
+                    </div>
+                </div>
+            </div>
+        </section>        
     </header>
 
-    <main>
-        <nav class="dropdown">
-            <ul>
-                <li><a href="#">Seleccioná una opción</a></li>
-                <li><a href="#">Dulces</a></li>
-                <li><a href="page2-recetas-saladas.html">Saladas</a></li>
-            </ul>
-        </nav>
+    <!-- BLOQUE 2: MAIN -->
+    <!-- Main - Page 1 -->
+    <!-- 
+    <main class="page1-main">
+        <div class="page-grid">
+            <div class="dropdown">Dropdown</div>
 
-        <!-- probando estructura de las recetas para segunda entrega -->
+            <div class="page1-main-grid-12">        
+                <section class="container-recetas-cortas">
 
-        <!-- probando lo que me dijo chat gpt para los bordes redondeados invertidos en mi tag
+                    <article class="card-receta-corta">
+                        <div class="card-receta-corta-dulce">
+                            <p>D</p>
+                            <h6>Torta de chocolate y nueces</h6>
+                        </div>
+                
+                        <div class="card-receta-corta-imagen">
+                            <img class="img-receta-corta" src="../../img/page1-recetas1-torta-chocolate-nueces.jpg" alt="porción de torta de chocolate rellena">
+                            <div>
+                                <span>5</span> 
+                                <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
+                            </div>
+                        </div>
+                    </article> 
 
-        <div class="card">
-            <div class="card-header">
-                <span class="badge">D</span>
-                Torta de chocolate y nueces
+                    <article class="card-receta-corta">
+                        <div class="card-receta-corta-dulce">
+                            <p>D</p>
+                            <h6>Torta de chocolate y nueces</h6>
+                        </div>
+                
+                        <div class="card-receta-corta-imagen">
+                            <img class="img-receta-corta" src="../../img/page1-recetas1-torta-chocolate-nueces.jpg" alt="porción de torta de chocolate rellena">
+                            <div>
+                                <span>5</span> 
+                                <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
+                            </div>
+                        </div>
+                    </article> 
+
+                    <article class="card-receta-corta">
+                        <div class="card-receta-corta-dulce">
+                            <p>D</p>
+                            <h6>Torta de chocolate y nueces</h6>
+                        </div>
+                
+                        <div class="card-receta-corta-imagen">
+                            <img class="img-receta-corta" src="../../img/page1-recetas1-torta-chocolate-nueces.jpg" alt="porción de torta de chocolate rellena">
+                            <div>
+                                <span>5</span> 
+                                <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
+                            </div>
+                        </div>
+                    </article> 
+
+                    <article class="card-receta-corta">
+                        <div class="card-receta-corta-dulce">
+                            <p>D</p>
+                            <h6>Torta de chocolate y nueces</h6>
+                        </div>
+                
+                        <div class="card-receta-corta-imagen">
+                            <img class="img-receta-corta" src="../../img/page1-recetas1-torta-chocolate-nueces.jpg" alt="porción de torta de chocolate rellena">
+                            <div>
+                                <span>5</span> 
+                                <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
+                            </div>
+                        </div>
+                    </article> 
+
+
+
+                </section>
             </div>
-            <img src="torta.jpg" alt="Torta de chocolate">
-            <div class="rating">5 ★</div>
-        </div>-->
+        </div>
+    </main> 
+    -->
 
 
-        <section class="contenedor-tag-receta-corta">
-            <article class="tag-receta-corta">
-                <div class="tag-receta-corta-dulce">
-                    <p>D</p>
-                    <h6>Torta de chocolate y nueces</h6>
+    <main class="grid-12">
+        <div class="dropdown">Dropdown</div>
+    
+        <section class="grilla-recetas-cortas">
+            <article class="card-receta-corta">
+                <div class="card-receta-corta-dulce">
+                  <p>D</p>
+                  <h6>Torta de chocolate y nueces</h6>
                 </div>
-
-                <div class="tag-receta-corta-imagen">
-                    <img class="img-receta-corta" src="../../img/page1-recetas1-torta-chocolate-nueces.jpg" alt="porción de torta de chocolate rellena">
-                    <div>
-                        <span>5</span> 
-                        <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
-                    </div>
-                </div>
-            </article> 
-            
-            <article class="tag-receta-corta">
-                <div class="tag-receta-corta-dulce">
-                    <p>D</p>
-                    <h6>Brownies de chocolate</h6>
-                </div>
-
-                <div class="tag-receta-corta-imagen">
-                    <img class="img-receta-corta" src="../../img/page1-recetas2-brownies.jpg" alt="brownies de chocolate">
-                    <div>
-                        <span>5</span> 
-                        <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
-                    </div>
+              
+                <div class="card-receta-corta-imagen-container">
+                  <img class="img-receta-corta" src="../../img/page1-recetas1-torta-chocolate-nueces.jpg" alt="porción de torta de chocolate rellena">
+                  <div class="card-receta-corta-puntuacion">
+                    <span>5</span> 
+                    <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
+                  </div>
                 </div>
             </article>
 
-            <article class="tag-receta-corta">
-                <div class="tag-receta-corta-salada">
-                    <p>S</p>
-                    <h6>Mini pancitos de papa</h6>
+            <article class="card-receta-corta">
+                <div class="card-receta-corta-dulce">
+                  <p>D</p>
+                  <h6>Torta de chocolate y nueces</h6>
                 </div>
+              
+                <div class="card-receta-corta-imagen-container">
+                  <img class="img-receta-corta" src="../../img/page1-recetas1-torta-chocolate-nueces.jpg" alt="porción de torta de chocolate rellena">
+                  <div class="card-receta-corta-puntuacion">
+                    <span>5</span> 
+                    <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
+                  </div>
+                </div>
+            </article>
 
-                <div class="tag-receta-corta-imagen">
-                    <img class="img-receta-corta" src="../../img/page1-recetas3-pancitos.jpg" alt="mini pancitos de papa">
-                    <div>
-                        <span>4,8</span> 
-                        <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
-                    </div>
+            <article class="card-receta-corta">
+                <div class="card-receta-corta-dulce">
+                  <p>D</p>
+                  <h6>Torta de chocolate y nueces</h6>
                 </div>
-            </article>  
+              
+                <div class="card-receta-corta-imagen-container">
+                  <img class="img-receta-corta" src="../../img/page1-recetas1-torta-chocolate-nueces.jpg" alt="porción de torta de chocolate rellena">
+                  <div class="card-receta-corta-puntuacion">
+                    <span>5</span> 
+                    <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
+                  </div>
+                </div>
+            </article>
 
-            <article class="tag-receta-corta">
-                <div class="tag-receta-corta-dulce">
-                    <p>D</p>
-                    <h6>Cupcakes coloridos</h6>
+            <article class="card-receta-corta">
+                <div class="card-receta-corta-dulce">
+                  <p>D</p>
+                  <h6>Torta de chocolate y nueces</h6>
                 </div>
+              
+                <div class="card-receta-corta-imagen-container">
+                  <img class="img-receta-corta" src="../../img/page1-recetas1-torta-chocolate-nueces.jpg" alt="porción de torta de chocolate rellena">
+                  <div class="card-receta-corta-puntuacion">
+                    <span>5</span> 
+                    <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
+                  </div>
+                </div>
+            </article>
 
-                <div class="tag-receta-corta-imagen">
-                    <img class="img-receta-corta" src="../../img/page1-recetas4-cupcakes.jpg" alt="cupcakes coloridos">
-                    <div>
-                        <span>5</span> 
-                        <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
-                    </div>
+            <article class="card-receta-corta">
+                <div class="card-receta-corta-dulce">
+                  <p>D</p>
+                  <h6>Torta de chocolate y nueces</h6>
                 </div>
-            </article> 
+              
+                <div class="card-receta-corta-imagen-container">
+                  <img class="img-receta-corta" src="../../img/page1-recetas1-torta-chocolate-nueces.jpg" alt="porción de torta de chocolate rellena">
+                  <div class="card-receta-corta-puntuacion">
+                    <span>5</span> 
+                    <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
+                  </div>
+                </div>
+            </article>
 
-            <article class="tag-receta-corta">
-                <div class="tag-receta-corta-salada">
-                    <p>S</p>
-                    <h6>Galletitas crackers</h6>
+            <article class="card-receta-corta">
+                <div class="card-receta-corta-dulce">
+                  <p>D</p>
+                  <h6>Torta de chocolate y nueces</h6>
                 </div>
-
-                <div class="tag-receta-corta-imagen">
-                    <img class="img-receta-corta" src="../../img/page1-recetas5-crackers.jpg" alt="galletitas crackers">
-                    <div>
-                        <span>4,4</span> 
-                        <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
-                    </div>
+              
+                <div class="card-receta-corta-imagen-container">
+                  <img class="img-receta-corta" src="../../img/page1-recetas1-torta-chocolate-nueces.jpg" alt="porción de torta de chocolate rellena">
+                  <div class="card-receta-corta-puntuacion">
+                    <span>5</span> 
+                    <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
+                  </div>
                 </div>
-            </article> 
-
-            <article class="tag-receta-corta">
-                <div class="tag-receta-corta-salada">
-                    <p>S</p>
-                    <h6>Pizza de bocconcini con pesto de albahaca</h6>
-                </div>
-
-                <div class="tag-receta-corta-imagen">
-                    <img class="img-receta-corta" src="../../img/page1-recetas6-pizza-bocconcini.jpg" alt="pizza de bocconcini con pesto de albahaca">
-                    <div>
-                        <span>5</span> 
-                        <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
-                    </div>
-                </div>
-
-                <div class="tag-receta-corta-imagen">
-                    <img class="img-receta-corta" src="../../img/page1-recetas6-pizza-bocconcini.jpg" alt="pizza de bocconcini con pesto de albahaca">
-                    <div>
-                        <span>5</span> 
-                        <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
-                    </div>
-                </div>
-            </article> 
+            </article>
         </section>
-
-
-        <!-- <section class="contenedor-tag-receta-corta">
-            <article class="tag-receta-corta">
-                <div class="categoria-dulce-y-nombre">
-                    <p class="letra">D</p>
-                    <h6>Torta de chocolate y nueces</h6>
-                </div>
-
-                <div class="imagen-estrella">
-                    <img class="img-receta-corta" src="../../img/page1-recetas1-torta-chocolate-nueces.png" alt="porción de torta de chocolate rellena">
-                    <div>
-                        <p>5</p> 
-                        <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
-                    </div>
-                </div>
-            </article>    
-        </section> -->
-
-
-    <!-- así lo estructuré para la primer entrega -->
-    <!-- 
-        <article class="tag-recetas">
-            <div class="receta-dulce">
-                <p class="letra">D</p>
-                <h6>Torta de chocolate y nueces</h6>
-            </div>
-            <div>
-                <img src="../../img/page1-recetas1-torta-chocolate-nueces.png" alt="porción de torta de chocolate rellena">
-                <div class="estrella">
-                    <p class="puntuacion">5</p> 
-                    <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
-                </div>
-            </div>
-        </article>
-
-        <article section class="tag-recetas">
-            <div class="receta-salada">
-                <p>S</p>
-                <h6>Mini pancitos de papa</h6>
-            </div>
-            <div>
-                <img src="../../img/page1-recetas3-pancitos.png" alt="pancitos de papa">
-                <div class="estrella">
-                    <p>4,8</p> 
-                    <img src="../../img/icono-estrella-puntuacion.png" alt="ícono estrella de puntuación">
-                </div>
-            </div>
-        </article>
-    -->
-
     </main>
 
-    <footer>
-        <img src="../../img/logo-benot.png" alt="Logo Benot">
-        <img src="../../img/logo-sin-gluten.png" alt="Logo Sin gluten">
-        
-        <nav class="menu-categorias-footer">
-            <ul>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="page1-recetas.html">Recetas</a></li>
-                <li><a href="#">Dónde comprar</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Soporte</a></li>
-                <li><a href="#">Preguntas frecuentes</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
 
-        <p>Si tenés dudas o reclamos o querés mayor información sobre nuestros productos, por favor comunicate con nosotros.</p>
-        <p>0237 4832732   I   cac@benotsrl.com.ar</p>
-        
-        <p>Seguinos en:</p>
-        <nav class="redes">
-            <img src="../../img/logo-instagram.png" alt="Logo Instagram">
-            <img src="../../img/logo-facebook.png" alt="Logo Facebook">
-            <img src="../../img/logo-youtube.png" alt="Logo Youtube">
-        </nav>
+    <!-- BLOQUE 3: FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Imagen de fondo -->
+            <img src="../../img/footer-fondo.svg" alt="fondo plateado">
 
-        <img src="../../img/footer-fondo.svg" alt="fondo plateado">
-        <img src="../../img/footer-boton.svg" alt="botón controlador">
+            <!-- Estructura que va sobre la imagen de fondo-->
+            <div class="page-grid footer-grid-12">
 
-        <p class="pie">BENOT SRL</p>
-        <p class="pie">Todos los derechos reservados</p>
-        <p class="pie">Diseño Web I Mariana Capuzzi</p>
+                <!-- Logos -->
+                <div class="footer-logos">
+                    <img class="footer-logo-benot" src="../../img/logo-benot.png" alt="Logo Benot">
+                    <img class="footer-logo-sin-gluten" src="../../img/logo-sin-gluten.png" alt="Logo Sin gluten">
+                </div>
+                
+                <!-- Menú columna 1 -->
+                <nav class="footer-menu">
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="page1-recetas.html">Recetas</a></li>
+                        <li><a href="#">Dónde comprar</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Menú columna 2 -->
+                <nav class="footer-menu">
+                    <ul>
+                        <li><a href="#">Soporte</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Texto de contacto y Redes sociales-->
+                <div class="footer-contacto">
+                    <p>Si tenés dudas o reclamos o querés mayor información sobre nuestros productos, por favor comunicate con nosotros.</p>
+                  
+                    <div class="footer-contacto-datos">
+                        <p>0237 4832732 <span>I</span> <a href="mailto:cac@benotsrl.com.ar">cac@benotsrl.com.ar</a></p>
+                    </div>
+
+                    <div class="footer-redes">
+                        <p>Seguinos en:</p>
+                        <nav class="footer-social-iconos">
+                            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                                <img src="../../img/logo-instagram.png" alt="Logo Instagram">
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                                <img src="../../img/logo-facebook.png" alt="Logo Facebook">
+                            </a>
+                            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                                <img src="../../img/logo-youtube.png" alt="Logo Youtube">
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón para subir -->
+            <a href="#top" class="footer-boton" aria-label="Subir al inicio">
+                <img src="../../img/footer-boton.svg" alt="Subir al inicio">
+            </a>
+        </div>
+
+        <!-- Pie final -->
+        <div class="footer-pie page-grid">
+            <p>BENOT SRL  I  Todos los derechos reservados</p>
+            <p>Diseño Web I Mariana Capuzzi</p>
+        </div>
     </footer>
 </body>
 </html>
