@@ -1,12 +1,15 @@
 /* ESTILOS GENERALES */
 
-*{
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
 }
+
+
+
 /* Fuentes personalizadas */
 @font-face {
     font-family: 'Belfast';
@@ -426,30 +429,86 @@ header {
 } 
 
 
-/* Estilos de MAIN - PAGE 1 */
-/* Main PAGE 1 - Estructura general */
+/* Estilos de MAIN */
+/* Main PAGE 1 */
+/* Main PAGE 1 - Dropdown */
 
-.grid-12{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    margin: 0 5vw;
-    gap: 1rem;
+.dropdown {
+    grid-column: 10 / span 3;
+    justify-self: end;
+    width: 100%;
+    background-color: transparent;
+    position: relative; /* chequear si es necesario */
+  }
+
+/* Main PAGE 1 - Dropdown - Estilo del botón */
+.dropdown .btn {
+    grid-column: 10 / span 3;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    color: #431C19;
+    border: 1px solid #431C19;
+    border-radius: 12px;
+    background-color: #FFF; 
 }
 
-.dropdown{
-    grid-column: 1 / span 12;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem 0;
-    background-color: aqua;
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    content: "";
+    border-top: 0.4em solid;
+    border-right: 0.4em solid transparent;
+    border-left: 0.4em solid transparent;
+    border-top-color: #431C19;;
+  }
+
+/* Main PAGE 1 - Dropdown - Menú desplegable */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #431C19;
+
+    text-align: left;
+    background-color: #fff;
 }
 
+/* Main PAGE 1 - Dropdown - Ítems */
+.dropdown-item {
+    display: block;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ECCFBC;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #f6e9de;
+    color: #431C19;
+}
+
+
+/* Main PAGE 1 - Cards */
 .grilla-recetas-cortas{
     display: grid;
     grid-column: 1 / span 12;
     /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */ /* Tiene más adaptabilidad automática */
     grid-template-columns: repeat(4, 1fr); /* Esto si quiero 4 col sí o sí y luego ajusto con media queries*/
     gap: 3.5rem 1.25rem;
+    margin: 2rem 0 3.75rem 0;
+    background-color: transparent;
 }
 
 .card-receta-corta{
@@ -461,91 +520,81 @@ header {
     gap: 0.7rem;
 }
 
-.card-receta-corta-dulce{
-    display: flex;
-    height: 3.75rem; /* 60px */
+.card-receta-corta-dulce {
+    display: grid;
+    grid-template-columns: 2.4rem 1fr; /* letra fija, resto flexible */
+    height: 3.75rem;
     width: 100%;
     background-color: #FFF;
-    align-items: center;
+    border-radius: 0.75rem;
     border: 1px solid #431C19;
-    border-radius: 0.75rem;
-    gap: 0px;
-}
-
-.card-receta-corta-dulce p{  
+    overflow: hidden;
+  }
+  
+.card-receta-corta-dulce p {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 3.75rem; /* 60px */
-    flex: 0 0 13%; /* no crece más allá del tamaño inicial, no se achica si no entra, ocupa de entrada el 13% del contenedor */
+    justify-content: center;
     background-color: #431C19;
-    border-radius: 0.75rem 0rem 0rem 0.75rem;
-    text-align: center;
     font-family: 'Belfast', serif;
-    font-weight: normal;
     font-size: 1.125rem;
-    color: #FFF;
+    color: #fff;
+    height: 100%;
+    border-radius: 0.75rem 0 0 0.75rem;
 }
-
-.card-receta-corta-dulce h6{
+  
+.card-receta-corta-dulce h6 {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 3.75rem; /* 60px */
-    flex: 0 0 87%;
-    /* min-width: 0; */  /* No veo el beneficio de usarlo */
+    justify-content: center;
+    padding: 0 0.75rem;
+    background-color: transparent;
     font-size: 1.125rem;
-    line-height: 1.625rem;
-    padding-inline: 0.5rem; /* agrega espacio izquierdo y derecho */
-    border-radius: 0.75rem;
+    line-height: 1.4rem;
+    word-break: break-word; /* por si el título es muy largo */
     color: #431C19;
+    height: 100%;
+    border-radius: 0 0.75rem 0.75rem 0;
     text-align: center;
 }
-
-
-.card-receta-corta-salada{
-    display: flex;
-    height: 3.75rem; /* 60px */
+  
+.card-receta-corta-salada {
+    display: grid;
+    grid-template-columns: 2.4rem 1fr; /* letra fija, resto flexible */
+    height: 3.75rem;
     width: 100%;
     background-color: #FFF;
-    align-items: center;
+    border-radius: 0.75rem;
     border: 1px solid #ECCFBC;
-    border-radius: 0.75rem;
-    gap: 0px;
+    overflow: hidden;
 }
 
-.card-receta-corta-salada p{  
+.card-receta-corta-salada p {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 3.75rem; /* 60px */
-    flex: 0 0 13%; /* no crece más allá del tamaño inicial, no se achica si no entra, ocupa de entrada el 13% del contenedor */
+    justify-content: center;
     background-color: #ECCFBC;
-    border-radius: 0.75rem 0rem 0rem 0.75rem;
-    text-align: center;
     font-family: 'Belfast', serif;
-    font-weight: normal;
     font-size: 1.125rem;
     color: #431C19;
+    height: 100%;
+    border-radius: 0.75rem 0 0 0.75rem;
 }
 
-.card-receta-corta-salada h6{
+.card-receta-corta-salada h6 {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 3.75rem; /* 60px */
-    flex: 0 0 87%;
-    /* min-width: 0; */  /* No veo el beneficio de usarlo */
+    justify-content: center;
+    padding: 0 0.75rem;
+    background-color: transparent;
     font-size: 1.125rem;
-    line-height: 1.625rem;
-    padding-inline: 0.5rem; /* agrega espacio izquierdo y derecho */
-    border-radius: 0.75rem;
+    line-height: 1.4rem;
+    word-break: break-word; /* por si el título es muy largo */
     color: #431C19;
+    height: 100%;
+    border-radius: 0 0.75rem 0.75rem 0;
     text-align: center;
 }
-
-
-
 
 .card-receta-corta-imagen-container{
     position: relative;
@@ -637,7 +686,9 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
 
     .card-receta-corta-dulce,
     .card-receta-corta-dulce p,
-    .card-receta-corta-dulce h6{
+    .card-receta-corta-salada,
+    .card-receta-corta-salada p,
+    .card-receta-corta-salada h6 {
         height: 3.25rem; /* 52px */
     }  
 
@@ -656,15 +707,19 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
 
     .card-receta-corta-dulce,
     .card-receta-corta-dulce p,
-    .card-receta-corta-dulce h6 {
+    .card-receta-corta-salada,
+    .card-receta-corta-salada p,
+    .card-receta-corta-salada h6 {
         height: 3rem; /* 48px */
     }
 
-    .card-receta-corta-dulce p {
+    .card-receta-corta-dulce p, 
+    .card-receta-corta-salada p{
         font-size: 1rem;
     }
 
-    .card-receta-corta-dulce h6 {
+    .card-receta-corta-dulce h6 
+    .card-receta-corta-salada h6{
         font-size: 1rem;
     }
 
@@ -683,15 +738,19 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
 
     .card-receta-corta-dulce,
     .card-receta-corta-dulce p,
-    .card-receta-corta-dulce h6 {
+    .card-receta-corta-salada,
+    .card-receta-corta-salada p,
+    .card-receta-corta-salada h6 {
         height: 2.75rem; /* 44px */
     }
 
-    .card-receta-corta-dulce p {
+    .card-receta-corta-dulce p, 
+    .card-receta-corta-salada p{
         font-size: 0.875rem;
     }
 
-    .card-receta-corta-dulce h6 {
+    .card-receta-corta-dulce h6 
+    .card-receta-corta-salada h6{
         font-size: 0.875rem;
     }
 
@@ -857,8 +916,8 @@ footer {
 .footer-menu a{
     font-family: 'Lato', sans-serif;
     font-weight: 400; /* Regular */
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     color: #431C19;   
     cursor: pointer;
 }
@@ -888,7 +947,7 @@ footer {
 .footer-contacto-datos span {
     font-family: 'Lato', sans-serif;
     font-weight: 400; /* Regular */
-    font-size: 16px;
+    font-size: 1rem;
     color: #431C19;
     padding: 0 0.25rem;
 }
@@ -896,7 +955,7 @@ footer {
 .footer-contacto-datos a {
     font-family: 'Lato', sans-serif;
     font-weight: 400; /* Regular */
-    font-size: 16px;
+    font-size: 1rem;
     color: #431C19;
     cursor: pointer;
 }
@@ -920,7 +979,7 @@ footer {
 .footer-redes img {
     display: flex;
     align-items: center;
-    width: 24px;  /* tamaño razonable para íconos */
+    width: 1.5rem;  /* tamaño razonable para íconos */
     height: auto;
     background-color: transparent;
 }
@@ -945,7 +1004,7 @@ footer {
     padding: 0.5rem 0;
 }
 
-/* Responsive */
+/* MEDIA QUERIES FOOTER */
 /*
 @media (max-width: 768px) {
     .container {
