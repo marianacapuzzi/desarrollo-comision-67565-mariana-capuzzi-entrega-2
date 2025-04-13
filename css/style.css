@@ -686,6 +686,7 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
 
     .card-receta-corta-dulce,
     .card-receta-corta-dulce p,
+    .card-receta-corta-dulce h6,
     .card-receta-corta-salada,
     .card-receta-corta-salada p,
     .card-receta-corta-salada h6 {
@@ -707,6 +708,7 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
 
     .card-receta-corta-dulce,
     .card-receta-corta-dulce p,
+    .card-receta-corta-dulce h6,
     .card-receta-corta-salada,
     .card-receta-corta-salada p,
     .card-receta-corta-salada h6 {
@@ -738,6 +740,7 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
 
     .card-receta-corta-dulce,
     .card-receta-corta-dulce p,
+    .card-receta-corta-dulce h6,
     .card-receta-corta-salada,
     .card-receta-corta-salada p,
     .card-receta-corta-salada h6 {
@@ -1046,3 +1049,10 @@ footer {
     }
   }
   */
+
+  /* Corrección para evitar subrayado de Bootstrap */
+header a,
+nav a,
+.footer a {
+  text-decoration: none !important;
+}
