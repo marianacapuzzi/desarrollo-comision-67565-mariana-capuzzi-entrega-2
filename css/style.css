@@ -129,7 +129,7 @@ header {
     grid-column: 1 / -1; /* necesario para que ocupe todo el ancho del grid */
     gap: 0.5rem;
     width: 100%;
-  }
+}
 
 .header-1 ul li{
     background-color: transparent;
@@ -508,7 +508,6 @@ header {
     grid-template-columns: repeat(4, 1fr); /* Esto si quiero 4 col sí o sí y luego ajusto con media queries*/
     gap: 3.5rem 1.25rem;
     margin: 2rem 0 3.75rem 0;
-    background-color: transparent;
 }
 
 .card-receta-corta{
@@ -522,7 +521,7 @@ header {
 
 .card-receta-corta-dulce {
     display: grid;
-    grid-template-columns: 2.4rem 1fr; /* letra fija, resto flexible */
+    grid-template-columns: 2.4rem 1fr; /* la primera columna es fija, la otra flexible */
     height: 3.75rem;
     width: 100%;
     background-color: #FFF;
@@ -680,7 +679,7 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
 /* MEDIA QUERIES para las cards recetas cortas */
 /* Tablet horizontal */
 @media (max-width: 1024px) {
-    .grilla-recetas-cortas {
+    .grilla-recetas-cortas{
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -766,14 +765,125 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
 
 
 /* Estilos de MAIN - PAGE 2 y PAGE 3 */
-
-.caracteristicas-receta{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    text-align: center;
-    color: #431C19;
-    background-color: #F6E9DE;
+/* Main PAGE 2 y PAGE 3 - Cards */
+.grilla-recetas-largas{
+    display: grid;
+    grid-column: 2 / span 10;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem 1.25rem;
+    margin: 2rem 0 3.75rem 0;
 }
+
+.card-receta-larga{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.7rem;
+}
+
+.card-receta-larga-salada {
+    display: grid;
+    grid-template-columns: 2.4rem 1fr; /* la primera columna es fija, la otra flexible */
+    height: 3.75rem;
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 0.75rem;
+    border: 1px solid #431C19;
+    overflow: hidden;
+    background-color: #FFF;
+}
+
+.card-receta-larga-salada p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ECCFBC;
+    font-family: 'Belfast', serif;
+    font-size: 1.125rem;
+    color: #431C19;
+    height: 100%;
+    border-radius: 0.75rem 0 0 0.75rem;
+}
+
+.card-receta-larga-salada h6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.75rem;
+    background-color: transparent;
+    font-size: 1.125rem;
+    line-height: 1.4rem;
+    word-break: break-word; /* por si el título es muy largo */
+    color: #431C19;
+    height: 100%;
+    border-radius: 0 0.75rem 0.75rem 0;
+    text-align: center;
+}
+
+.card-receta-larga-imagen-container{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 341 / 480; /* Sirve para mantener la proporción entre el ancho y el alto de un elemento */
+}
+
+.img-receta-larga{
+    display: block;
+    width: 100%;
+    object-fit: cover;  /* La imagen se escala para cubrir todo el contenedor, se recorta automáticamente y no se deforma. */
+}
+
+/* Loguito corazón */
+.card-info-top{
+    position: absolute;
+    bottom: 5.4rem;
+    right: 0.5rem;
+    z-index: 10;    
+}
+
+.card-info-top img {
+    width: 2.5rem;
+    height: auto;
+}
+
+.card-receta-larga-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    gap: 1.7rem;
+    width: 100%;
+    height: 5rem;
+    border-radius: 0.75rem;
+    background-color: #F6E9DE; 
+}
+
+.card-info-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #431C19;
+    text-align: center;
+}
+
+.card-info-item img {
+    width: 2rem;
+    height: auto;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+
 
 
 /* Estilos de MAIN - PAGE 4 */
@@ -1050,9 +1160,18 @@ footer {
   }
   */
 
-  /* Corrección para evitar subrayado de Bootstrap */
+
+/* AJUSTES para evitar Bootstrap */
 header a,
 nav a,
 .footer a {
   text-decoration: none !important;
+}
+
+.header-1 ul,
+.header-1 ul li,
+.header-1 ul li a {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: normal !important;
 }
