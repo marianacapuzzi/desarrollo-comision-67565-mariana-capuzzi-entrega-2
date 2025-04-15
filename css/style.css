@@ -790,9 +790,8 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
     width: 100%;
     background-color: #FFF;
     border-radius: 0.75rem;
-    border: 1px solid #431C19;
+    border: 1px solid #ECCFBC;
     overflow: hidden;
-    background-color: #FFF;
 }
 
 .card-receta-larga-salada p {
