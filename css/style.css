@@ -74,25 +74,30 @@ h1 {
 }
 
 h2{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Belfast';
+    font-weight: normal;
     font-size: 32px;
     text-align: center;
 }
 
 h3{
-    font-family: Arial;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* Regular */
     font-size: 24px;
     text-align: left;
 }
 
 h4{
-    font-family: Arial;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* Regular */
     font-size: 22px;
+    line-height: 30px;
     text-align: center;
 }
 
 h5{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Belfast';
+    font-weight: normal;
     font-size: 38px;
     line-height: 48px;
     text-align: center;
@@ -359,9 +364,105 @@ header {
 
 /* ESTILOS DE MAIN */
 /* Estilos de MAIN - INDEX */
+/* Estilos de MAIN - INDEX - Bloque 1 */
+.bloque1{
+    display: grid;
+    grid-column: 2 / span 10;
+    margin-top: 3.75rem;
+    gap: 1.25rem;
+} 
 
+.bloque1-container-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+} 
+
+.bloque1-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 341 / 420;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.bloque1-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bloque1-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Lo empuja hacia arriba la mitad de su propia altura */
+    left: 0;
+    width: 8rem;
+    padding: 1rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+    border: 0.5rem solid white;
+    border-left: none;
+    background-color: #ECCFBC;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 22px;
+    line-height: 30px;
+    white-space: normal;
+    text-align: left;
+    color: #431C19;
+}
+
+
+/* Estilos de MAIN - INDEX - Bloque 2 */
+.bloque2{
+    display: grid;
+    grid-column: 1 / span 12;
+    background-color: aqua;
+} 
+
+
+/* Estilos de MAIN - INDEX - Bloque 3 */
+.bloque3{
+    display: grid;
+    grid-column: 2 / span 10;
+    position: relative;
+    background-color: gold;
+} 
+
+.bloque3-container-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #74B735;
+} 
+
+.bloque3-card{
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+} 
+
+
+/* Estilos de MAIN - INDEX - Bloque 4 */
+.bloque4{
+    display: grid;
+    grid-column: 1 / span 12;
+    background-color: orange;
+} 
+
+
+
+
+
+
+
+
+
+
+/*
 .scaling-effect a{
-    /* hay algo que no está funcionando acá */
     background-color: #F6E9DE;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
@@ -426,7 +527,7 @@ header {
     color: #431C19;
     text-align: center;
     text-decoration: none;
-} 
+}  */
 
 
 /* Estilos de MAIN */
@@ -476,7 +577,6 @@ header {
     width: 100%;
     border-radius: 12px;
     border: 1px solid #431C19;
-
     text-align: left;
     background-color: #fff;
 }
@@ -1162,15 +1262,16 @@ footer {
 
 /* AJUSTES para evitar Bootstrap */
 header a,
+main a,
 nav a,
 .footer a {
-  text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 .header-1 ul,
 .header-1 ul li,
 .header-1 ul li a {
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: normal !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: normal !important;
 }
