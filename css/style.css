@@ -365,6 +365,7 @@ header {
 /* ESTILOS DE MAIN */
 /* Estilos de MAIN - INDEX */
 /* Estilos de MAIN - INDEX - Bloque 1 */
+
 .bloque1{
     display: grid;
     grid-column: 2 / span 10;
@@ -404,7 +405,7 @@ header {
     border-radius: 0 0.75rem 0.75rem 0;
     border: 0.5rem solid white;
     border-left: none;
-    background-color: #ECCFBC;
+    background-color: #F6E9DE;
     font-family: 'Lato', sans-serif;
     font-weight: 400; /* Regular */
     font-size: 22px;
@@ -416,12 +417,58 @@ header {
 
 
 /* Estilos de MAIN - INDEX - Bloque 2 */
-.bloque2{
-    display: grid;
+.bloque2 {
     grid-column: 1 / span 12;
-    background-color: aqua;
+    margin-top: 3.75rem;
+    background-color: #AAA;
+} 
+/* 
+.bloque2-container {
+    border: 1px solid #431C19;
+    border-radius: 0.75rem;
+    margin: 0 4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}*/
+
+.bloque2 .subbloque1 {
+    background-color: #74B735;
+}
+
+.bloque2 .subbloque1 .subbloque1-segundo{
+    background-color: brown;
+}
+
+.bloque2 .subbloque1 .subbloque1-segundo h4{
+    padding: 1rem 0.5rem;
+    border-radius: 0.75rem;
+    background-color: #F6E9DE;
+}
+
+.bloque2 .subbloque1 .subbloque1-segundo p{
+    text-align: left;
+    background-color: #FFF;
 } 
 
+.bloque2 .subbloque1 .subbloque1-segundo a{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+    color: #431C19;
+    cursor: pointer;
+    background-color: #FFF;
+} 
+
+.bloque2 .subbloque2 {
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    grid-column: 2 / span 10;
+    align-items: center;
+    gap: 1.25rem;
+    background-color: crimson;
+} 
 
 /* Estilos de MAIN - INDEX - Bloque 3 */
 .bloque3{
