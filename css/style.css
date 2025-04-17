@@ -392,6 +392,7 @@ header {
 .bloque1-label {
     position: absolute;
     top: 50%;
+    left: 0;
     transform: translateY(-50%);
     width: 8rem;
     padding: 1rem;
@@ -408,38 +409,43 @@ header {
     color: #431C19;
 }
 
+.bloque1-label:hover {
+    color: #F6E9DE;
+    background-color: #431C19;
+}
+
 
 /* Estilos de MAIN - INDEX - Bloque 2 */
 .bloque2 {
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
     grid-column: 1 / span 12;
     margin: 0 0 3.75rem 0;
-    background-color: #AAA;
-} 
- 
-.bloque2-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    border: 1px solid #431C19;
-    border-radius: 0.75rem;
-}
- 
-
-.bloque2 .subbloque1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
-    align-items: start;
-    background-color: #74B735;
+} 
+
+.bloque2 h2{
+    grid-column: 1 / span 12;
+    text-align: center;
+} 
+
+/* Subbloque 1 */
+.bloque2 .subbloque1-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1 / span 12;
+    align-items: stretch;
+    gap: 1.25rem;  
+    margin-bottom: 1.25rem;
 }
 
-.bloque2 .subbloque1 img{
+.bloque2 .subbloque1-container img{
     display: block;
-    aspect-ratio: 630 / 430;
-    border-radius: 0.75rem;
     width: 100%;
+    height: auto;
+    aspect-ratio: 630 / 430;
     object-fit: cover;
+    border-radius: 0.75rem;
 }
 
 .bloque2 .subbloque1-info{
@@ -447,13 +453,14 @@ header {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.25rem;
-    background-color: brown;
 }
 
 .bloque2 .subbloque1-info h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 197px;
     height: 70px;
-    text-align: center;
     border-radius: 0.75rem;
     margin: 0;
     color: #431C19;
@@ -462,7 +469,7 @@ header {
 
 .bloque2 .subbloque1-info p{
     text-align: left;
-    max-width: 28rem;
+    max-width: 33rem;
     margin: 0;
     background-color: #FFF;
 } 
@@ -472,21 +479,154 @@ header {
 }
 
 
-
-
-.bloque2 .subbloque2 {
+/* Subbloque 2 */
+.bloque2 .subbloque2-container {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-column: 2 / span 10;
-    grid-template-columns: 5fr 5fr;
-    align-items: center;
-    gap: 1.25rem;
-    background-color: crimson;
+    gap: 1.25rem;    
+    margin-bottom: 1.25rem;
 }
 
-.bloque2 .subbloque3 {
-    display: grid;
-    background-color: crimson;
+.subbloque2-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
+
+.top-card-a,
+.top-card-b {
+    position: relative;
+}
+
+.top-card-a img{
+    display: block;
+    clip-path: polygon(0 0, 61% 0, 61% 23%, 100% 23%, 100% 100%, 0 100%);
+    border-radius: 0.75rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.top-card-b img{
+    display: block;
+    clip-path: polygon(0 0, 100% 0, 100% 77%, 61% 77%, 61% 100%, 0 100%);
+    border-radius: 0.75rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.top-card-a h4,
+.top-card-b h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 197px;
+    height: 70px;
+    border-radius: 0.75rem;
+    margin: 0;
+    color: #431C19;
+    background-color: #F6E9DE;
+}
+
+.top-card-a h4{
+    top: 0;
+    right: 0;
+}
+
+.top-card-b h4{
+    bottom: 0;
+    right: 0;
+}
+
+.subbloque2-card p{
+    text-align: left;
+    margin: 0;
+}
+
+.subbloque2-card .bloque2-btn {
+    align-self: flex-start;
+}
+
+
+/* Subbloque 3 */
+.bloque2 .subbloque3-container {
+    display: grid;
+    grid-template-columns: 4fr 3fr 5fr;
+    grid-column: 1 / span 12;
+    gap: 1.25rem;
+}
+
+.subbloque3-card-a,
+.subbloque3-card-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.subbloque3-card-b {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.625rem;
+}
+
+.subbloque3-card-a img{
+    aspect-ratio: 4 / 3;
+    border-radius: 0.75rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.subbloque3-card-b img{
+    aspect-ratio: 1 / 1;
+    border-radius: 0.75rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.subbloque3-card-c img{
+    aspect-ratio: 5 / 3;
+    border-radius: 0.75rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.subbloque3-card-a span,
+.subbloque3-card-b span,
+.subbloque3-card-c span{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 0.75rem;
+    text-align: left;
+    padding: 0 0 0 2rem;
+    margin: 0;
+    color: #431C19;
+    background-color: #F6E9DE;
+}
+
+.subbloque3-card-b .bloque2-btn {
+    align-self: center;
+}
+
+
+
+
+
+
+
+
+
 
 /* Estilos de MAIN - INDEX - Bloque 3 */
 .bloque3{
@@ -643,77 +783,9 @@ header {
 
 
 
-/*
-.scaling-effect a{
-    background-color: #F6E9DE;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    line-height: 30px;
-    color: #431C19;
-    text-align: left;
-    text-decoration: none;
-} 
-
-.sobre-nosotros h4{
-    background-color: #F6E9DE;
-    text-align: center;
-} 
-
-.sobre-nosotros p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    color: #431C19;
-    text-align: left;
-} 
-
-.sobre-nosotros a{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    color: #431C19;
-    text-align: center;
-    text-decoration: none;
-} 
-
-.valores p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    color: #431C19;
-    text-align: left;
-    background-color: #F6E9DE;
-} 
-
-.valores a{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    color: #431C19;
-    text-align: center;
-    text-decoration: none;
-} 
-
-.tags-sobre-nosotros h2{
-    color: #F6E9DE;
-} 
-
-.tags-sobre-nosotros p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    color: #F6E9DE;
-    text-align: left;
-} 
-
-.tags-sobre-nosotros a{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    color: #431C19;
-    text-align: center;
-    text-decoration: none;
-}  */
 
 
-/* Estilos de MAIN */
-/* Main PAGE 1 */
+/* Estilos de MAIN - PAGE 1 */
 /* Main PAGE 1 - Dropdown */
 
 .dropdown {
