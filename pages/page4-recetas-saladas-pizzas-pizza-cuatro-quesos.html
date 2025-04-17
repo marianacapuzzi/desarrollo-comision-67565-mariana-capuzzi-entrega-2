@@ -12,11 +12,11 @@
 </head>
 <body>
     <!-- BLOQUE 1: HEADER -->
-    <header id="top"> <!-- Este id es para que el botón del footer vaya al tope de la página -->
+    <header id="top"> 
  
         <!-- HEADER - Sub-bloque 1: idioma/login -->
-        <nav class="header-1"> <!-- Esta estructura permite fondo full-width -->
-            <div class="page-grid"> <!-- Aplica el sistema de columnas y márgenes -->
+        <nav class="header-1"> 
+            <div class="page-grid"> 
                 <ul>
                     <li><a href="#">Español</a></li>
                     <li><a href="#">Iniciar sesión</a></li>
@@ -36,27 +36,12 @@
                 </div>
                 
                 <!-- BARRA DE BÚSQUEDA -->
-                <!-- 
-                <div class="search-bar">
-                    <input type="text" placeholder="Buscar...">
-                    <button class="search-btn">🔍</button>
-                </div>
-                 -->
-
-                <!-- BARRA DE BÚSQUEDA (tipo línea) -->
-                <!-- Versión con form (es la más recomendada porque  permite enviar datos con Enter o botón)-->
                 <form class="search-bar" action="/resultados.html" method="GET">
                     <input type="text" name="q" placeholder="Buscá productos o recetas sin gluten" />
                     <button type="submit" class="search-btn">
                         <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                     </button>
                 </form>
-
-                <!-- Versión con div (solo visual, sin función de envío nativa):
-                <div class="search-bar">
-                    <input type="text" placeholder="Buscá productos o recetas sin gluten" />
-                    <button class="search-btn">🔍</button>
-                </div>  -->
 
                 <!-- NAVBAR -->
                 <nav class="navbar">
