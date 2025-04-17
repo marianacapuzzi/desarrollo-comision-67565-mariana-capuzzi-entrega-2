@@ -82,14 +82,14 @@ h2{
 
 h3{
     font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-size: 24px;
     text-align: left;
 }
 
 h4{
     font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-size: 22px;
     line-height: 30px;
     text-align: center;
@@ -122,16 +122,16 @@ header {
 .header-1 {
     background-color: #427A2B;
     padding: 0.7rem 0;
-    font-family: 'Lato', sans-serif; /* Para el separador */
-    font-weight: 400; /* Regular */
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     font-size: 14px;
-    color: #FFF; /* Para el separador */
+    color: #FFF;
 }
  
 .header-1 ul {
     display: flex;
     justify-content: flex-end;
-    grid-column: 1 / -1; /* necesario para que ocupe todo el ancho del grid */
+    grid-column: 1 / -1;
     gap: 0.5rem;
     width: 100%;
 }
@@ -142,7 +142,7 @@ header {
 
 .header-1 ul li a{
     font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-size: 14px;
     color: #FFF;
 }
@@ -165,11 +165,11 @@ header {
 /* Header Bloque 2 - Logos */
 .header-pages-logos {
     display: flex;
-    grid-column: 1 / span 3; /* Logos ocupan 3 columnas empezando en la 1 */
-    grid-row: 1 / span 2; /* Logos ocupan 2 filas empezando en la 1 */
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
     gap: 1.25rem;
     background-color: transparent;
-    align-items: end; /* Los alinea abajo */
+    align-items: end;
     justify-content: flex-start;
 }
 
@@ -196,22 +196,21 @@ header {
 }
   
 .search-bar input {
-    flex: 1; /* El input se estira para llenar el espacio que no usa la lupa */
-    border: none; /* Elimina el borde gris que los navegadores ponen por defecto en el input */
-    outline: none; /*  Para que no se vea ese marco de enfoque azul que pone el navegador por defecto. ¡Ojo! Hay que poner un reemplazo para que los usuarios sepan en qué campo están escribiendo. */
+    flex: 1; 
+    border: none;
+    outline: none;
     padding: 0 0 0.2rem 0; 
     font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-size: 14px;
-    color: #431C19; /* Se refiere al color del texto que escribe el usuario */
+    color: #431C19;
     background-color: transparent;
-    transition: box-shadow 0.2s ease;  /* Chequear */
-    /* transition no define un estado, sino una animación entre estados. Por eso, se pone en el estado base, no en el :focus */
+    transition: box-shadow 0.2s ease;
 }
 
 .search-bar input::placeholder {
     color: #AAA; 
-    opacity: 1;  /* el color se encuentra al 100%, si no lo pongo el navegador usará su valor por defecto, que suele ser opacity: 0.5 o 0.54 */
+    opacity: 1;
   }
 
 /* Estilo cuando el input recibe foco */
@@ -237,31 +236,26 @@ header {
 
 /* Header Bloque 2 - Navbar */
 .navbar {
-    display: flex; /* Para que el ul se alinee verticalmente */
-    align-items: center; /* Centra el ul dentro de navbar */
-    grid-column: 4 / span 9; /* Navbar ocupa 9 columnas empezando en la 4 */
-    grid-row: 2; /* Navbar ocupa solo la fila 2 */
+    display: flex;
+    align-items: center;
+    grid-column: 4 / span 9;
+    grid-row: 2;
     background-color: transparent;
 }
 
 .nav-list {
-    display: flex; /* Pone los li en línea */
+    display: flex;
     justify-content: space-between;
     gap: 1.25rem;
     padding: 0;
-    width: 100%; /* Hace que los li ocupen todo el contenedor */
+    width: 100%;
 }
 
 .nav-list li{
     display: flex;
     justify-content: center;
-    flex: 1; /* Para que todos los elementos tengan el mismo ancho y es un atajo de: 
-            flex-grow: 1 → Puede crecer si hay espacio
-            flex-shrink: 1 → Puede achicarse si es necesario
-            flex-basis: 0% → Parte de un ancho base de 0 (así todos arrancan igual) */
+    flex: 1;
     align-items: center;
-    /* height: 2.5rem;
-    padding: 0; */ /* Esta es una opción alternativa para controlar la altura de los botones */
     padding: 0.7rem 0;
     background-color: #FFF;
     border: 1px solid #74B735;
@@ -276,10 +270,10 @@ header {
 .nav-list li a{
     color: #427A2B;;
     font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-size: 14px;
-    text-align: center; /* Opcional, pero útil si el texto ocupa varias líneas */
-    line-height: 1; /* En textos con más de una línea, controla la separación vertical entre ellas */
+    text-align: center;
+    line-height: 1;
 }
 
 /* Header Bloque 3 */
@@ -287,7 +281,7 @@ header {
 .menu-back {
     background-color: transparent;
     font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-size: 14px;
     color: #431C19;
     padding: 0.7rem 0;
@@ -300,7 +294,7 @@ header {
 .menu-back ul{
     display: flex;
     justify-content: flex-start;
-    grid-column: 1 / -1; /* necesario para que ocupe todo el ancho del grid */
+    grid-column: 1 / -1;
     gap: 0.5rem;
     width: 100%;
 }
@@ -312,7 +306,7 @@ header {
 
 .menu-back ul li a{
     font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-size: 14px;
     color: #ECCFBC;
 }
@@ -332,8 +326,8 @@ header {
 }
 
 .banner img {
-    display: block; /* Conviene usarlo para evitar problemas de espacio fantasma */
-    width: 100vw; /* para que ocupe todo el ancho del viewport */
+    display: block;
+    width: 100vw;
     height: auto;
 }
 
@@ -343,22 +337,22 @@ header {
     grid-template-rows: auto;
     height: 100%;
     position: absolute;
-    inset: 0; /* shorthand que agrupa: top, right, bottom y left en una sola línea */
+    inset: 0;
   }
 
 .banner-text {
     grid-column: 1 / span 5;
-    align-self: end; /* como solo hay un hijo podría usar align-items en lugar de align-self */
+    align-self: end;
     padding-bottom: 4rem;
     background-color: transparent;
-    bottom: 2rem; /* Al tener position: absolute esta propiedad es la correcta para la ubicación dentro de la imagen*/
+    bottom: 2rem;
 }
 
 .banner-text h1 {
     color: #FFF;
-    max-width: 40ch; /* 1ch = el ancho del carácter “0” (cero) de la fuente que estoy usando */
+    max-width: 40ch;
     line-height: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* sombra suave hacia abajo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 
@@ -369,7 +363,7 @@ header {
 .bloque1{
     display: grid;
     grid-column: 2 / span 10;
-    margin-top: 3.75rem;
+    margin: 3.75rem 0 3.75rem 0;
     gap: 1.25rem;
 } 
 
@@ -398,8 +392,7 @@ header {
 .bloque1-label {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Lo empuja hacia arriba la mitad de su propia altura */
-    left: 0;
+    transform: translateY(-50%);
     width: 8rem;
     padding: 1rem;
     border-radius: 0 0.75rem 0.75rem 0;
@@ -407,7 +400,7 @@ header {
     border-left: none;
     background-color: #F6E9DE;
     font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-size: 22px;
     line-height: 30px;
     white-space: normal;
@@ -418,90 +411,232 @@ header {
 
 /* Estilos de MAIN - INDEX - Bloque 2 */
 .bloque2 {
+    display: grid;
     grid-column: 1 / span 12;
-    margin-top: 3.75rem;
+    margin: 0 0 3.75rem 0;
     background-color: #AAA;
 } 
-/* 
+ 
 .bloque2-container {
-    border: 1px solid #431C19;
-    border-radius: 0.75rem;
-    margin: 0 4vw;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-}*/
+    gap: 2.5rem;
+    border: 1px solid #431C19;
+    border-radius: 0.75rem;
+}
+ 
 
 .bloque2 .subbloque1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    align-items: start;
     background-color: #74B735;
 }
 
-.bloque2 .subbloque1 .subbloque1-segundo{
+.bloque2 .subbloque1 img{
+    display: block;
+    aspect-ratio: 630 / 430;
+    border-radius: 0.75rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bloque2 .subbloque1-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
     background-color: brown;
 }
 
-.bloque2 .subbloque1 .subbloque1-segundo h4{
-    padding: 1rem 0.5rem;
+.bloque2 .subbloque1-info h4{
+    width: 197px;
+    height: 70px;
+    text-align: center;
     border-radius: 0.75rem;
+    margin: 0;
+    color: #431C19;
     background-color: #F6E9DE;
 }
 
-.bloque2 .subbloque1 .subbloque1-segundo p{
+.bloque2 .subbloque1-info p{
     text-align: left;
+    max-width: 28rem;
+    margin: 0;
     background-color: #FFF;
 } 
 
-.bloque2 .subbloque1 .subbloque1-segundo a{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    text-align: left;
-    color: #431C19;
-    cursor: pointer;
-    background-color: #FFF;
-} 
+.subbloque1-info .bloque2-btn {
+    align-self: flex-start;
+}
+
+
+
 
 .bloque2 .subbloque2 {
     display: grid;
-    grid-template-columns: 5fr 5fr;
     grid-column: 2 / span 10;
+    grid-template-columns: 5fr 5fr;
     align-items: center;
     gap: 1.25rem;
     background-color: crimson;
-} 
+}
+
+.bloque2 .subbloque3 {
+    display: grid;
+    background-color: crimson;
+}
 
 /* Estilos de MAIN - INDEX - Bloque 3 */
 .bloque3{
     display: grid;
     grid-column: 2 / span 10;
-    position: relative;
-    background-color: gold;
+    margin: 0 0 3.75rem 0;
 } 
 
 .bloque3-container-cards{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #74B735;
+    gap: 1.25rem;
 } 
 
 .bloque3-card{
-    display: flex;
-    flex-direction: column;
-    background-color: orange;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 522 / 420;
+    border-radius: 0.75rem;
+    overflow: hidden;
 } 
+
+.bloque3-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(67, 28, 25, 0.8), transparent);
+    z-index: 1;
+  }
+
+.bloque3-card img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+.bloque3-container-info{
+    position: absolute;
+    display: grid;
+    grid-template-rows: auto auto;
+    bottom: 0;
+    width: 100%;
+    justify-items: center;
+    gap: 1.25rem;
+    padding: 0 1rem 1rem 1rem;
+    color: #431C19;
+    z-index: 2;
+} 
+
+.bloque3-container-info h2{
+    text-align: center;
+    color: #FFF;
+} 
+
+.bloque3-texto-boton{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 1rem;
+} 
+
+.bloque3-texto-boton p{
+    text-align: left;
+    margin: 0;
+    color: #FFF;
+} 
+
+.btn-benot {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 10.5rem;
+    height: 2.5rem;
+    padding: 0;
+    white-space: nowrap;
+    border-radius: 1.25rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #431C19;
+    background-color: white;
+    border: 1px solid #431C19;
+  }
+
+  .btn-benot:hover{
+    color: #FFF;
+    background-color: #431C19;
+    border: none;
+  }
 
 
 /* Estilos de MAIN - INDEX - Bloque 4 */
 .bloque4{
     display: grid;
     grid-column: 1 / span 12;
-    background-color: orange;
+    margin: 0 0 3.75rem 0;
 } 
 
+.bloque4-wrapper {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
 
+.bloque4-wrapper img{
+    display: block;
+    clip-path: polygon(0 0, 100% 0, 100% 91%, 50% 91%, 50% 100%, 0 100%);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+} 
 
+.bloque4-container-info{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    gap: 1.25rem;
+    padding-top: 1rem;
+}
 
+.bloque4-container-info h2{
+    text-align: center;
+    padding: 0 2rem 0 0;
+    margin: 0;
+    color: #FFF;
+}
+
+.bloque4-container-info p{
+    text-align: left;
+    padding: 0 2rem 0 0;
+    margin: 0;
+    color: #FFF;
+}
+
+.bloque4-btn {
+    position: absolute;
+    bottom: 0;
+    left: 52%;
+}
 
 
 
@@ -586,7 +721,7 @@ header {
     justify-self: end;
     width: 100%;
     background-color: transparent;
-    position: relative; /* chequear si es necesario */
+    position: relative;
   }
 
 /* Main PAGE 1 - Dropdown - Estilo del botón */
@@ -651,8 +786,7 @@ header {
 .grilla-recetas-cortas{
     display: grid;
     grid-column: 1 / span 12;
-    /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */ /* Tiene más adaptabilidad automática */
-    grid-template-columns: repeat(4, 1fr); /* Esto si quiero 4 col sí o sí y luego ajusto con media queries*/
+    grid-template-columns: repeat(4, 1fr);
     gap: 3.5rem 1.25rem;
     margin: 2rem 0 3.75rem 0;
 }
@@ -668,7 +802,7 @@ header {
 
 .card-receta-corta-dulce {
     display: grid;
-    grid-template-columns: 2.4rem 1fr; /* la primera columna es fija, la otra flexible */
+    grid-template-columns: 2.4rem 1fr;
     height: 3.75rem;
     width: 100%;
     background-color: #FFF;
@@ -697,7 +831,7 @@ header {
     background-color: transparent;
     font-size: 1.125rem;
     line-height: 1.4rem;
-    word-break: break-word; /* por si el título es muy largo */
+    word-break: break-word;
     color: #431C19;
     height: 100%;
     border-radius: 0 0.75rem 0.75rem 0;
@@ -706,7 +840,7 @@ header {
   
 .card-receta-corta-salada {
     display: grid;
-    grid-template-columns: 2.4rem 1fr; /* letra fija, resto flexible */
+    grid-template-columns: 2.4rem 1fr;
     height: 3.75rem;
     width: 100%;
     background-color: #FFF;
@@ -735,7 +869,7 @@ header {
     background-color: transparent;
     font-size: 1.125rem;
     line-height: 1.4rem;
-    word-break: break-word; /* por si el título es muy largo */
+    word-break: break-word;
     color: #431C19;
     height: 100%;
     border-radius: 0 0.75rem 0.75rem 0;
@@ -746,14 +880,14 @@ header {
     position: relative;
     width: 100%;
     overflow: hidden;
-    aspect-ratio: 305 / 250; /* Sirve para mantener la proporción entre el ancho y el alto de un elemento */
+    aspect-ratio: 305 / 250;
 }
 
 .img-receta-corta{
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;  /* La imagen se escala para cubrir todo el contenedor, se recorta automáticamente y no se deforma. */
+    object-fit: cover;
 }
 
 .card-receta-corta-puntuacion{
@@ -836,11 +970,11 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
     .card-receta-corta-salada,
     .card-receta-corta-salada p,
     .card-receta-corta-salada h6 {
-        height: 3.25rem; /* 52px */
+        height: 3.25rem;
     }  
 
     .card-receta-corta-puntuacion {
-        width: 3.75rem;   /* 60px */
+        width: 3.75rem;
         height: 3.75rem;
         font-size: 0.875rem;
     }
@@ -858,7 +992,7 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
     .card-receta-corta-salada,
     .card-receta-corta-salada p,
     .card-receta-corta-salada h6 {
-        height: 3rem; /* 48px */
+        height: 3rem;
     }
 
     .card-receta-corta-dulce p, 
@@ -872,7 +1006,7 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
     }
 
     .card-receta-corta-puntuacion {
-        width: 3.25rem;   /* 52px */
+        width: 3.25rem;
         height: 3.25rem;
         font-size: 0.75rem;
     }
@@ -890,7 +1024,7 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
     .card-receta-corta-salada,
     .card-receta-corta-salada p,
     .card-receta-corta-salada h6 {
-        height: 2.75rem; /* 44px */
+        height: 2.75rem;
     }
 
     .card-receta-corta-dulce p, 
@@ -904,7 +1038,7 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
     }
 
     .card-receta-corta-puntuacion {
-        width: 2.75rem;   /* 44px */
+        width: 2.75rem;
         height: 2.75rem;
         font-size: 0.75rem;
     }
@@ -932,7 +1066,7 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
 
 .card-receta-larga-salada {
     display: grid;
-    grid-template-columns: 2.4rem 1fr; /* la primera columna es fija, la otra flexible */
+    grid-template-columns: 2.4rem 1fr;
     height: 3.75rem;
     width: 100%;
     background-color: #FFF;
@@ -961,7 +1095,7 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
     background-color: transparent;
     font-size: 1.125rem;
     line-height: 1.4rem;
-    word-break: break-word; /* por si el título es muy largo */
+    word-break: break-word;
     color: #431C19;
     height: 100%;
     border-radius: 0 0.75rem 0.75rem 0;
@@ -971,13 +1105,13 @@ clip-path: path("M 12,0 L 213,0 A 12,12 0,0,1 225,12 L 225,68 A 12,12 0,0,0 237,
 .card-receta-larga-imagen-container{
     position: relative;
     width: 100%;
-    aspect-ratio: 341 / 480; /* Sirve para mantener la proporción entre el ancho y el alto de un elemento */
+    aspect-ratio: 341 / 480;
 }
 
 .img-receta-larga{
     display: block;
     width: 100%;
-    object-fit: cover;  /* La imagen se escala para cubrir todo el contenedor, se recorta automáticamente y no se deforma. */
+    object-fit: cover;
 }
 
 /* Loguito corazón */
@@ -1113,9 +1247,9 @@ footer {
 }
 
 /* Footer - Imagen de fondo */
-.footer-container > img { /* > img significa que afecta solo a la imagen que está directamente dentro de .footer-container */
-    display: block; /* Conviene usarlo para evitar problemas de espacio fantasma */
-    width: 100vw; /* para que ocupe todo el ancho del viewport */
+.footer-container > img { 
+    display: block;
+    width: 100vw;
     height: auto;
 }
 
@@ -1126,13 +1260,13 @@ footer {
     grid-template-rows: auto;
     align-items: start;
     position: absolute;
-    inset: 0; /* shorthand que agrupa: top, right, bottom y left en una sola línea */
+    inset: 0;
 }
 
 /* Footer - Logos */
 .footer-logos {
     display: flex;
-    grid-column: 1 / span 3; /* Logos ocupan 2 columnas empezando en la 1 */
+    grid-column: 1 / span 3;
     gap: 0.75rem;
     align-items: flex-start;
     padding-top: 4rem;
@@ -1154,13 +1288,13 @@ footer {
 
 /* Footer - Menús */
 .footer-menu:nth-of-type(1) {
-    grid-column: 4 / span 2; /* Ocupa columnas 4 y 5 */ 
+    grid-column: 4 / span 2;
     padding-top: 4rem;
     background-color: transparent;
 }
   
 .footer-menu:nth-of-type(2) {
-    grid-column: 6 / span 3; /* Ocupa columnas 6, 7 y 8 */
+    grid-column: 6 / span 3;
     padding-top: 4rem;
     background-color: transparent;
 }
@@ -1174,7 +1308,7 @@ footer {
 
 .footer-menu a{
     font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-size: 1rem;
     line-height: 1.5rem;
     color: #431C19;   
@@ -1187,7 +1321,7 @@ footer {
 
 /* Footer - Contacto */
 .footer-contacto {
-    grid-column: 9 / span 4; /* Ocupa columnas 6, 7 y 8 */
+    grid-column: 9 / span 4;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -1205,7 +1339,7 @@ footer {
 
 .footer-contacto-datos span {
     font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-size: 1rem;
     color: #431C19;
     padding: 0 0.25rem;
@@ -1213,7 +1347,7 @@ footer {
 
 .footer-contacto-datos a {
     font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-size: 1rem;
     color: #431C19;
     cursor: pointer;
@@ -1238,7 +1372,7 @@ footer {
 .footer-redes img {
     display: flex;
     align-items: center;
-    width: 1.5rem;  /* tamaño razonable para íconos */
+    width: 1.5rem;
     height: auto;
     background-color: transparent;
 }
@@ -1246,7 +1380,7 @@ footer {
 /* Footer - Botón para subir */
 .footer-boton {
     position: absolute;
-    bottom: -1.5rem; /* Esto hace que se superponga a la imagen */
+    bottom: -1.5rem;
     cursor: pointer;
 }
 
