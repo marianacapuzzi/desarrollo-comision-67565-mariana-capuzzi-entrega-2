@@ -1,0 +1,80 @@
+/* MAIN - Recetas cortas */
+.grilla-recetas-cortas {
+    @include grilla-recetas-cortas;
+}
+
+.card-receta-corta {
+    @include card-receta;
+}
+
+.card-receta-corta-top-dulce,
+.card-receta-corta-top-salada {
+  @include card-top-wrapper;
+}
+  
+.card-receta-corta-top-dulce span {
+    @include card-top-categoria($color-marron-oscuro, $color-blanco, $color-marron-oscuro);
+}
+  
+.card-receta-corta-top-dulce h6 {
+    @include card-top-titulo($color-marron-oscuro, $color-marron-oscuro, $color-blanco);
+}
+
+.card-receta-corta-top-salada span {
+    @include card-top-categoria($color-marron-medio, $color-marron-oscuro, $color-marron-medio);
+}
+  
+.card-receta-corta-top-salada h6 {
+    @include card-top-titulo($color-marron-medio, $color-marron-oscuro, $color-blanco);
+}
+
+.card-receta-corta-bottom{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 305 / 250;
+}
+
+.card-receta-corta-bottom-imagen img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card-receta-corta-bottom-puntuacion{
+    @include card-puntuacion;
+}
+
+.card-receta-corta-bottom-puntuacion img{
+    width: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);    
+}
+
+
+/* MAIN - Recetas largas */
+.grilla-recetas-largas {
+    @include grilla-recetas-largas;
+}
+
+.grilla-recetas-largas:nth-child(1){
+    margin: 0;
+}
+.grilla-recetas-largas:nth-child(1) .dropdown{
+    grid-column: 3 / span 1;
+}
+
+.card-receta-larga {
+    @include card-receta;
+}
+
+.card-receta-larga-top-salada {
+  @include card-top-wrapper;
+}
+
+.card-receta-larga-top-salada span {
+    @include card-top-categoria($color-marron-medio, $color-marron-oscuro, $color-marron-medio);
+}
+  
+.card-receta-larga-top-salada h6 {
+    @include card-top-titulo($color-marron-medio, $color-marron-oscuro, $color-blanco);
+}

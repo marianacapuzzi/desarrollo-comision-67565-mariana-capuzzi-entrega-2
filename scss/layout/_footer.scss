@@ -1,0 +1,154 @@
+/* FOOTER */
+.footer {
+    position: relative;
+  
+    .footer-container {
+        position: relative;
+        height: clamp(17.5rem, 12.895rem + 6.579vw, 20rem);
+        overflow: hidden;
+  
+        > img {
+            display: block;
+            width: 100vw;
+            height: auto;
+        }
+  
+        .footer-grid-wrapper {
+            @include flexbox(center, center);
+            position: absolute;
+            transform: translateY(10%);
+            inset: 0;
+  
+            .footer-grid-interna {
+            @include grid_12;
+            gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+            width: 100%;
+            align-items: start;
+  
+                .footer-logos {
+                    @include flexbox(flex-start, end);
+                    grid-column: 1 / span 3;
+                    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+        
+                    a {
+                        width: 45%;
+                        padding: 0;
+                    }
+        
+                    .footer-logo-benot {
+                        width: 100%;
+                        height: auto;
+                    }
+        
+                    .footer-logo-sin-gluten {
+                        width: 18%;
+                        height: auto;
+                    }
+                }
+  
+                .footer-menu {
+                    @include flexbox(flex-start, flex-start);
+                    grid-column: 4 / span 4;
+                    gap: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem);
+                    margin: 0;
+        
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        text-align: left;
+                        padding: 0;
+                        margin: 0;
+        
+                        a {
+                            font-family: $fuente-secundaria;
+                            font-weight: 400;
+                            font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+                            line-height: 1.5em;
+                            color: $color-marron-oscuro;
+                            cursor: pointer;
+            
+                            &:hover {
+                                color: $color-blanco;
+                            }
+                        }
+                    }
+                }
+    
+                .footer-contacto {
+                    grid-column: 9 / span 4;
+                    display: flex;
+                    flex-direction: column;
+                    gap: clamp(0.35rem, 0.166rem + 0.263vw, 0.45rem);
+                    text-align: left;
+    
+                    .footer-contacto-datos {
+                        @include flexbox(flex-start, center);
+                        gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+        
+                        span, a {
+                            font-family: $fuente-secundaria;
+                            font-weight: 400;
+                            font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+                            line-height: 1.5em;
+                            color: $color-marron-oscuro;
+                        }
+                        
+                        span {
+                            padding: 0 clamp(0.22rem, 0.109rem + 0.158vw, 0.28rem);
+                        }
+
+                        a {
+                            cursor: pointer;
+        
+                            &:hover {
+                                color: $color-blanco;
+                            }
+                        }
+                    }
+    
+                    .footer-contacto-redes {
+                        @include flexbox(flex-start, center);
+                        gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+            
+                        span {
+                            font-family: $fuente-secundaria;
+                            font-weight: 400;
+                        }
+            
+                        .footer-contacto-iconos {
+                            @include flexbox(flex-start, center);
+                            gap: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+            
+                            img {
+                            width: clamp(1.375rem, 0.914rem + 0.658vw, 1.625rem);
+                            height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+  
+    .footer-boton {
+        position: absolute;
+        top: clamp(17.5rem, 12.895rem + 6.579vw, 20rem);
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 10;
+        cursor: pointer;
+    
+        img {
+            width: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem);
+            height: auto;
+        }
+    }
+  
+    .footer-pie {
+        @include flexbox(space-between, center);
+        padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem) 0;
+        font-family: $fuente-secundaria;
+        font-weight: 400;
+        font-size: clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
+    }
+}
+  
