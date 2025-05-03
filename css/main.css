@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "Belfast";
+  src: url("fonts/belfast-regular_6510.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Belfast";
+  src: url("fonts/belfast-medium_6516.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Belfast";
+  src: url("fonts/belfast-bold_6509.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #FFF;
+  text-align: center;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+h1 {
+  font-family: "Belfast", serif;
+  font-weight: normal;
+  font-size: clamp(1.6rem, 0.863rem + 1.053vw, 2rem);
+  line-height: 1.3em;
+  text-align: left;
+}
+
+h2 {
+  font-family: "Belfast", serif;
+  font-weight: normal;
+  font-size: clamp(1.5rem, 0.763rem + 1.053vw, 1.9rem);
+  text-align: center;
+}
+
+h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.15rem, 0.782rem + 0.526vw, 1.35rem);
+  text-align: center;
+}
+
+h5 {
+  font-family: "Belfast", serif;
+  font-weight: normal;
+  font-size: 2.25rem;
+  line-height: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-family: "Belfast", serif;
+  font-weight: normal;
+  font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
+  line-height: 1.3em;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+  line-height: 1.5em;
+  color: #431C19;
+}
+
+.grid-externa {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+  margin: 0 5vw;
+}
+
+.grid-interna {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+  align-items: center;
+}
+
+.menu-back ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos de HEADER - Bloque 1 */
+.header-1 {
+  background-color: #427A2B;
+  padding: 0.7rem 0;
+  color: #FFF;
+}
+.header-1 ul {
+  display: flex;
+  justify-content: flex-end;
+  grid-column: 1/-1;
+  gap: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.header-1 ul li {
+  background-color: transparent;
+}
+.header-1 ul li a {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+  color: #FFF;
+}
+
+/* Estilos de HEADER - Bloque 2 */
+.header-2 {
+  padding: 0;
+}
+.header-2 .grid-header-2 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto;
+  gap: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem);
+  align-items: end;
+  padding-top: clamp(1.375rem, 0.914rem + 0.658vw, 1.625rem);
+}
+.header-2 .grid-header-2 .header-logos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+  grid-column: 1/span 3;
+  grid-row: 1/span 2;
+  gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+  padding: 0 0 clamp(0.35rem, 0.166rem + 0.263vw, 0.45rem) 0;
+}
+.header-2 .grid-header-2 .header-logos a {
+  width: 50%;
+}
+.header-2 .grid-header-2 .header-logos .header-logo-benot {
+  width: 100%;
+  height: auto;
+}
+.header-2 .grid-header-2 .header-logos .header-logo-sin-gluten {
+  width: 20%;
+  height: auto;
+}
+
+/*# sourceMappingURL=main.css.map */

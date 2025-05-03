@@ -1,0 +1,55 @@
+
+// H1 - H6
+h1 {
+    font-family: $fuente-principal;
+    font-weight: normal;
+    font-size: $h1-size;
+    line-height: $h-line-height;
+    text-align: left;
+}
+
+h2{
+    font-family: $fuente-principal;
+    font-weight: normal;
+    font-size: $h2-size;
+    text-align: center;
+}
+
+h3{
+    font-family: $fuente-secundaria;
+    font-weight: 400;
+    font-size: $h3-size;
+    text-align: left;
+}
+
+h4{
+    font-family: $fuente-secundaria;
+    font-weight: 400;
+    font-size: $h4-size;
+    text-align: center;
+}
+
+h5{
+    font-family: $fuente-principal;
+    font-weight: normal;
+    font-size: $h5-size;
+    line-height: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-family: $fuente-principal;
+    font-weight: normal;
+    font-size: $h6-size;
+    line-height: $h-line-height;
+}
+
+// Textos del body
+body {
+    font-family: $fuente-secundaria;
+    font-weight: 400;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    color: $color-marron-oscuro;   
+}

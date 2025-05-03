@@ -1,0 +1,10 @@
+@mixin grid_12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+@mixin flexbox($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+  }

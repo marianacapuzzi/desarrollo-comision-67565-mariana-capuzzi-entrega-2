@@ -1,0 +1,1829 @@
+/* ESTILOS GENERALES */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.header-1 ul {
+    padding: 0;
+    margin: 0;
+}
+
+.menu-back ul {
+padding: 0;
+margin: 0;
+}
+
+/* Fuentes personalizadas */
+@font-face {
+    font-family: 'Belfast';
+    src: url("fonts/belfast-regular_6510.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Belfast';
+    src: url("fonts/belfast-medium_6516.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Belfast';
+    src: url("fonts/belfast-bold_6509.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* SISTEMA DE GRILLA GENERAL */
+body {
+    width: 100vw;
+    min-height: 100vh; 
+    text-align: center;
+    background-color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+    line-height: 1.5em;
+    color: #431C19;   
+}
+
+/* Contenedor principal con márgenes laterales */
+.grid-externa {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    margin: 0 5vw;
+}
+
+/* Rejilla interna para alinear el contenido a las 12 columnas */
+.grid-interna {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* H1 - H6 */
+h1 {
+    font-family: 'Belfast';
+    font-weight: normal;
+    font-size: clamp(1.6rem, 0.863rem + 1.053vw, 2rem);
+    line-height: 1.3em;
+    text-align: left;
+}
+
+h2{
+    font-family: 'Belfast';
+    font-weight: normal;
+    font-size: clamp(1.5rem, 0.763rem + 1.053vw, 1.9rem);
+    text-align: center;
+}
+
+h3{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+h4{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.15rem, 0.782rem + 0.526vw, 1.35rem);
+    text-align: center;
+}
+
+h5{
+    font-family: 'Belfast';
+    font-weight: normal;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-family: 'Belfast';
+    font-weight: normal;
+    font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
+    line-height: 1.3em;
+}
+
+
+/* ESTILOS DE HEADER */
+header {
+    background-color: transparent;
+}
+
+/* Estilos de HEADER PAGE 1,2,3 */
+/* Header Bloque 1 */
+.header-1 {
+    background-color: #427A2B;
+    padding: 0.7rem 0;
+    color: #FFF;
+}
+ 
+.header-1 ul {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 1 / -1;
+    gap: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem);
+    width: 100%;
+}
+
+.header-1 ul li{
+    background-color: transparent;
+}
+
+.header-1 ul li a{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+    color: #FFF;
+}
+
+/* Header Bloque 2 */
+.header-2 {
+    padding: 0; 
+}
+
+.grid-header-2 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    gap: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem);
+    align-items: end;  
+    background-color: transparent;
+    padding-top: clamp(1.375rem, 0.914rem + 0.658vw, 1.625rem);
+    background-color: brown;
+}
+
+/* Header Bloque 2 - Logos */
+.header-logos {
+    display: flex;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    align-items: end;
+    justify-content: flex-start;
+    padding: 0 0 clamp(0.35rem, 0.166rem + 0.263vw, 0.45rem) 0;
+    background-color: chocolate;
+}
+
+.header-logos a {
+    width: 50%;
+    background-color: aqua;
+}
+
+.header-logo-benot {
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+}
+
+.header-logo-sin-gluten {
+    width: 20%;
+    height: auto;
+    background-color: gold;
+}
+
+/* Header Bloque 2 - Input */
+/* Versión con form */
+.search-bar {
+    display: flex;
+    grid-column: 7 / span 6;
+    grid-row: 1;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #999;
+}
+  
+.search-bar input {
+    flex: 1; 
+    border: none;
+    outline: none;
+    padding: 0 0 clamp(0.22rem, 0.109rem + 0.158vw, 0.28rem) 0; 
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+    color: #431C19;
+    transition: box-shadow 0.2s ease;
+}
+
+.search-bar input::placeholder {
+    color: #AAA; 
+    opacity: 1;
+}
+  
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.search-icon {
+    width: clamp(1.15rem, 0.782rem + 0.526vw, 1.35rem);
+    height: clamp(1.15rem, 0.782rem + 0.526vw, 1.35rem);
+    stroke: #999; ;
+}
+
+/* Header Bloque 2 - Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    grid-column: 4 / span 9;
+    grid-row: 2;
+    padding: 0 0 clamp(0.35rem, 0.166rem + 0.263vw, 0.45rem) 0;
+    background-color: gold;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.nav-list li{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+    padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem) 0;
+    background-color: #FFF;
+    border: 1px solid #74B735;
+    border-radius: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem); 
+}
+
+.nav-list li:hover{
+    background-color: #E5F4D3;
+    border: 0px;
+}
+
+.nav-list li a{
+    color: #427A2B;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+    text-align: center;
+}
+
+/* Header Bloque 3 */
+/* Header Bloque 3 - Menú para regresar */
+.header-3-back {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+    color: #431C19;
+    padding: clamp(0.35rem, 0.166rem + 0.263vw, 0.45rem) 0;
+}
+
+.separador{
+    color: #ECCFBC;
+}
+
+.header-3-back ul{
+    display: flex;
+    justify-content: flex-start;
+    grid-column: 1 / -1;
+    gap: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header-3-back ul li{
+    background-color: transparent;
+}
+
+.header-3-back ul li a{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+    color: #ECCFBC;
+}
+
+.header-3-back ul li a:hover{
+    text-decoration: underline;
+}
+
+/* Header Bloque 4 */
+/* Header Bloque 4 - Banner */
+.header-4-banner {
+    padding: clamp(0.35rem, 0.166rem + 0.263vw, 0.45rem) 0 0 0;
+}
+
+.banner-container{
+    position: relative;
+}
+
+.header-4-banner img {
+    display: block;
+    width: 100vw;
+    height: auto;
+}
+
+.grid-header-4 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+}
+
+.banner-text {
+    grid-column: 1 / span 5;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.banner-text h1 {
+    color: #FFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ESTILOS DE MAIN */
+/* Estilos de MAIN - INDEX */
+/* Estilos de MAIN - INDEX - Bloque 1 */
+
+.bloque1{
+    display: grid;
+    grid-column: 2 / span 10;
+    margin: clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0 clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+} 
+
+.bloque1 h2{
+    background-color: crimson;
+} 
+
+.bloque1-container-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    /* el clamp del gap: 1.25rem es el que está acá arriba */
+} 
+
+.bloque1-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 341 / 420;
+}
+
+.bloque1-card img {
+    display: block;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 65%, 38% 65%, 38% 35%, 0 35%);
+    width: 100%;
+    height: 100%;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    /* el clamp del border-radius: 0.75rem es el que está acá arriba */
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.bloque1-label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 35%;
+    height: 26%;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    padding: 0 clamp(0.8rem, 0.063rem + 1.053vw, 1.2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color: #F6E9DE;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 0.079rem + 1.316vw, 1.5rem);
+    line-height: 1.3em;
+    white-space: normal;
+    text-align: left;
+    color: #431C19;
+}
+
+.bloque1-label:hover {
+    color: #F6E9DE;
+    background-color: #431C19;
+}
+
+
+/* Estilos de MAIN - INDEX - Bloque 2 */
+.bloque2 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 1 / span 12;
+    margin: 0 0 clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    background-color: gold;
+} 
+
+.bloque2 h2{
+    grid-column: 1 / span 12;
+    background-color: #74B735;
+} 
+
+/* Subbloque 1 */
+.bloque2 .subbloque1-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1 / span 12;
+    align-items: stretch;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);  
+    margin-bottom: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    background-color: #74B735;
+}
+
+.bloque2 .subbloque1-container img{
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 630 / 430;
+    object-fit: cover;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+}
+
+.bloque2 .subbloque1-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    background-color: brown;
+}
+
+.label-texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 31.5%;
+    height: 16.7%;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    margin: 0;
+    color: #431C19;
+    background-color: #F6E9DE;
+}
+
+.bloque2 .subbloque1-info p{
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    background-color: #FFF;
+} 
+
+.subbloque1-info .bloque2-btn {
+    align-self: flex-start;
+}
+
+
+/* Subbloque 2 */
+.bloque2 .subbloque2-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 2 / span 10;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);   
+    margin-bottom: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    background-color: brown;
+}
+
+.subbloque2-card {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+}
+
+.top-card-a,
+.top-card-b {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    align-items: stretch;
+    position: relative;
+}
+
+.top-card-a img,
+.top-card-b img{
+    display: block;
+    grid-column: 1 / span 5;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    width: 100%;
+    aspect-ratio: 522 / 400;
+    object-fit: cover;
+}
+
+.top-card-a img{
+    clip-path: polygon(0 0, 61% 0, 61% 21%, 100% 21%, 100% 100%, 0 100%);
+}
+
+.top-card-b img{
+    clip-path: polygon(0 0, 100% 0, 100% 79%, 61% 79%, 61% 100%, 0 100%);
+}
+
+.top-card-a .label-img,
+.top-card-b .label-img{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 37%;
+    height: 18%;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    margin: 0;
+    color: #431C19;
+    background-color: #F6E9DE;
+    z-index: 2;
+}
+
+.top-card-a .label-img{
+    align-self: start;
+    right: 0;
+}
+
+.top-card-b .label-img{
+    align-self: end;
+    right: 0;
+}
+
+.subbloque2-card p{
+    text-align: left;
+    margin: 0;
+}
+
+.subbloque2-card .bloque2-btn {
+    align-self: flex-start;
+}
+
+
+/* Subbloque 3 */
+.bloque2 .subbloque3-container {
+    display: grid;
+    grid-template-columns: 4fr 3fr 5fr;
+    grid-column: 1 / span 12;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    background-color: blueviolet;
+}
+
+.subbloque3-card-a,
+.subbloque3-card-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: clamp(0.5rem, 0.039rem + 0.658vw, 0.75rem);
+}
+
+.subbloque3-card-b {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: clamp(0.5rem, 0.039rem + 0.658vw, 0.75rem);
+}
+
+.subbloque3-card-a img{
+    aspect-ratio: 4 / 3;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.subbloque3-card-b img{
+    aspect-ratio: 1 / 1;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.subbloque3-card-c img{
+    aspect-ratio: 5 / 3;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.subbloque3-card-a span,
+.subbloque3-card-b span,
+.subbloque3-card-c span{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: clamp(2.5rem, 0.658rem + 2.632vw, 3.5rem);
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    padding: 0 0 0 clamp(1.75rem, 0.829rem + 1.316vw, 2.25rem);
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+    color: #431C19;   
+    text-align: left;
+    background-color: #F6E9DE;
+}
+
+.subbloque3-card-b .bloque2-btn {
+    align-self: center;
+}
+
+
+/* Estilos de MAIN - INDEX - Bloque 3 */
+.bloque3{
+    display: grid;
+    grid-column: 2 / span 10;
+    margin: 0 0 clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
+} 
+
+.bloque3-container-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+} 
+
+.bloque3-card{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 522 / 420;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    overflow: hidden;
+} 
+
+.bloque3-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(67, 28, 25, 1), transparent);
+    z-index: 1;
+}
+
+.bloque3-card img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+.bloque3-container-info{
+    position: absolute;
+    display: grid;
+    grid-template-rows: auto auto;
+    bottom: 0;
+    width: 100%;
+    justify-items: center;
+    gap: clamp(1rem, 0.539rem + 0.658vw, 1.25rem);
+    padding: 0 clamp(1rem, 0.539rem + 0.658vw, 1.25rem) clamp(1rem, 0.539rem + 0.658vw, 1.25rem) clamp(1rem, 0.539rem + 0.658vw, 1.25rem);
+    z-index: 2;
+} 
+
+.bloque3-container-info h2{
+    text-align: center;
+    color: #FFF;
+} 
+
+.bloque3-texto-boton{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: clamp(1rem, 0.539rem + 0.658vw, 1.25rem);
+    padding: 0;
+} 
+
+.bloque3-texto-boton p{
+    text-align: left;
+    margin: 0;
+    color: #FFF;
+} 
+
+.btn-benot {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: clamp(9.5rem, 7.658rem + 2.632vw, 10.5rem);
+    height: clamp(2rem, 1.079rem + 1.316vw, 2.5rem);
+    padding: 0;
+    white-space: nowrap;
+    border-radius: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem); 
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+    text-align: center;
+    color: #431C19;
+    background-color: white;
+    border: 1px solid #431C19;
+}
+
+.btn-benot:hover{
+    color: #FFF;
+    background-color: #431C19;
+    border: none;
+}
+
+
+/* Estilos de MAIN - INDEX - Bloque 4 */
+.bloque4{
+    display: grid;
+    grid-column: 1 / span 12;
+    margin: 0 0 clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
+} 
+
+.bloque4-wrapper {
+    position: relative;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    overflow: hidden;
+}
+
+.bloque4-wrapper img{
+    display: block;
+    clip-path: polygon(0 0, 100% 0, 100% 93.5%, 50.4% 93.5%, 50.4% 100%, 0 100%);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+} 
+
+.bloque4-container-info{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    padding: clamp(2rem, 1.079rem + 1.316vw, 2.5rem) clamp(2rem, 1.079rem + 1.316vw, 2.5rem) 0 0;
+    background-color: #74B735;
+}
+
+.bloque4-container-info h2{
+    text-align: center;
+    margin: 0;
+    color: #FFF;
+    background-color: darkorange;
+}
+
+.bloque4-container-info p{
+    text-align: left;
+    margin: 0;
+    color: #FFF;
+}
+
+.bloque4-btn {
+    position: absolute;
+    bottom: 0;
+    left: 51%;
+}
+
+
+/* Estilos de MAIN - PAGE 1 */
+/* Main PAGE 1 - Dropdown */
+.dropdown {
+    grid-column: 10 / span 3;
+    justify-self: end;
+    width: 100%;
+    background-color: transparent;
+    position: relative; 
+}
+
+/* Main PAGE 1 - Dropdown - Estilo del botón */
+.dropdown-recetas-btn {
+    grid-column: 10 / span 3;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+    text-align: left;
+    padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem) clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
+    color: #431C19;
+    border: 1px solid #431C19;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+}
+
+.dropdown-recetas-btn::after {
+    display: inline-block;
+    margin-left: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem);
+    vertical-align: middle;
+    content: "";
+    border-top: 0.4em solid;
+    border-right: 0.4em solid transparent;
+    border-left: 0.4em solid transparent;
+    border-top-color: #431C19;
+}
+
+.dropdown-recetas-btn:hover,
+.dropdown-recetas-btn:focus {
+    background-color: #f6e9de; /* o dejo blanco si no quiero efecto */
+    color: #431C19;
+}
+
+/* Main PAGE 1 - Dropdown - Menú desplegable */
+.dropdown-recetas-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    border: 1px solid #ECCFBC;
+    text-align: left;
+    background-color: #fff;
+}
+
+/* Main PAGE 1 - Dropdown - Ítems */
+.dropdown-recetas-menu .dropdown-item {
+    display: block;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+    color: #ECCFBC;
+    padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem) clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
+    text-decoration: none;
+}
+
+.dropdown-recetas-menu .dropdown-item:hover,
+.dropdown-recetas-menu .dropdown-item:focus {
+    background-color: #f6e9de;
+    color: #431C19;
+}
+
+
+/* Main PAGE 1 - Cards cortas */
+.grilla-recetas-cortas{
+    display: grid;
+    grid-column: 1 / span 12;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(3.5rem, 2.579rem + 1.316vw, 4rem) clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    margin: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem) 0 clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
+}
+
+.card-receta-corta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: clamp(0.5rem, 0.039rem + 0.658vw, 0.75rem);
+    background-color: gold;
+}
+
+.card-receta-corta-top-dulce, 
+.card-receta-corta-top-salada {
+    display: flex;
+    width: 100%;
+    height: clamp(3.5rem, 1.658rem + 2.632vw, 4.5rem);
+    gap: 0;
+}
+  
+.card-receta-corta-top-dulce span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13%;
+    margin: 0;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem); 
+    border: 1px solid #431C19;
+    border-right: none;
+    font-family: 'Belfast', serif;
+    font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
+    color: #fff;
+    text-align: center;
+    background-color: #431C19;
+}
+  
+.card-receta-corta-top-dulce h6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 87%;
+    margin: 0;
+    border-radius: 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem) clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0;
+    border: 1px solid #431C19;
+    border-left: none;
+    padding: 0 clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
+    text-align: center;
+    word-break: break-word;
+    color: #431C19;
+    background-color: #FFF;
+}
+
+.card-receta-corta-top-salada span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13%;
+    margin: 0;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem); 
+    border: 1px solid #ECCFBC;
+    border-right: none;
+    font-family: 'Belfast', serif;
+    font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
+    color: #431C19;
+    text-align: center;
+    background-color: #ECCFBC;
+}
+
+.card-receta-corta-top-salada h6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 87%;
+    margin: 0;
+    border-radius: 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem) clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0;
+    border: 1px solid #ECCFBC;
+    border-left: none;
+    padding: 0 clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
+    text-align: center;
+    word-break: break-word;
+    color: #431C19;
+    background-color: #FFF;
+}
+
+.card-receta-corta-bottom{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 305 / 250;
+}
+
+.card-receta-corta-bottom-imagen img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card-receta-corta-bottom-puntuacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+    width: clamp(3.5rem, -4.789rem + 11.842vw, 8rem);
+    height: clamp(3.5rem, -4.789rem + 11.842vw, 8rem);
+    gap: clamp(0.22rem, 0.109rem + 0.158vw, 0.28rem);
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    background-color: #F6E9DE;    
+}
+
+.card-receta-corta-bottom-puntuacion img{
+    width: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);    
+}
+
+
+/* Estilos de MAIN - PAGE 2 y PAGE 3 */
+.grilla-recetas-largas{
+    display: grid;
+    grid-column: 2 / span 10;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(3.5rem, 2.579rem + 1.316vw, 4rem) clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    margin: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem) 0 clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
+    background-color: brown;
+}
+
+.grilla-recetas-largas:nth-child(1){
+    margin: 0;
+}
+.grilla-recetas-largas:nth-child(1) .dropdown{
+    grid-column: 3 / span 1;
+    background-color: cornflowerblue;
+}
+
+.card-receta-larga{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: clamp(0.5rem, 0.039rem + 0.658vw, 0.75rem);
+    background-color: gold;
+}
+
+.card-receta-larga-top-salada{
+    display: flex;
+    width: 100%;
+    height: clamp(3.5rem, 1.658rem + 2.632vw, 4.5rem);
+    gap: 0;
+}
+
+.card-receta-larga-top-salada span{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 13%;
+    margin: 0;
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem); 
+    border: 1px solid #ECCFBC;
+    border-right: none;
+    font-family: 'Belfast', serif;
+    font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
+    color: #431C19;
+    text-align: center;
+    background-color: #ECCFBC;
+}
+
+.card-receta-larga-top-salada h6{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 87%;
+    margin: 0;
+    border-radius: 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem) clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0;
+    border: 1px solid #ECCFBC;
+    border-left: none;
+    padding: 0 clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
+    text-align: center;
+    word-break: break-word;
+    color: #431C19;
+    background-color: #FFF;
+}
+
+.card-receta-larga-bottom{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 341 / 480;
+}
+
+.card-receta-larga-bottom-imagen img{
+    display: block;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 85%, 75% 100%, 0 100%);
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.icono-favorito{
+    position: absolute;
+    top: 73%;
+    left: 89%;
+    transform: translate(-50%);
+    width: 12%;
+    height: auto;
+    z-index: 10;
+}
+
+.card-receta-larga-bottom-items{
+    position: absolute;
+    clip-path: polygon(0 37%, 78% 37%,78% 0, 100% 0, 100% 100%, 0 100%);
+    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 31%;
+    background-color: #FDF1E9;
+    padding-top: clamp(3rem, 0.237rem + 3.947vw, 4.5rem);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.8rem, -3.253rem + 5.789vw, 3rem);
+}
+
+.card-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: clamp(0.25rem, -0.211rem + 0.658vw, 0.5rem);
+}
+
+.card-info-item img{
+    width: auto;
+    height: clamp(1.5rem, 0.579rem + 1.316vw, 2rem);
+}
+
+.card-info-item span{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+    text-align: center;
+    color: #431C19;
+}
+
+
+/* Estilos de MAIN - PAGE 4 */
+
+.titulo-receta{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.recetas-botones{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #431C19;
+    background-color: #eccfbc;
+}
+
+.recetas-botones a{
+    text-decoration: none;
+    color: #431C19;
+}   
+
+.recetas-caracteristicas{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #431C19;
+    background-color: #F6E9DE;
+}
+
+.recetas-productos{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.recetas-desarrollo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.recetas-desarrollo h4{
+    background-color: #F6E9DE;
+}
+
+.lista-ordenada{
+    list-style-position: inside;
+}
+
+.negrita{
+    font-weight: bold;
+}
+
+.tips h4{
+    background-color: #FFF;
+}
+
+.tips p{
+    background-color: #F6E9DE;
+}
+
+.probaste{
+    text-align: left;
+}
+
+
+/* FOOTER */
+footer {
+    position: relative;
+    background-color: transparent;
+}
+
+/* Footer - Container para posicionar el contenido sobre la imagen */
+.footer-container{
+    position: relative;
+    height: clamp(17.5rem, 12.895rem + 6.579vw, 20rem);
+    overflow: hidden;
+}
+
+/* Footer - Imagen de fondo */
+.footer-container > img { 
+    display: block;
+    width: 100vw;
+    height: auto;
+}
+
+/* Footer - Grilla sobre la imagen */
+.footer-grid-wrapper {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(10%);
+    inset: 0;
+    background-color: brown;
+
+}
+
+.footer-grid-interna {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    width: 100%;
+    align-items: start; 
+    background-color: cadetblue ;
+}
+
+/* Footer - Logos */
+.footer-logos {
+    display: flex;
+    grid-column: 1 / span 3;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    align-items: end;
+    justify-content: flex-start;
+    background-color: darkorange;
+}
+
+.footer-logos a{
+    width: 45%;
+    padding: 0;
+}
+
+.footer-logo-benot {
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+}
+
+.footer-logo-sin-gluten {
+    width: 18%;
+    height: auto;
+    background-color: gold;
+}
+
+
+/* Footer - Menús */
+.footer-menu {
+    display: flex;
+    grid-column: 4 / span 4;
+    gap: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem);
+    margin: 0;
+    background-color: aqua;
+}
+
+.footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu a{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+    line-height: 1.5em;
+    color: #431C19;   
+    cursor: pointer;
+}
+
+.footer-menu a:hover {
+    color: #FFF;
+}
+
+/* Footer - Contacto */
+.footer-contacto {
+    grid-column: 9 / span 4;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.35rem, 0.166rem + 0.263vw, 0.45rem);
+    text-align: left;
+    background-color: blueviolet;
+}
+
+.footer-contacto-datos {
+    display: flex;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    align-items: center;
+    background-color: transparent;
+}
+
+.footer-contacto-datos span {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+    line-height: 1.5em;
+    color: #431C19;
+    padding: 0 clamp(0.22rem, 0.109rem + 0.158vw, 0.28rem);
+}
+
+.footer-contacto-datos a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+    line-height: 1.5em;
+    color: #431C19;
+    cursor: pointer;
+}
+
+.footer-contacto-datos a:hover {
+    color: #FFF;
+}
+
+.footer-contacto-redes {
+    display: flex;
+    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+}
+
+.footer-contacto-iconos {
+    display: flex;
+    gap: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+}
+
+.footer-contacto-redes img {
+    display: flex;
+    width: clamp(1.375rem, 0.914rem + 0.658vw, 1.625rem);
+    height: auto;
+}
+
+/* Footer - Botón para subir */
+.footer-boton {
+    position: absolute;
+    top: clamp(17.5rem, 12.895rem + 6.579vw, 20rem);
+    /* bottom: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem);
+    bottom: clamp(1.375rem, 0.914rem + 0.658vw, 1.625rem);*/
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.footer-boton img{
+    width: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem);
+    height: auto;
+}
+
+/* Footer - Pie */
+.footer-pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem) 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* DESKTOP (1120px en adelante) */
+@media (min-width: 1120px) {
+    .grid-externa,
+    .grid-interna {
+      grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+
+/* TABLET (820px a 1119px) */
+@media (min-width: 820px) and (max-width: 1119px) {
+    /* General */
+    .grid-externa,
+    .grid-interna {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .banner-text h1 {
+        font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    }
+
+    /* Header */
+    .header-1 {
+        padding: clamp(0.5rem, 0.226rem + 0.535vw, 0.6rem) 0;
+    }
+
+    .grid-header-2 {
+        padding-top: clamp(0.9rem, 0.626rem + 0.535vw, 1rem);
+        gap: clamp(1.4rem, 1.126rem + 0.535vw, 1.5rem);
+    }
+
+    .header-logos {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+        gap: clamp(0.9rem, 0.626rem + 0.535vw, 1rem);
+    }
+
+    .header-logos a{
+        width: 45%;
+    }
+
+    .header-logo-sin-gluten {
+        width: 18%;
+    }
+
+    .search-bar {
+        grid-column: 5 / span 4;
+        grid-row: 1;
+    }
+
+    .navbar {
+        grid-column: 1 / span 8;
+        grid-row: 2;
+    }
+
+    .nav-list li {
+        padding: clamp(0.35rem, 0.213rem + 0.268vw, 0.4rem) 0;
+    }
+
+    .nav-list {
+        gap: clamp(0.45rem, 0.313rem + 0.268vw, 0.5rem);
+    }
+    
+    .banner-text h1 {
+        font-size: clamp(1.3rem, 1.026rem + 0.535vw, 1.4rem);
+        text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.6);
+    }
+    
+
+    /* Main */
+    .grilla-recetas-cortas{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-receta-corta-puntuacion{
+        width: clamp(3.3rem, 6.7vw, 6rem);
+        height: clamp(3.3rem, 6.7vw, 6rem);
+    }
+
+    .grilla-recetas-largas{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-receta-larga-top-salada{
+        height: clamp(3.5rem, 0.758rem + 5.351vw, 4.5rem);
+    }
+
+    .card-receta-larga-top-salada span,
+    .card-receta-larga-top-salada h6{
+        font-size: clamp(1rem, 0.452rem + 1.07vw, 1.2rem);
+    }
+
+    .card-receta-larga-bottom-items{
+        padding-top: clamp(3rem, -1.114rem + 8.027vw, 4.5rem);
+        gap: clamp(0.8rem, -5.233rem + 11.773vw, 3rem);
+    }
+    
+    .card-info-item {
+        gap: clamp(0.25rem, -0.436rem + 1.338vw, 0.5rem);
+    }
+
+
+    .card-info-item img{
+        height: clamp(1.5rem, 0.129rem + 2.676vw, 2rem);
+     }
+     
+     .card-info-item span{
+         font-size: clamp(0.875rem, 0.532rem + 0.669vw, 1rem);
+     }
+
+
+    /* Footer */
+
+    .footer-container{
+         /*height: clamp(17.5rem, 10.644rem + 13.378vw, 20rem);*/
+        height: clamp(16rem, 10.515rem + 10.702vw, 18rem);
+    }
+
+    .footer-grid-wrapper {
+        transform: translateY(7%);
+    }
+    
+    .footer-grid-interna {
+        gap: clamp(1.2rem, 0.926rem + 0.535vw, 1.3rem);
+
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        grid-column: 3 / span 3;
+        gap: 0;
+        align-items: flex-start;
+    }
+
+    .footer-menu a{
+        font-size: clamp(0.9rem, 0.626rem + 0.535vw, 1rem);
+    }
+
+    .footer-logos {
+        grid-column: 1 / span 2;
+        gap: clamp(0.9rem, 0.626rem + 0.535vw, 1rem);
+    }
+
+    .footer-contacto {
+        grid-column: 6 / span 3;
+        gap: clamp(0.35rem, 0.076rem + 0.535vw, 0.45rem);
+    }
+
+    .footer-contacto p{
+        font-size: clamp(0.9rem, 0.626rem + 0.535vw, 1rem); 
+    }
+
+    .footer-contacto-datos{
+        gap: clamp(0.9rem, 0.626rem + 0.535vw, 1rem);
+    }
+
+    .footer-contacto-datos p{
+        font-size: clamp(0.9rem, 0.626rem + 0.535vw, 1rem);
+    }
+
+    .footer-contacto-datos span{
+        font-size: clamp(0.9rem, 0.626rem + 0.535vw, 1rem);
+        padding: clamp(0.22rem, 0.055rem + 0.321vw, 0.28rem);
+    }
+
+    .footer-contacto-datos a{
+        font-size: clamp(0.9rem, 0.626rem + 0.535vw, 1rem);
+    }
+
+    .footer-contacto-redes {
+        gap: clamp(0.9rem, 0.626rem + 0.535vw, 1rem);
+    }
+
+    .footer-contacto-redes img {
+        width: clamp(1.375rem, 1.032rem + 0.669vw, 1.5rem);
+    }
+
+    .footer-contacto-iconos {
+        gap: clamp(0.75rem, 0.407rem + 0.669vw, 0.875rem);
+    }
+
+    .footer-boton {
+        top: clamp(16rem, 10.515rem + 10.702vw, 18rem);
+    }
+    
+    .footer-boton img{
+        width: clamp(1.8rem, 1.252rem + 1.07vw, 2rem);
+    }
+
+    .footer-pie {
+        padding: clamp(0.4rem, 0.126rem + 0.535vw, 0.5rem);
+        font-size: clamp(0.7rem, 0.426rem + 0.535vw, 0.8rem);
+    }    
+}
+
+
+/* MOBILE */
+@media (min-width: 360px) and (max-width: 819px) {
+
+
+    .grid-externa {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 3vw;
+
+    }
+
+    .grid-interna {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    body {
+        font-size: 0.8rem;
+    }
+
+
+    /* Header */
+    .grid-header-2 {
+        display: flex;
+        flex-direction: column;
+        background-color: brown;
+    }
+
+    .navbar {
+        display: flex;
+        grid-column: 1 / -1;
+        flex-direction: column;
+        background-color: burlywood;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 0rem;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-list li a{
+        font-size: 0.4rem;
+    }
+
+
+    /* Main Page 1 */
+    .dropdown {
+        grid-column: 2 / span 1;
+        justify-self: end;
+        width: 100%;
+        background-color: transparent;
+        position: relative; 
+        background-color: #74B735;
+    }
+    
+    .dropdown-recetas-btn {
+        grid-column: 2 / span 1;
+        font-size: 14px;
+        text-align: left;
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+    }
+    
+    .dropdown-recetas-btn::after {
+        display: inline-block;
+        margin-left: 1rem;
+    }
+
+    .grilla-recetas-cortas{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column: 1 / span 2;
+        gap: 2rem 1rem;
+        background-color: aqua;
+    }
+
+
+    /* Footer */
+ /*
+    .footer-container{
+        height: 10.4rem;
+        background-color: blueviolet;
+    }
+
+    .footer-grid-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+
+        background-color: #74B735;
+    }
+
+
+    .footer-grid-interna {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column: 1 / span 2;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+
+        background-color: coral;
+
+    }
+
+    .footer-logos {
+        grid-column: 1 / span 1;
+        grid-row: 1;
+
+    }
+
+    .footer-menu {
+        grid-column: 1 / span 1;
+        grid-row: 2;
+        background-color: chocolate;
+    }
+
+    .footer-contacto {
+        grid-column: 2 / span 1;
+        grid-row: 1;
+
+    }
+
+    .footer-pie {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 0;
+        gap: 0;
+        font-size: 0.7rem;
+        background-color: deepskyblue;
+    }*/
+
+
+
+    .footer-container{
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-container img{
+
+    }
+
+    .footer-grid-wrapper > .grid-externa {
+        width: auto;
+        margin: 0 3vw !important;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        box-sizing: border-box;
+      }
+
+    .footer-grid-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        grid-column: 1 / span 2;
+        width: 100vw;
+        margin: 0;
+        padding: 1rem 0;
+        gap: 1rem;
+
+
+    }
+
+    .footer-grid-interna{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100vw;
+        margin: 0;
+    }
+
+    .footer-logos{
+        display: flex;
+        flex-direction: row;
+        grid-column: 1 / span 1;
+        grid-row: 1;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-menu{
+        display: flex;
+        grid-column: 1 / span 1;
+        grid-row: 2;
+        flex-direction: column;
+        gap: 0.5rem;
+
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        gap: 0.25rem;
+
+      }
+
+    .footer-contacto{
+        display: flex;
+        flex-direction: column;
+        grid-column: 2 / span 1;
+        grid-row: 1;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+    .footer-contacto-redes {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    
+      .footer-contacto-iconos {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+    .footer-boton{
+
+    }
+
+    .footer-pie{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 0;
+        gap: 0;
+        font-size: 0.7rem;
+
+    }
+
+
+
+}
+  
