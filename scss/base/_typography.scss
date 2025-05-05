@@ -1,55 +1,61 @@
 
 // H1 - H6
-h1 {
+@mixin h1($align: left, $color: $color-marron-oscuro) {
     font-family: $fuente-principal;
     font-weight: normal;
     font-size: $h1-size;
     line-height: $h-line-height;
-    text-align: left;
+    text-align: $align;
+    color: $color;
 }
 
-h2{
+@mixin h2($align: center, $color: $color-marron-oscuro) {
     font-family: $fuente-principal;
     font-weight: normal;
     font-size: $h2-size;
-    text-align: center;
+    text-align: $align;
+    color: $color;
 }
 
-h3{
+@mixin h3($align: left) {
     font-family: $fuente-secundaria;
     font-weight: 400;
     font-size: $h3-size;
-    text-align: left;
+    text-align: $align;
 }
 
-h4{
+@mixin h4($align: center) {
     font-family: $fuente-secundaria;
     font-weight: 400;
     font-size: $h4-size;
-    text-align: center;
-}
+    text-align: $align;
+  }
 
-h5{
+@mixin h5($align: center) {
     font-family: $fuente-principal;
     font-weight: normal;
     font-size: $h5-size;
     line-height: 3rem;
-    text-align: center;
     text-transform: uppercase;
+    text-align: $align;
 }
 
-h6 {
+@mixin h6($align: center, $color: $color-marron-oscuro) {
     font-family: $fuente-principal;
     font-weight: normal;
     font-size: $h6-size;
     line-height: $h-line-height;
+    text-align: $align;
+    color: $color;
 }
 
+
 // Textos del body
-body {
+@mixin body-texto($align: left, $lh: $body-line-height) {
     font-family: $fuente-secundaria;
     font-weight: 400;
     font-size: $body-font-size;
-    line-height: $body-line-height;
-    color: $color-marron-oscuro;   
-}
+    line-height: $lh;
+    text-align: $align;
+    color: $color-marron-oscuro;
+  }

@@ -30,7 +30,110 @@
 }
 
 
-/* Recetas */
+//Home
+@mixin label-home-style {
+    @include flexbox(center, center);
+    margin: 0;
+    border-radius: $border-radius;
+    background-color: $color-marron-claro;
+    @include h4(left);
+    color: $color-marron-oscuro;
+    white-space: normal;
+}
+
+@mixin boton-benot {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: clamp(9.5rem, 7.658rem + 2.632vw, 10.5rem);
+    height: clamp(2rem, 1.079rem + 1.316vw, 2.5rem);
+    padding: 0;
+    white-space: nowrap;
+    border-radius: $border-radius; 
+    font-family: $fuente-secundaria;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+    text-align: center;
+    color: $color-marron-oscuro;
+    background-color: $color-blanco;
+    border: $border-solido-marron;
+
+    &:hover {
+        color: $color-blanco;
+        background-color: $color-marron-oscuro;
+        border: none;
+    }
+}
+
+
+// Dropdown recetas 
+@mixin dropdown-recetas {
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+  
+    & .dropdown-recetas-btn {
+      width: 100%;
+      font-family: $fuente-secundaria;
+      font-weight: 400;
+      font-size: $body-font-size;
+      text-align: left;
+      padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem)
+               clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
+      color: $color-marron-oscuro;
+      border: $border-solido-marron;
+      border-radius: $border-radius;
+  
+      &::after {
+        display: inline-block;
+        margin-left: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem);
+        vertical-align: middle;
+        content: "";
+        border-top: 0.4em solid $color-marron-oscuro;
+        border-right: 0.4em solid transparent;
+        border-left: 0.4em solid transparent;
+      }
+  
+      &:hover,
+      &:focus {
+        background-color: $color-marron-claro;
+        color: $color-marron-oscuro;
+      }
+    }
+  
+    & .dropdown-recetas-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      border-radius: $border-radius;
+      border: 1px solid $color-marron-medio;
+      text-align: left;
+      background-color: $color-blanco;
+  
+      & .dropdown-item {
+        display: block;
+        width: 100%;
+        font-family: $fuente-secundaria;
+        font-weight: 400;
+        font-size: $body-font-size;
+        color: $color-marron-medio;
+        padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem)
+                 clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
+        text-decoration: none;
+  
+        &:hover,
+        &:focus {
+          background-color: $color-marron-claro;
+          color: $color-marron-oscuro;
+        }
+      }
+    }
+}  
+  
+
+//Recetas
 @mixin card-receta{
     @include flexbox(center, center);
     flex-direction: column;
@@ -68,7 +171,7 @@
     border-left: none;
     padding: 0 clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
     font-family: $fuente-principal;
-    font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
+    font-size: $h6-size;
     color: $text-color;
     text-align: center;
     word-break: break-word;
@@ -76,7 +179,7 @@
 }
 
 
-/* Recetas cortas */
+// Recetas cortas
 @mixin grilla-recetas-cortas {
     @include grid_4;
     grid-column: 1 / span 12;
@@ -100,7 +203,7 @@
 }
 
 
-/* Recetas largas */
+// Recetas largas
 @mixin grilla-recetas-largas {
     @include grid_3;
     grid-column: 2 / span 10;
