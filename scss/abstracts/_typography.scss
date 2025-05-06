@@ -1,3 +1,4 @@
+@use "variables" as *;
 
 // H1 - H6
 @mixin h1($align: left, $color: $color-marron-oscuro) {

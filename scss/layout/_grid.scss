@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 // Contenedor principal con márgenes laterales
 .grid-externa {
     display: grid;

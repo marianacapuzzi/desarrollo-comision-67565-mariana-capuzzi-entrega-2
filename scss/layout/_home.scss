@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 // MAIN -Bloque 1
 .bloque1 {
     display: grid;
@@ -19,12 +21,8 @@
             aspect-ratio: 341 / 420;
 
             img {
-                display: block;
-                width: 100%;
-                height: 100%;
+                @include img-config($width: 100%, $height: 100%, $object-fit: cover);
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 65%, 38% 65%, 38% 35%, 0 35%);
-                border-radius: $border-radius;
-                object-fit: cover;
                 overflow: hidden;
             }
     
@@ -67,12 +65,8 @@
         margin-bottom: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
 
         img {
-            display: block;
-            width: 100%;
-            height: auto;
+            @include img-config($width: 100%, $height: auto, $object-fit: cover);
             aspect-ratio: 630 / 430;
-            object-fit: cover;
-            border-radius: $border-radius;
         }
 
         .subbloque1-info {
@@ -121,12 +115,9 @@
                 position: relative;
     
                 img {
-                    display: block;
+                    @include img-config($width: 100%, $height: auto, $object-fit: cover);
                     grid-column: 1 / span 5;
-                    width: 100%;
                     aspect-ratio: 522 / 400;
-                    object-fit: cover;
-                    border-radius: $border-radius;
                 }
     
                 &.top-card-a {
@@ -187,21 +178,15 @@
       
         .subbloque3-card-a {
             img {
+                @include img-config($width: 100%, $height: auto, $object-fit: cover);
                 aspect-ratio: 4 / 3;
-                border-radius: $border-radius;
-                width: 100%;
-                height: auto;
-                object-fit: cover;
             }
         }
 
         .subbloque3-card-c {
             img {
+                @include img-config($width: 100%, $height: auto, $object-fit: cover);
                 aspect-ratio: 5 / 3;
-                border-radius: $border-radius;
-                width: 100%;
-                height: auto;
-                object-fit: cover;
             }
         }
       
@@ -211,11 +196,8 @@
             gap: clamp(0.5rem, 0.039rem + 0.658vw, 0.75rem);
 
             img {
+                @include img-config($width: 100%, $height: auto, $object-fit: cover);
                 aspect-ratio: 1 / 1;
-                border-radius: $border-radius;
-                width: 100%;
-                height: auto;
-                object-fit: cover;
             }
 
             .bloque2-btn {
@@ -268,10 +250,7 @@
             }
 
             img {
-                display: block;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+                @include img-config($width: 100%, $height: 100%, $object-fit: cover);
             }
 
             .bloque3-container-info {
@@ -323,11 +302,8 @@
         overflow: hidden;
 
         img {
-            display: block;
+            @include img-config($width: 100%, $height: auto, $object-fit: cover);
             clip-path: polygon(0 0, 100% 0, 100% 93.5%, 50.4% 93.5%, 50.4% 100%, 0 100%);
-            width: 100%;
-            height: auto;
-            object-fit: cover;
         }
 
         .bloque4-container-info {

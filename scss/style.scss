@@ -1,17 +1,14 @@
-@import "abstracts/variables";
-@import "abstracts/listas";
-@import "abstracts/mixins";
+@use "abstracts" as *;
 
-@import "base/fonts"; 
-@import "base/base"; 
-@import "base/reset";
-@import "base/typography";
+@use "base/fonts" as *; 
+@use "base/base" as *; 
+@use "base/reset" as *;
 
-@import "layout/grid";
-@import "layout/header";
-@import "layout/home";
-@import "layout/recetas";
-@import "layout/footer";
+@use "layout/grid" as *;
+@use "layout/header" as *;
+@use "layout/home" as *;
+@use "layout/recetas" as *;
+@use "layout/footer" as *;
 
-@import "components/buttons";
-@import "components/cards";
+@use "components/buttons" as *;
+@use "components/cards" as *;

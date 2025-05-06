@@ -38,356 +38,189 @@ header {
 /* Estilos de MAIN - INDEX - Bloque 1 */
 
 .bloque1{
-    display: grid;
-    grid-column: 2 / span 10;
-    margin: clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0 clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+
 } 
 
 .bloque1 h2{
-    background-color: crimson;
+
 } 
 
 .bloque1-container-cards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+
     /* el clamp del gap: 1.25rem es el que está acá arriba */
 } 
 
 .bloque1-card {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 341 / 420;
 }
 
 .bloque1-card img {
-    display: block;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 65%, 38% 65%, 38% 35%, 0 35%);
-    width: 100%;
-    height: 100%;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    /* el clamp del border-radius: 0.75rem es el que está acá arriba */
-    overflow: hidden;
-    object-fit: cover;
 }
 
 .bloque1-label {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 35%;
-    height: 26%;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    padding: 0 clamp(0.8rem, 0.063rem + 1.053vw, 1.2rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    background-color: #F6E9DE;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: clamp(1rem, 0.079rem + 1.316vw, 1.5rem);
-    line-height: 1.3em;
-    white-space: normal;
-    text-align: left;
-    color: #431C19;
+
 }
 
 .bloque1-label:hover {
-    color: #F6E9DE;
-    background-color: #431C19;
+
 }
 
 
 /* Estilos de MAIN - INDEX - Bloque 2 */
 .bloque2 {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column: 1 / span 12;
-    margin: 0 0 clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
-    background-color: gold;
+
 } 
 
 .bloque2 h2{
-    grid-column: 1 / span 12;
-    background-color: #74B735;
+
+
 } 
 
 /* Subbloque 1 */
 .bloque2 .subbloque1-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column: 1 / span 12;
-    align-items: stretch;
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);  
-    margin-bottom: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
-    background-color: #74B735;
 }
 
 .bloque2 .subbloque1-container img{
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 630 / 430;
-    object-fit: cover;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+
 }
 
 .bloque2 .subbloque1-info{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
-    background-color: brown;
+
 }
 
 .label-texto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 31.5%;
-    height: 16.7%;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    margin: 0;
-    color: #431C19;
-    background-color: #F6E9DE;
 }
 
 .bloque2 .subbloque1-info p{
-    width: 100%;
-    margin: 0;
-    text-align: left;
-    background-color: #FFF;
+
 } 
 
 .subbloque1-info .bloque2-btn {
-    align-self: flex-start;
+
 }
 
 
 /* Subbloque 2 */
 .bloque2 .subbloque2-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column: 2 / span 10;
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);   
-    margin-bottom: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
-    background-color: brown;
+
 }
 
 .subbloque2-card {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+
 }
 
 .top-card-a,
 .top-card-b {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    align-items: stretch;
-    position: relative;
+
 }
 
 .top-card-a img,
 .top-card-b img{
-    display: block;
-    grid-column: 1 / span 5;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    width: 100%;
-    aspect-ratio: 522 / 400;
-    object-fit: cover;
+
 }
 
 .top-card-a img{
-    clip-path: polygon(0 0, 61% 0, 61% 21%, 100% 21%, 100% 100%, 0 100%);
+
 }
 
 .top-card-b img{
-    clip-path: polygon(0 0, 100% 0, 100% 79%, 61% 79%, 61% 100%, 0 100%);
+
 }
 
 .top-card-a .label-img,
 .top-card-b .label-img{
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    width: 37%;
-    height: 18%;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    margin: 0;
-    color: #431C19;
-    background-color: #F6E9DE;
-    z-index: 2;
+
+
 }
 
 .top-card-a .label-img{
-    align-self: start;
-    right: 0;
+
 }
 
 .top-card-b .label-img{
-    align-self: end;
-    right: 0;
+
 }
 
 .subbloque2-card p{
-    text-align: left;
-    margin: 0;
+
 }
 
 .subbloque2-card .bloque2-btn {
-    align-self: flex-start;
+
 }
 
 
 /* Subbloque 3 */
 .bloque2 .subbloque3-container {
-    display: grid;
-    grid-template-columns: 4fr 3fr 5fr;
-    grid-column: 1 / span 12;
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
-    background-color: blueviolet;
+
 }
 
 .subbloque3-card-a,
 .subbloque3-card-c {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: clamp(0.5rem, 0.039rem + 0.658vw, 0.75rem);
+
 }
 
 .subbloque3-card-b {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: clamp(0.5rem, 0.039rem + 0.658vw, 0.75rem);
+
 }
 
 .subbloque3-card-a img{
-    aspect-ratio: 4 / 3;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+
 }
 
 .subbloque3-card-b img{
-    aspect-ratio: 1 / 1;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+
 }
 
 .subbloque3-card-c img{
-    aspect-ratio: 5 / 3;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+
 }
 
 .subbloque3-card-a span,
 .subbloque3-card-b span,
 .subbloque3-card-c span{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    height: clamp(2.5rem, 0.658rem + 2.632vw, 3.5rem);
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    padding: 0 0 0 clamp(1.75rem, 0.829rem + 1.316vw, 2.25rem);
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
-    color: #431C19;   
-    text-align: left;
-    background-color: #F6E9DE;
+
+
 }
 
 .subbloque3-card-b .bloque2-btn {
-    align-self: center;
+
 }
 
 
 /* Estilos de MAIN - INDEX - Bloque 3 */
 .bloque3{
-    display: grid;
-    grid-column: 2 / span 10;
-    margin: 0 0 clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
+
 } 
 
 .bloque3-container-cards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+   
 } 
 
 .bloque3-card{
-    position: relative;
-    width: 100%;
-    aspect-ratio: 522 / 420;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    overflow: hidden;
+
 } 
 
 .bloque3-card::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(to top, rgba(67, 28, 25, 1), transparent);
-    z-index: 1;
+ 
 }
 
 .bloque3-card img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
 } 
 
 .bloque3-container-info{
-    position: absolute;
-    display: grid;
-    grid-template-rows: auto auto;
-    bottom: 0;
-    width: 100%;
-    justify-items: center;
-    gap: clamp(1rem, 0.539rem + 0.658vw, 1.25rem);
-    padding: 0 clamp(1rem, 0.539rem + 0.658vw, 1.25rem) clamp(1rem, 0.539rem + 0.658vw, 1.25rem) clamp(1rem, 0.539rem + 0.658vw, 1.25rem);
-    z-index: 2;
+
 } 
 
 .bloque3-container-info h2{
-    text-align: center;
-    color: #FFF;
+ 
 } 
 
-.bloque3-texto-boton{
-    display: flex;
-    flex-direction: row;
-    align-items: end;
-    gap: clamp(1rem, 0.539rem + 0.658vw, 1.25rem);
-    padding: 0;
+.bloque3-info-bottom{
 } 
 
 .bloque3-texto-boton p{
-    text-align: left;
-    margin: 0;
-    color: #FFF;
+ 
 } 
 
 .btn-benot {
@@ -417,54 +250,34 @@ header {
 
 /* Estilos de MAIN - INDEX - Bloque 4 */
 .bloque4{
-    display: grid;
-    grid-column: 1 / span 12;
-    margin: 0 0 clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
+
 } 
 
 .bloque4-wrapper {
-    position: relative;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    overflow: hidden;
+
 }
 
 .bloque4-wrapper img{
-    display: block;
-    clip-path: polygon(0 0, 100% 0, 100% 93.5%, 50.4% 93.5%, 50.4% 100%, 0 100%);
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+   
 } 
 
 .bloque4-container-info{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40%;
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
-    padding: clamp(2rem, 1.079rem + 1.316vw, 2.5rem) clamp(2rem, 1.079rem + 1.316vw, 2.5rem) 0 0;
-    background-color: #74B735;
+  
 }
 
 .bloque4-container-info h2{
     text-align: center;
     margin: 0;
     color: #FFF;
-    background-color: darkorange;
+
 }
 
 .bloque4-container-info p{
-    text-align: left;
-    margin: 0;
-    color: #FFF;
+
 }
 
 .bloque4-btn {
-    position: absolute;
-    bottom: 0;
-    left: 51%;
+
 }
 
 
@@ -542,261 +355,59 @@ header {
 
 
 /* Main PAGE 1 - Cards cortas */
-.grilla-recetas-cortas{
-    display: grid;
-    grid-column: 1 / span 12;
-    grid-template-columns: repeat(4, 1fr);
-    gap: clamp(3.5rem, 2.579rem + 1.316vw, 4rem) clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
-    margin: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem) 0 clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
-}
 
-.card-receta-corta{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: clamp(0.5rem, 0.039rem + 0.658vw, 0.75rem);
-    background-color: gold;
-}
-
-.card-receta-corta-top-dulce, 
-.card-receta-corta-top-salada {
-    display: flex;
-    width: 100%;
-    height: clamp(3.5rem, 1.658rem + 2.632vw, 4.5rem);
-    gap: 0;
-}
-  
-.card-receta-corta-top-dulce span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 13%;
-    margin: 0;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem); 
-    border: 1px solid #431C19;
-    border-right: none;
-    font-family: 'Belfast', serif;
-    font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
-    color: #fff;
-    text-align: center;
-    background-color: #431C19;
-}
-  
-.card-receta-corta-top-dulce h6 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 87%;
-    margin: 0;
-    border-radius: 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem) clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0;
-    border: 1px solid #431C19;
-    border-left: none;
-    padding: 0 clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
-    text-align: center;
-    word-break: break-word;
-    color: #431C19;
-    background-color: #FFF;
-}
-
-.card-receta-corta-top-salada span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 13%;
-    margin: 0;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem); 
-    border: 1px solid #ECCFBC;
-    border-right: none;
-    font-family: 'Belfast', serif;
-    font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
-    color: #431C19;
-    text-align: center;
-    background-color: #ECCFBC;
-}
-
-.card-receta-corta-top-salada h6 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 87%;
-    margin: 0;
-    border-radius: 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem) clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0;
-    border: 1px solid #ECCFBC;
-    border-left: none;
-    padding: 0 clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
-    text-align: center;
-    word-break: break-word;
-    color: #431C19;
-    background-color: #FFF;
-}
-
-.card-receta-corta-bottom{
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    aspect-ratio: 305 / 250;
-}
-
-.card-receta-corta-bottom-imagen img{
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-.card-receta-corta-bottom-puntuacion{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    font-family: 'Lato', sans-serif;
-    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
-    width: clamp(3.5rem, -4.789rem + 11.842vw, 8rem);
-    height: clamp(3.5rem, -4.789rem + 11.842vw, 8rem);
-    gap: clamp(0.22rem, 0.109rem + 0.158vw, 0.28rem);
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    background-color: #F6E9DE;    
-}
-
-.card-receta-corta-bottom-puntuacion img{
-    width: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);    
-}
 
 
 /* Estilos de MAIN - PAGE 2 y PAGE 3 */
 .grilla-recetas-largas{
-    display: grid;
-    grid-column: 2 / span 10;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(3.5rem, 2.579rem + 1.316vw, 4rem) clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
-    margin: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem) 0 clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
-    background-color: brown;
 }
 
 .grilla-recetas-largas:nth-child(1){
-    margin: 0;
+
 }
 .grilla-recetas-largas:nth-child(1) .dropdown{
-    grid-column: 3 / span 1;
-    background-color: cornflowerblue;
+
 }
 
 .card-receta-larga{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: clamp(0.5rem, 0.039rem + 0.658vw, 0.75rem);
-    background-color: gold;
 }
 
 .card-receta-larga-top-salada{
-    display: flex;
-    width: 100%;
-    height: clamp(3.5rem, 1.658rem + 2.632vw, 4.5rem);
-    gap: 0;
+
 }
 
 .card-receta-larga-top-salada span{
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    width: 13%;
-    margin: 0;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem); 
-    border: 1px solid #ECCFBC;
-    border-right: none;
-    font-family: 'Belfast', serif;
-    font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
-    color: #431C19;
-    text-align: center;
-    background-color: #ECCFBC;
+
 }
 
 .card-receta-larga-top-salada h6{
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    width: 87%;
-    margin: 0;
-    border-radius: 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem) clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0;
-    border: 1px solid #ECCFBC;
-    border-left: none;
-    padding: 0 clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
-    text-align: center;
-    word-break: break-word;
-    color: #431C19;
-    background-color: #FFF;
+
 }
 
 .card-receta-larga-bottom{
-    position: relative;
-    width: 100%;
-    aspect-ratio: 341 / 480;
 }
 
 .card-receta-larga-bottom-imagen img{
-    display: block;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 85%, 75% 100%, 0 100%);
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+ 
 }
 
 .icono-favorito{
-    position: absolute;
-    top: 73%;
-    left: 89%;
-    transform: translate(-50%);
-    width: 12%;
-    height: auto;
-    z-index: 10;
 }
 
 .card-receta-larga-bottom-items{
-    position: absolute;
-    clip-path: polygon(0 37%, 78% 37%,78% 0, 100% 0, 100% 100%, 0 100%);
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 31%;
-    background-color: #FDF1E9;
-    padding-top: clamp(3rem, 0.237rem + 3.947vw, 4.5rem);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(0.8rem, -3.253rem + 5.789vw, 3rem);
+
 }
 
 .card-info-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: clamp(0.25rem, -0.211rem + 0.658vw, 0.5rem);
+
 }
 
 .card-info-item img{
-    width: auto;
-    height: clamp(1.5rem, 0.579rem + 1.316vw, 2rem);
+
 }
 
 .card-info-item span{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
-    text-align: center;
-    color: #431C19;
+
 }
 
 
@@ -870,185 +481,16 @@ header {
 
 
 /* FOOTER */
-footer {
-    position: relative;
-    background-color: transparent;
-}
 
-/* Footer - Container para posicionar el contenido sobre la imagen */
-.footer-container{
-    position: relative;
-    height: clamp(17.5rem, 12.895rem + 6.579vw, 20rem);
-    overflow: hidden;
-}
-
-/* Footer - Imagen de fondo */
-.footer-container > img { 
-    display: block;
-    width: 100vw;
-    height: auto;
-}
-
-/* Footer - Grilla sobre la imagen */
-.footer-grid-wrapper {
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(10%);
-    inset: 0;
-    background-color: brown;
-
-}
-
-.footer-grid-interna {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
-    width: 100%;
-    align-items: start; 
-    background-color: cadetblue ;
-}
-
-/* Footer - Logos */
-.footer-logos {
-    display: flex;
-    grid-column: 1 / span 3;
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
-    align-items: end;
-    justify-content: flex-start;
-    background-color: darkorange;
-}
-
-.footer-logos a{
-    width: 45%;
-    padding: 0;
-}
-
-.footer-logo-benot {
-    width: 100%;
-    height: auto;
-    background-color: aqua;
-}
-
-.footer-logo-sin-gluten {
-    width: 18%;
-    height: auto;
-    background-color: gold;
-}
-
-
-/* Footer - Menús */
-.footer-menu {
-    display: flex;
-    grid-column: 4 / span 4;
-    gap: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem);
-    margin: 0;
-    background-color: aqua;
-}
-
-.footer-menu ul {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-menu a{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
-    line-height: 1.5em;
-    color: #431C19;   
-    cursor: pointer;
-}
-
-.footer-menu a:hover {
-    color: #FFF;
-}
-
-/* Footer - Contacto */
-.footer-contacto {
-    grid-column: 9 / span 4;
-    display: flex;
-    flex-direction: column;
-    gap: clamp(0.35rem, 0.166rem + 0.263vw, 0.45rem);
-    text-align: left;
-    background-color: blueviolet;
-}
-
-.footer-contacto-datos {
-    display: flex;
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
-    align-items: center;
-    background-color: transparent;
-}
-
-.footer-contacto-datos span {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
-    line-height: 1.5em;
-    color: #431C19;
-    padding: 0 clamp(0.22rem, 0.109rem + 0.158vw, 0.28rem);
-}
-
-.footer-contacto-datos a {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
-    line-height: 1.5em;
-    color: #431C19;
-    cursor: pointer;
-}
-
-.footer-contacto-datos a:hover {
-    color: #FFF;
-}
-
-.footer-contacto-redes {
-    display: flex;
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
-}
-
-.footer-contacto-iconos {
-    display: flex;
-    gap: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-}
-
-.footer-contacto-redes img {
-    display: flex;
-    width: clamp(1.375rem, 0.914rem + 0.658vw, 1.625rem);
-    height: auto;
-}
 
 /* Footer - Botón para subir */
 .footer-boton {
-    position: absolute;
-    top: clamp(17.5rem, 12.895rem + 6.579vw, 20rem);
+
     /* bottom: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem);
     bottom: clamp(1.375rem, 0.914rem + 0.658vw, 1.625rem);*/
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 10;
-    cursor: pointer;
+
 }
 
-.footer-boton img{
-    width: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem);
-    height: auto;
-}
-
-/* Footer - Pie */
-.footer-pie {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem) 0;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
-}
 
 
 

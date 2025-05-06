@@ -288,9 +288,9 @@ li {
   display: block;
   width: 100%;
   height: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 65%, 38% 65%, 38% 35%, 0 35%);
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
   object-fit: cover;
+  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 65%, 38% 65%, 38% 35%, 0 35%);
   overflow: hidden;
 }
 .bloque1-container-cards .bloque1-card .bloque1-label {
@@ -346,9 +346,9 @@ li {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 630/430;
   object-fit: cover;
   border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  aspect-ratio: 630/430;
 }
 .bloque2 .subbloque1-container .subbloque1-info {
   display: flex;
@@ -424,11 +424,12 @@ li {
 .bloque2 .subbloque2-container .subbloque2-card .top-card-a img,
 .bloque2 .subbloque2-container .subbloque2-card .top-card-b img {
   display: block;
-  grid-column: 1/span 5;
   width: 100%;
-  aspect-ratio: 522/400;
+  height: auto;
   object-fit: cover;
   border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  grid-column: 1/span 5;
+  aspect-ratio: 522/400;
 }
 .bloque2 .subbloque2-container .subbloque2-card .top-card-a.top-card-a img,
 .bloque2 .subbloque2-container .subbloque2-card .top-card-b.top-card-a img {
@@ -509,18 +510,20 @@ li {
   gap: clamp(0.5rem, 0.039rem + 0.658vw, 0.75rem);
 }
 .bloque2 .subbloque3-container .subbloque3-card-a img {
-  aspect-ratio: 4/3;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  aspect-ratio: 4/3;
 }
 .bloque2 .subbloque3-container .subbloque3-card-c img {
-  aspect-ratio: 5/3;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  aspect-ratio: 5/3;
 }
 .bloque2 .subbloque3-container .subbloque3-card-b {
   display: flex;
@@ -530,11 +533,12 @@ li {
   gap: clamp(0.5rem, 0.039rem + 0.658vw, 0.75rem);
 }
 .bloque2 .subbloque3-container .subbloque3-card-b img {
-  aspect-ratio: 1/1;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  aspect-ratio: 1/1;
 }
 .bloque2 .subbloque3-container .subbloque3-card-b .bloque2-btn {
   display: inline-flex;
@@ -612,6 +616,7 @@ li {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
 }
 .bloque3-container-cards .bloque3-card .bloque3-container-info {
   position: absolute;
@@ -683,10 +688,11 @@ li {
 }
 .bloque4-wrapper img {
   display: block;
-  clip-path: polygon(0 0, 100% 0, 100% 93.5%, 50.4% 93.5%, 50.4% 100%, 0 100%);
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  clip-path: polygon(0 0, 100% 0, 100% 93.5%, 50.4% 93.5%, 50.4% 100%, 0 100%);
 }
 .bloque4-wrapper .bloque4-container-info {
   display: flex;
@@ -742,7 +748,7 @@ li {
   border: none;
 }
 
-/* MAIN - Dropdown recetas */
+/* MAIN - Cards Dropdown Recetas */
 .dropdown {
   grid-column: 10/span 3;
   justify-self: end;
@@ -800,7 +806,7 @@ li {
   color: #431C19;
 }
 
-/* MAIN - Recetas cortas */
+/* MAIN - Cards Recetas cortas */
 .grilla-recetas-cortas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -902,10 +908,11 @@ li {
 }
 
 .card-receta-corta-bottom-imagen img {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
+  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
 }
 
 .card-receta-corta-bottom-puntuacion {
@@ -929,7 +936,7 @@ li {
   width: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
 }
 
-/* MAIN - Recetas largas */
+/* MAIN - Cards Recetas largas */
 .grilla-recetas-largas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1004,11 +1011,11 @@ li {
 
 .card-receta-larga-bottom-imagen img {
   display: block;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 85%, 75% 100%, 0 100%);
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 85%, 75% 100%, 0 100%);
 }
 
 .icono-favorito {
@@ -1058,6 +1065,74 @@ li {
   font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
   text-align: center;
   color: #431C19;
+}
+
+/* MAIN - Receta completa */
+.titulo-receta {
+  font-family: "Belfast", serif;
+  font-size: 2.25rem;
+  line-height: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #431C19;
+}
+
+.recetas-botones {
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #431C19;
+  background-color: #ECCFBC;
+}
+
+.recetas-botones a {
+  text-decoration: none;
+  color: #431C19;
+}
+
+.recetas-caracteristicas {
+  font-family: "Lato", sans-serif;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #431C19;
+  background-color: #F6E9DE;
+}
+
+.recetas-productos {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.recetas-desarrollo {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+.recetas-desarrollo h4 {
+  background-color: #F6E9DE;
+}
+
+.lista-ordenada {
+  list-style-position: inside;
+}
+
+.negrita {
+  font-weight: bold;
+}
+
+.tips h4 {
+  background-color: #FFF;
+}
+
+.tips p {
+  background-color: #F6E9DE;
+}
+
+.probaste {
+  text-align: left;
 }
 
 /* FOOTER */

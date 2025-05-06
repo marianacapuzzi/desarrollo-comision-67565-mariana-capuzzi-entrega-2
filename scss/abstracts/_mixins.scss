@@ -1,3 +1,7 @@
+@use "variables" as *;
+@use "typography" as *;
+
+// Estructuras
 @mixin grid_12 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -30,7 +34,16 @@
 }
 
 
-//Home
+// Img
+@mixin img-config($width: 100%, $height: auto, $object-fit: cover) {
+    display: block;
+    width: $width;
+    height: $height;
+    object-fit: $object-fit;
+    border-radius: $border-radius; 
+}
+
+// Home
 @mixin label-home-style {
     @include flexbox(center, center);
     margin: 0;
