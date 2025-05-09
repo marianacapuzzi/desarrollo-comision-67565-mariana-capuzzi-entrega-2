@@ -1,103 +1,120 @@
 @use "../abstracts" as *;
 
-/* MAIN - Cards Dropdown Recetas */
-.dropdown {
-    grid-column: 10 / span 3;
-    justify-self: end;
+/* MAIN - Cards Recetas cortas */
+.dropdown-recetas-cortas {
     @include dropdown-recetas;
+    grid-column: 4 / span 1;
+    justify-self: end;
+    margin-bottom: clamp(3.5rem, 2.579rem + 1.316vw, 4rem);
 }
 
-
-/* MAIN - Cards Recetas cortas */
 .grilla-recetas-cortas {
     @include grilla-recetas-cortas;
 }
-
+  
 .card-receta-corta {
     @include card-receta;
-}
-
-.card-receta-corta-top-dulce,
-.card-receta-corta-top-salada {
-  @include card-top-wrapper;
+  
+    &-top-dulce {
+        @include card-top-wrapper;
+    
+        span {
+            @include card-top-categoria($color-marron-oscuro, $color-blanco, $color-marron-oscuro);
+        }
+    
+        h6 {
+            @include card-top-titulo($color-marron-oscuro, $color-marron-oscuro, $color-blanco);
+        }
+    }
+  
+    &-top-salada {
+        @include card-top-wrapper;
+    
+        span {
+            @include card-top-categoria($color-marron-medio, $color-marron-oscuro, $color-marron-medio);
+        }
+    
+        h6 {
+            @include card-top-titulo($color-marron-medio, $color-marron-oscuro, $color-blanco);
+        }
+    }
+  
+    &-bottom {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        aspect-ratio: 305 / 250;
+    
+        &-imagen img {
+            @include img-config($width: 100%, $height: 100%, $object-fit: cover);
+        }
+    
+        &-puntuacion {
+            @include card-puntuacion;
+    
+            img {
+                width: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+            }
+        }
+    }
 }
   
-.card-receta-corta-top-dulce span {
-    @include card-top-categoria($color-marron-oscuro, $color-blanco, $color-marron-oscuro);
-}
-  
-.card-receta-corta-top-dulce h6 {
-    @include card-top-titulo($color-marron-oscuro, $color-marron-oscuro, $color-blanco);
-}
-
-.card-receta-corta-top-salada span {
-    @include card-top-categoria($color-marron-medio, $color-marron-oscuro, $color-marron-medio);
-}
-  
-.card-receta-corta-top-salada h6 {
-    @include card-top-titulo($color-marron-medio, $color-marron-oscuro, $color-blanco);
-}
-
-.card-receta-corta-bottom{
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    aspect-ratio: 305 / 250;
-}
-
-.card-receta-corta-bottom-imagen img{
-    @include img-config($width: 100%, $height: 100%, $object-fit: cover);
-}
-
-.card-receta-corta-bottom-puntuacion{
-    @include card-puntuacion;
-}
-
-.card-receta-corta-bottom-puntuacion img{
-    width: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);    
-}
-
 
 /* MAIN - Cards Recetas largas */
+.dropdown-recetas-largas {
+    @include dropdown-recetas;
+    grid-column: 3 / span 1;
+    justify-self: end;
+    margin-bottom: clamp(3.5rem, 2.579rem + 1.316vw, 4rem);
+}
+
 .grilla-recetas-largas {
     @include grilla-recetas-largas;
 }
-
-.grilla-recetas-largas:nth-child(1){
-    margin: 0;
-}
-.grilla-recetas-largas:nth-child(1) .dropdown{
-    grid-column: 3 / span 1;
-}
-
+  
 .card-receta-larga {
     @include card-receta;
-}
-
-.card-receta-larga-top-salada {
-  @include card-top-wrapper;
-}
-
-.card-receta-larga-top-salada span {
-    @include card-top-categoria($color-marron-medio, $color-marron-oscuro, $color-marron-medio);
+  
+    &-top-salada {
+        @include card-top-wrapper;
+  
+        span {
+            @include card-top-categoria($color-marron-medio, $color-marron-oscuro, $color-marron-medio);
+        }
+    
+        h6 {
+            @include card-top-titulo($color-marron-medio, $color-marron-oscuro, $color-blanco);
+        }
+    }
+  
+    &-bottom {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 341 / 480;
+    
+        &-imagen img {
+            @include img-config($width: 100%, $height: auto, $object-fit: cover);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 85%, 75% 100%, 0 100%);
+        }
+    
+        &-items {
+            @include flexbox(center, center);
+            flex-direction: row;
+            position: absolute;
+            clip-path: polygon(0 37%, 78% 37%, 78% 0, 100% 0, 100% 100%, 0 100%);
+            border-radius: $border-radius;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 31%;
+            background-color: $color-marron-claro;
+            padding-top: clamp(3rem, 0.237rem + 3.947vw, 4.5rem);
+            gap: clamp(0.8rem, -3.253rem + 5.789vw, 3rem);
+        }
+    }
 }
   
-.card-receta-larga-top-salada h6 {
-    @include card-top-titulo($color-marron-medio, $color-marron-oscuro, $color-blanco);
-}
-
-.card-receta-larga-bottom{
-    position: relative;
-    width: 100%;
-    aspect-ratio: 341 / 480;
-}
-
-.card-receta-larga-bottom-imagen img{
-    @include img-config($width: 100%, $height: auto, $object-fit: cover);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 85%, 75% 100%, 0 100%);
-}
-
-.icono-favorito{
+.icono-favorito {
     position: absolute;
     top: 73%;
     left: 89%;
@@ -106,107 +123,130 @@
     height: auto;
     z-index: 10;
 }
-
-.card-receta-larga-bottom-items{
-    @include flexbox(center, center);
-    flex-direction: row;
-    position: absolute;
-    clip-path: polygon(0 37%, 78% 37%,78% 0, 100% 0, 100% 100%, 0 100%);
-    border-radius: $border-radius;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 31%;
-    background-color: $color-marron-claro;
-    padding-top: clamp(3rem, 0.237rem + 3.947vw, 4.5rem);
-    gap: clamp(0.8rem, -3.253rem + 5.789vw, 3rem);
-}
-
+  
 .card-info-item {
     @include flexbox(center, center);
     flex-direction: column;
     text-align: center;
     gap: clamp(0.25rem, -0.211rem + 0.658vw, 0.5rem);
+  
+    img {
+        width: auto;
+        height: clamp(1.5rem, 0.579rem + 1.316vw, 2rem);
+    }
+  
+    span {
+        font-family: $fuente-secundaria;
+        font-weight: 400;
+        font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+        text-align: center;
+        color: $color-marron-oscuro;
+    }
 }
 
-.card-info-item img{
-    width: auto;
-    height: clamp(1.5rem, 0.579rem + 1.316vw, 2rem);
+// Mediaqueries Mobile / Tablet - Cards Recetas
+@include mq-mobile {
+    .grilla-recetas-cortas,
+    .grilla-recetas-largas {
+        grid-column: 1 / span 4;
+        @include grid_2;
+    }
+
+    .dropdown-recetas-cortas,
+    .dropdown-recetas-largas {
+        display: none;
+    }
 }
 
-.card-info-item span{
-    font-family: $fuente-secundaria;
-    font-weight: 400;
-    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
-    text-align: center;
-    color: $color-marron-oscuro;
-}
 
+@include mq-tablet {
+    .grilla-recetas-cortas {
+        grid-column: 1 / span 8;
+        @include grid_3;
+    }
+
+    .dropdown-recetas-cortas {
+        grid-column: 3 / span 1;
+        justify-self: end;
+    }
+    
+    .grilla-recetas-largas {
+        grid-column: 2 / span 6;
+        @include grid_2;
+    }
+
+    .dropdown-recetas-largas {
+        grid-column: 2 / span 1;
+        justify-self: end;
+    }
+}
 
 /* MAIN - Receta completa */
-.titulo-receta{
+.titulo-receta {
     font-family: $fuente-principal;
     font-size: 2.25rem;
     line-height: 3rem;
     text-align: center;
     text-transform: uppercase;
     color: $color-marron-oscuro;
-}
-
-.recetas-botones{
+  }
+  
+.recetas-botones {
     font-family: $fuente-secundaria;
     font-size: 0.875rem;
     text-align: center;
     color: $color-marron-oscuro;
     background-color: $color-marron-medio;
+  
+    a {
+        text-decoration: none;
+        color: $color-marron-oscuro;
+    }
 }
-
-.recetas-botones a{
-    text-decoration: none;
-    color: $color-marron-oscuro;
-}   
-
-.recetas-caracteristicas{
+  
+.recetas-caracteristicas {
     font-family: $fuente-secundaria;
     font-size: 1.125rem;
     text-align: center;
     color: $color-marron-oscuro;
     background-color: $color-marron-claro;
 }
-
-.recetas-productos{
+  
+.recetas-productos {
     font-family: $fuente-secundaria;
     font-size: 1rem;
     line-height: 1.5rem;
 }
-
-.recetas-desarrollo{
+  
+.recetas-desarrollo {
     font-family: $fuente-secundaria;
     font-size: 1rem;
     line-height: 1.5rem;
     text-align: left;
+  
+    h4 {
+        background-color: $color-marron-claro;
+    }
 }
-
-.recetas-desarrollo h4{
-    background-color: $color-marron-claro;
-}
-
-.lista-ordenada{
+  
+.lista-ordenada {
     list-style-position: inside;
 }
-
-.negrita{
-    font-weight: bold;
+  
+.negrita {
+        font-weight: bold;
 }
-
-.tips h4{
-    background-color: $color-blanco;
+  
+.tips {
+    h4 {
+        background-color: $color-blanco;
+    }
+  
+    p {
+        background-color: $color-marron-claro;
+    }
 }
-
-.tips p{
-    background-color: $color-marron-claro;
-}
-
-.probaste{
+  
+.probaste {
     text-align: left;
 }

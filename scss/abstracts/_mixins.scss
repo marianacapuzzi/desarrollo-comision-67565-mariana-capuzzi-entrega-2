@@ -1,6 +1,7 @@
 @use "variables" as *;
 @use "typography" as *;
 
+
 // Estructuras
 @mixin grid_12 {
     display: grid;
@@ -42,6 +43,7 @@
     object-fit: $object-fit;
     border-radius: $border-radius; 
 }
+
 
 // Home
 @mixin label-home-style {
@@ -86,62 +88,63 @@
     position: relative;
   
     & .dropdown-recetas-btn {
-      width: 100%;
-      font-family: $fuente-secundaria;
-      font-weight: 400;
-      font-size: $body-font-size;
-      text-align: left;
-      padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem)
-               clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
-      color: $color-marron-oscuro;
-      border: $border-solido-marron;
-      border-radius: $border-radius;
-  
-      &::after {
-        display: inline-block;
-        margin-left: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem);
-        vertical-align: middle;
-        content: "";
-        border-top: 0.4em solid $color-marron-oscuro;
-        border-right: 0.4em solid transparent;
-        border-left: 0.4em solid transparent;
-      }
-  
-      &:hover,
-      &:focus {
-        background-color: $color-marron-claro;
-        color: $color-marron-oscuro;
-      }
-    }
-  
-    & .dropdown-recetas-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: 1000;
-      width: 100%;
-      border-radius: $border-radius;
-      border: 1px solid $color-marron-medio;
-      text-align: left;
-      background-color: $color-blanco;
-  
-      & .dropdown-item {
-        display: block;
         width: 100%;
         font-family: $fuente-secundaria;
         font-weight: 400;
         font-size: $body-font-size;
-        color: $color-marron-medio;
+        text-align: left;
         padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem)
-                 clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
-        text-decoration: none;
+                clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
+        color: $color-marron-oscuro;
+        border: $border-solido-marron;
+        border-radius: $border-radius;
+  
+        &::after {
+            display: inline-block;
+            margin-left: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem);
+            vertical-align: middle;
+            content: "";
+            border-top: 0.4em solid $color-marron-oscuro;
+            border-right: 0.4em solid transparent;
+            border-left: 0.4em solid transparent;
+            border-top-color: $color-marron-oscuro;
+        }
   
         &:hover,
         &:focus {
-          background-color: $color-marron-claro;
-          color: $color-marron-oscuro;
+            background-color: $color-marron-claro;
+            color: $color-marron-oscuro;
         }
-      }
+    }
+  
+    & .dropdown-recetas-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        border-radius: $border-radius;
+        border: 1px solid $color-marron-medio;
+        text-align: left;
+        background-color: $color-blanco;
+    
+        & .dropdown-item {
+            display: block;
+            width: 100%;
+            font-family: $fuente-secundaria;
+            font-weight: 400;
+            font-size: $body-font-size;
+            color: $color-marron-medio;
+            padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem)
+                    clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
+            text-decoration: none;
+  
+            &:hover,
+            &:focus {
+            background-color: $color-marron-claro;
+            color: $color-marron-oscuro;
+            }
+        }
     }
 }  
   
@@ -197,7 +200,8 @@
     @include grid_4;
     grid-column: 1 / span 12;
     gap: $grid-recetas-gap-rows $grid-recetas-gap-columns;
-    margin: $grid-recetas-margin-top 0 $grid-recetas-margin-bottom 0;
+    // margin: 0 0 $grid-recetas-margin-bottom 0;
+    margin: 0;
 }
 
 @mixin card-puntuacion {
@@ -208,8 +212,10 @@
     z-index: 10;
     font-family: $fuente-secundaria;
     font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
-    width: clamp(3.5rem, -4.789rem + 11.842vw, 8rem);
-    height: clamp(3.5rem, -4.789rem + 11.842vw, 8rem);
+    width: 23%;
+    height: 28%;
+    //width: clamp(3.5rem, -4.789rem + 11.842vw, 8rem);
+    //height: clamp(3.5rem, -4.789rem + 11.842vw, 8rem);
     gap: clamp(0.22rem, 0.109rem + 0.158vw, 0.28rem);
     border-radius: $border-radius;
     background-color: $color-marron-claro;
@@ -221,5 +227,6 @@
     @include grid_3;
     grid-column: 2 / span 10;
     gap: $grid-recetas-gap-rows $grid-recetas-gap-columns;
-    margin: $grid-recetas-margin-top 0 $grid-recetas-margin-bottom 0;
+    // margin: 0 0 $grid-recetas-margin-bottom 0;
+    margin: 0;
 }

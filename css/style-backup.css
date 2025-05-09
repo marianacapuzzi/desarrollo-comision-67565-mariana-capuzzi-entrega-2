@@ -224,27 +224,11 @@ header {
 } 
 
 .btn-benot {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    min-width: clamp(9.5rem, 7.658rem + 2.632vw, 10.5rem);
-    height: clamp(2rem, 1.079rem + 1.316vw, 2.5rem);
-    padding: 0;
-    white-space: nowrap;
-    border-radius: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem); 
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
-    text-align: center;
-    color: #431C19;
-    background-color: white;
-    border: 1px solid #431C19;
+
 }
 
 .btn-benot:hover{
-    color: #FFF;
-    background-color: #431C19;
-    border: none;
+
 }
 
 
@@ -266,9 +250,7 @@ header {
 }
 
 .bloque4-container-info h2{
-    text-align: center;
-    margin: 0;
-    color: #FFF;
+
 
 }
 
@@ -284,73 +266,39 @@ header {
 /* Estilos de MAIN - PAGE 1 */
 /* Main PAGE 1 - Dropdown */
 .dropdown {
-    grid-column: 10 / span 3;
-    justify-self: end;
-    width: 100%;
-    background-color: transparent;
-    position: relative; 
+
+
 }
 
 /* Main PAGE 1 - Dropdown - Estilo del botón */
 .dropdown-recetas-btn {
-    grid-column: 10 / span 3;
-    width: 100%;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
-    text-align: left;
-    padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem) clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
-    color: #431C19;
-    border: 1px solid #431C19;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+
+
+
 }
 
 .dropdown-recetas-btn::after {
-    display: inline-block;
-    margin-left: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem);
-    vertical-align: middle;
-    content: "";
-    border-top: 0.4em solid;
-    border-right: 0.4em solid transparent;
-    border-left: 0.4em solid transparent;
-    border-top-color: #431C19;
+
 }
 
 .dropdown-recetas-btn:hover,
 .dropdown-recetas-btn:focus {
-    background-color: #f6e9de; /* o dejo blanco si no quiero efecto */
-    color: #431C19;
+
 }
 
 /* Main PAGE 1 - Dropdown - Menú desplegable */
 .dropdown-recetas-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
-    border: 1px solid #ECCFBC;
-    text-align: left;
-    background-color: #fff;
+
 }
 
 /* Main PAGE 1 - Dropdown - Ítems */
 .dropdown-recetas-menu .dropdown-item {
-    display: block;
-    width: 100%;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
-    color: #ECCFBC;
-    padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem) clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
-    text-decoration: none;
+
 }
 
 .dropdown-recetas-menu .dropdown-item:hover,
 .dropdown-recetas-menu .dropdown-item:focus {
-    background-color: #f6e9de;
-    color: #431C19;
+
 }
 
 
@@ -414,69 +362,50 @@ header {
 /* Estilos de MAIN - PAGE 4 */
 
 .titulo-receta{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 38px;
-    line-height: 48px;
-    text-align: center;
-    text-transform: uppercase;
+
 }
 
 .recetas-botones{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    text-align: center;
-    color: #431C19;
-    background-color: #eccfbc;
+
 }
 
 .recetas-botones a{
-    text-decoration: none;
-    color: #431C19;
+
 }   
 
 .recetas-caracteristicas{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    text-align: center;
-    color: #431C19;
-    background-color: #F6E9DE;
+
 }
 
 .recetas-productos{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
 }
 
 .recetas-desarrollo{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: left;
+
 }
 
 .recetas-desarrollo h4{
-    background-color: #F6E9DE;
+
 }
 
 .lista-ordenada{
-    list-style-position: inside;
+
 }
 
 .negrita{
-    font-weight: bold;
+
 }
 
 .tips h4{
-    background-color: #FFF;
+
 }
 
 .tips p{
-    background-color: #F6E9DE;
+
 }
 
 .probaste{
-    text-align: left;
+
 }
 
 
@@ -528,27 +457,23 @@ header {
     }
 
     .header-logos {
-        grid-column: 1 / span 3;
-        grid-row: 1;
         gap: clamp(0.9rem, 0.626rem + 0.535vw, 1rem);
     }
 
     .header-logos a{
-        width: 45%;
+ 
     }
 
     .header-logo-sin-gluten {
-        width: 18%;
+    
     }
 
     .search-bar {
-        grid-column: 5 / span 4;
-        grid-row: 1;
+
     }
 
     .navbar {
-        grid-column: 1 / span 8;
-        grid-row: 2;
+  
     }
 
     .nav-list li {
@@ -567,7 +492,7 @@ header {
 
     /* Main */
     .grilla-recetas-cortas{
-        grid-template-columns: repeat(3, 1fr);
+ 
     }
 
     .card-receta-corta-puntuacion{
@@ -576,7 +501,7 @@ header {
     }
 
     .grilla-recetas-largas{
-        grid-template-columns: repeat(2, 1fr);
+
     }
 
     .card-receta-larga-top-salada{
@@ -624,10 +549,7 @@ header {
     }
 
     .footer-menu {
-        flex-direction: column;
-        grid-column: 3 / span 3;
-        gap: 0;
-        align-items: flex-start;
+
     }
 
     .footer-menu a{
@@ -635,12 +557,10 @@ header {
     }
 
     .footer-logos {
-        grid-column: 1 / span 2;
         gap: clamp(0.9rem, 0.626rem + 0.535vw, 1rem);
     }
 
     .footer-contacto {
-        grid-column: 6 / span 3;
         gap: clamp(0.35rem, 0.076rem + 0.535vw, 0.45rem);
     }
 

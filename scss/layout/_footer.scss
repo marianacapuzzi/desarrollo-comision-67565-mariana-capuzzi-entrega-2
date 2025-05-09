@@ -3,6 +3,8 @@
 /* FOOTER */
 .footer {
     position: relative;
+    margin-top: clamp(3.5rem, 2.579rem + 1.316vw, 4rem);
+    @include body-texto($align: left, $lh: $body-line-height);
   
     .footer-container {
         position: relative;
@@ -88,11 +90,7 @@
                         gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
         
                         span, a {
-                            font-family: $fuente-secundaria;
-                            font-weight: 400;
-                            font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
-                            line-height: 1.5em;
-                            color: $color-marron-oscuro;
+                            @include body-texto($align: left, $lh: $body-line-height);
                         }
                         
                         span {
@@ -135,6 +133,7 @@
     .footer-boton {
         position: absolute;
         top: clamp(17.5rem, 12.895rem + 6.579vw, 20rem);
+        left: 50%;
         transform: translateX(-50%) translateY(-50%);
         z-index: 10;
         cursor: pointer;
@@ -153,4 +152,101 @@
         font-size: clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
     }
 }
-  
+
+
+// // Mediaqueries Mobile / Tablet - Footer
+@include mq-mobile {
+    .footer {
+        .footer-container {
+            height: auto;
+
+            .footer-grid-wrapper {
+                transform: translateY(4%);
+
+                .footer-grid-interna {
+                    @include grid_2;
+                    align-items: end;
+        
+                    .footer-logos {
+                        grid-column: 1 / span 1;
+                        grid-row: 1;
+                    }
+        
+                    .footer-menu {
+                        flex-direction: column;
+                        grid-column: 1 / span 1;
+                        grid-row: 2;
+                        gap: 0;
+                        align-items: flex-start;
+                    }
+        
+                    .footer-contacto {
+                        grid-column: 2 / span 1;
+                        grid-row: 1/ span 2;
+
+                        .footer-contacto-datos {
+                            flex-direction: column;
+
+                            span {
+                                display: none;
+                            }
+                        }
+
+                        .footer-contacto-redes {
+                            flex-direction: column;
+                            align-items: flex-start;
+                            gap: 0.4rem;
+
+                            span {
+                              text-align: left;
+                            }
+              
+                            .footer-contacto-iconos {
+                              justify-content: flex-start;
+                            }
+                        }
+                    }               
+                }
+            }
+        }
+
+        .footer-boton {
+            top: 84%;
+            left: 90%;
+        }
+        
+        .footer-pie {
+            @include flexbox(space-between, center);
+            flex-direction: column;
+        }
+    }
+}
+
+@include mq-tablet {
+    .footer {
+        .footer-container {
+            .footer-grid-wrapper {
+                transform: translateY(7%);
+
+                .footer-grid-interna {
+                    @include grid_8;
+        
+                    .footer-logos {
+                        grid-column: 1 / span 2;
+                    }
+        
+                    .footer-menu {
+                        flex-direction: column;
+                        grid-column: 3 / span 3;
+                        gap: 0;
+                        align-items: flex-start;
+                    }
+        
+                    .footer-contacto {
+                        grid-column: 6 / span 3;
+                    }
+                }
+            }
+        }
+    }
+}

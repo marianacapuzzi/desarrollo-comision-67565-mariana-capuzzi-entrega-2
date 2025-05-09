@@ -2,16 +2,38 @@
 
 // Contenedor principal con márgenes laterales
 .grid-externa {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    @include grid_12;
+    //gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
     margin: 0 5vw;
 }
 
 // Rejilla interna para alinear el contenido a las 12 columnas
 .grid-interna {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
+    @include grid_12;
+    // gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
     align-items: center;
+}
+
+
+// Mediaqueries
+@include mq-mobile {
+    .grid-externa {
+        @include grid_4;
+        margin: 0 3vw;
+    }
+  
+    .grid-interna {
+        @include grid_4;
+    }
+}
+
+@include mq-tablet {
+    .grid-externa {
+        @include grid_8;
+        margin: 0 4vw;
+    }
+
+    .grid-interna {
+        @include grid_8;
+    }
 }

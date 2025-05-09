@@ -82,9 +82,9 @@
             }
     
             p {
+                @include body-texto($align: left, $lh: $body-line-height);
                 width: 100%;
                 margin: 0;
-                text-align: left;
                 background-color: $color-blanco;
             }
     
@@ -152,8 +152,8 @@
             }
 
             p {
+                @include body-texto($align: left, $lh: $body-line-height);
                 margin: 0;
-                text-align: left;
             }
     
             .bloque2-btn {
@@ -220,6 +220,7 @@
         }
     }      
 }
+
 
 // MAIN -Bloque 3
 .bloque3 {
@@ -290,11 +291,12 @@
     }
 }
 
+
 // MAIN -Bloque 4
 .bloque4 {
     display: grid;
     grid-column: 1 / -1;
-    margin: 0 0 clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
+    margin: 0;
 
     &-wrapper {
         position: relative;
@@ -336,3 +338,109 @@
         }
     }
 }
+
+
+// Mediaqueries Mobile / Tablet - Home
+@include mq-tablet {
+    .bloque1{
+        grid-column: 2 / span 6;
+    }
+
+    .bloque2 {
+        @include grid_8;
+        grid-column: 1 / -1;
+    }
+
+    .bloque2 .subbloque1-container,
+    .bloque2 .subbloque2-container,
+    .bloque2 .subbloque3-container {
+        grid-column: 1 / -1;
+    }
+
+    .bloque2 .subbloque2-container {
+        @include grid_2;
+        grid-column: 2 / span 6;
+    }
+
+
+    .bloque3 {
+        grid-column: 2 / span 6;
+      
+        .bloque3-container-cards {
+            @include grid_2;
+            gap: clamp(1rem, 0.5rem + 1vw, 1.5rem);
+        }
+      
+        .bloque3-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border-radius: $border-radius;
+            overflow: hidden;
+            //min-height: auto;
+        
+            img {
+                @include img-config($width: 100%, $height: auto, $object-fit: cover);
+                aspect-ratio: 522 / 420;
+                display: block;
+            }
+        
+            &::before {
+              content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: $border-radius;
+                background: linear-gradient(to top, rgba(67, 28, 25, 1), transparent);
+                z-index: 1;
+            }
+        
+            .bloque3-container-info {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                background-color: transparent;
+                padding: 0;
+                gap: 0;
+        
+                h2 {
+                    position: absolute;
+                    bottom: 1.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 2;
+                    @include h2(center, $color-blanco);
+                    margin: 0;
+                    padding: 0;
+                }
+        
+                .bloque3-info-bottom {
+                    margin-top: clamp(22rem, 20rem + 1vw, 26rem);
+                    width: 100%;
+                    background-color: $color-blanco;
+                    padding: clamp(1rem, 0.5rem + 1vw, 1.5rem);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: clamp(0.5rem, 0.3rem + 0.5vw, 1rem);
+              
+                    p {
+                        @include body-texto(left, $body-line-height);
+                        color: $color-marron-oscuro;
+                        margin: 0;
+                    }
+              
+                    .btn-benot {
+                        @include boton-benot;
+                    }
+                }
+            }
+        }
+        
+    }        
+}
+        
+       
