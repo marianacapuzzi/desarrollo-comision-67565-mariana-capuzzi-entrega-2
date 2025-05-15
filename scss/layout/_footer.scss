@@ -154,7 +154,7 @@
 }
 
 
-// // Mediaqueries Mobile / Tablet - Footer
+// Mediaqueries Mobile - Footer
 @include mq-mobile {
     .footer {
         .footer-container {
@@ -222,6 +222,8 @@
     }
 }
 
+
+// Mediaqueries Tablet - Footer
 @include mq-tablet {
     .footer {
         .footer-container {

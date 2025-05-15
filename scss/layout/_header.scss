@@ -201,9 +201,14 @@
                 top: 70%;
                 left: 0;
                 transform: translateY(-50%);
-        
+
                 h1 {
-                    @include h1(left, $color-blanco);
+                  @include h1(left, $color-blanco);
+                  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+              }
+        
+                h2 {
+                    @include h2(left, $color-blanco);
                     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
                 }
             }
@@ -211,7 +216,8 @@
     }
 }
   
-// Mediaqueries Mobile / Tablet - Header
+
+// Mediaqueries Mobile - Header
 @include mq-mobile {
   .header-1 {
       display: none;
@@ -456,33 +462,48 @@
 
   .header-4-banner {
       padding: 0;
-      margin-bottom: 0.5rem;
-      height: auto;
-      overflow: hidden;
-
-
-      .banner-container .grid-header-4 {
-          position: static;
-      }
   
-      .banner-container .grid-header-4 .banner-text {
-          position: static;
-          grid-column: 1 / -1;
-          text-align: center;
-          padding: 0;
+      .banner-container {
+        position: static;
   
-          h1 {
+        img {
+          display: block;
+          width: 100vw;
+          height: auto;
+        }
+  
+        .grid-header-4 {
+          @include grid_12;
+          position: static;
+          background-color: transparent;
+          padding: 1rem 0;
+  
+          .banner-text {
+            grid-column: 1 / -1;
+            position: static;
+            transform: none;
+            text-align: center;
+            padding: 0 1rem;
+  
+            h1 {
               @include h1(center, $color-marron-oscuro);
               text-shadow: none;
-              font-size: 1.2rem;
-              padding: 0;
-              margin: 5rem 0 0 0;
+              font-size: clamp(1.2rem, 1rem + 1vw, 1.5rem);
+              line-height: 1.2;
+              margin: 0;
+            }
+            h2 {
+              display: none;
+            }
+
           }
+        }
       }
-  }
+  } 
 }
 
 
+// Mediaqueries Tablet - Header
 @include mq-tablet {
   .header-2 {
     //@include grid_8;

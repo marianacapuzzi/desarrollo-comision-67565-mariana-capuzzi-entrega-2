@@ -1,14 +1,14 @@
 @use "../abstracts" as *;
 
-// MAIN -Bloque 1
+/* MAIN - Home - Bloque 1 */
 .bloque1 {
     display: grid;
     grid-column: 2 / span 10;
     margin: clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
     gap: $grid-recetas-gap-columns;
 
-    h2 {
-        @include h2($align: center, $color: $color-marron-oscuro);
+    h1 {
+        @include h1($align: center, $color: $color-marron-oscuro);
     }
 
     &-container-cards {
@@ -45,7 +45,7 @@
     }
 }
 
-// MAIN -Bloque 2
+/* MAIN - Home - Bloque 2 */
 .bloque2 {
     @include grid_12;
     grid-column: 1 / -1;
@@ -222,7 +222,7 @@
 }
 
 
-// MAIN -Bloque 3
+/* MAIN - Home - Bloque 3 */
 .bloque3 {
     display: grid;
     grid-column: 2 / span 10;
@@ -292,7 +292,7 @@
 }
 
 
-// MAIN -Bloque 4
+/* MAIN - Home - Bloque 4 */
 .bloque4 {
     display: grid;
     grid-column: 1 / -1;
@@ -340,7 +340,241 @@
 }
 
 
-// Mediaqueries Mobile / Tablet - Home
+// Mediaqueries Mobile 
+@include mq-mobile {
+    .bloque1 {
+        @include grid_4;
+        grid-column: 1 / -1;
+        gap: 1rem;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        grid-auto-rows: auto;
+        align-items: start;
+      
+        h1 {
+          grid-column: 1 / -1;
+          margin-bottom: 0;
+        }
+      
+        &-container-cards {
+          display: contents;
+        }
+      
+        .bloque1-card {
+          display: flex;
+          flex-direction: column;
+          grid-column: span 2;
+          gap: 0.5rem;
+      
+          img {
+            @include img-config($width: 100%, $height: auto, $object-fit: cover);
+            display: block;
+            aspect-ratio: 1 / 1;
+            clip-path: none;
+            margin: 0;
+          }
+      
+          .bloque1-label {
+            @include label-home-style;
+            position: static;
+            width: 100%;
+            transform: none;
+          }
+        }
+      
+        .bloque1-card:nth-child(3) {
+          grid-column: 2 / span 2;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+     
+    .bloque2 {
+        .subbloque1-container {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 1rem;
+
+          
+            img {
+              @include img-config($width: 100%, $height: auto, $object-fit: cover);
+              aspect-ratio: 522 / 400;
+              clip-path: polygon(0 21%, 39% 21%, 39% 0%, 100% 0, 100% 100%, 0 100%);
+            }
+          
+            .subbloque1-info { 
+                position: relative;
+
+                .label-texto {
+                    @include label-home-style;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 37%;
+                    height: 18%;
+                    margin-top: -17.9rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2;
+                }
+
+                p {
+                    @include body-texto(left, $body-line-height);
+                    color: $color-marron-oscuro;
+                    margin: 0;
+                }
+            
+                .bloque2-btn {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+          
+        .subbloque2-container {
+            display: flex;
+            flex-direction: column;
+            grid-template-columns: 1fr;
+            grid-column: 1 / -1;
+            gap: 3rem;
+            margin-bottom: 0;
+          
+            .subbloque2-card {
+                width: 100%;
+                gap: 1rem;
+
+                .top-card-b.top-card-b {
+                    img {
+                        clip-path: polygon(0 21%, 39% 21%, 39% 0%, 100% 0, 100% 100%, 0 100%);
+                    }
+            
+                    .label-img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: auto;
+                        bottom: auto;
+                    }
+                }
+            }
+
+            .bloque2-btn {
+                margin: 0 auto;
+            }
+        }
+
+        .subbloque3-container {
+            display: none;
+        }
+    }
+
+    .bloque3 {
+        display: flex;
+        grid-column: 1 / -1;
+      
+        .bloque3-container-cards {
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+        }
+      
+        .bloque3-card {
+          position: static;
+          border-radius: $border-radius;
+          overflow: visible;
+      
+          &::before {
+            display: none !important;
+          }
+      
+          img {
+            @include img-config($width: 100%, $height: auto, $object-fit: cover);
+
+        }
+      
+          .bloque3-container-info {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            background-color: $color-blanco;
+            padding: 0;
+            gap: 0.5rem;
+            margin-top: 1rem;
+      
+            h2 {
+              @include h2(center, $color-marron-oscuro);
+              margin: 0;
+            }
+      
+            .bloque3-info-bottom {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 1rem;
+      
+              p {
+                @include body-texto(center, $body-line-height);
+                color: $color-marron-oscuro;
+                text-align: left;
+                margin: 0;
+              }
+      
+              .btn-benot {
+                @include boton-benot;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+      
+    .bloque4 {
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 0;
+            border-radius: 0;
+        
+            img {
+                @include img-config($width: 100%, $height: auto, $object-fit: cover);
+                clip-path: none;
+            }
+        
+            .bloque4-container-info {
+                position: static;
+                width: 100%;
+                padding: 0;
+                gap: 0.5rem;
+                text-align: center;
+        
+                h2 {
+                    text-align: center;
+                    color: $color-marron-oscuro;
+                }
+
+                p {
+                    text-align: left;
+                    color: $color-marron-oscuro;
+                }
+            }
+      
+            .bloque4-btn {
+                position: static;
+                align-self: center;
+                margin: 0;
+            }
+        }
+      }
+}
+
+
+// Mediaqueries Tablet
 @include mq-tablet {
     .bloque1{
         grid-column: 2 / span 6;
@@ -438,9 +672,6 @@
                     }
                 }
             }
-        }
-        
+        }    
     }        
 }
-        
-       

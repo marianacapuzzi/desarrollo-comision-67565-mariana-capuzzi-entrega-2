@@ -37,269 +37,42 @@ header {
 /* Estilos de MAIN - INDEX */
 /* Estilos de MAIN - INDEX - Bloque 1 */
 
-.bloque1{
-
-} 
-
-.bloque1 h2{
-
-} 
-
-.bloque1-container-cards{
 
     /* el clamp del gap: 1.25rem es el que está acá arriba */
-} 
 
-.bloque1-card {
-}
-
-.bloque1-card img {
-}
-
-.bloque1-label {
-
-}
-
-.bloque1-label:hover {
-
-}
 
 
 /* Estilos de MAIN - INDEX - Bloque 2 */
-.bloque2 {
 
-} 
-
-.bloque2 h2{
-
-
-} 
 
 /* Subbloque 1 */
-.bloque2 .subbloque1-container {
-}
-
-.bloque2 .subbloque1-container img{
-
-}
-
-.bloque2 .subbloque1-info{
-
-}
-
-.label-texto{
-}
-
-.bloque2 .subbloque1-info p{
-
-} 
-
-.subbloque1-info .bloque2-btn {
-
-}
 
 
 /* Subbloque 2 */
-.bloque2 .subbloque2-container {
-
-}
-
-.subbloque2-card {
-
-}
-
-.top-card-a,
-.top-card-b {
-
-}
-
-.top-card-a img,
-.top-card-b img{
-
-}
-
-.top-card-a img{
-
-}
-
-.top-card-b img{
-
-}
-
-.top-card-a .label-img,
-.top-card-b .label-img{
-
-
-}
-
-.top-card-a .label-img{
-
-}
-
-.top-card-b .label-img{
-
-}
-
-.subbloque2-card p{
-
-}
-
-.subbloque2-card .bloque2-btn {
-
-}
 
 
 /* Subbloque 3 */
-.bloque2 .subbloque3-container {
 
-}
-
-.subbloque3-card-a,
-.subbloque3-card-c {
-
-}
-
-.subbloque3-card-b {
-
-}
-
-.subbloque3-card-a img{
-
-}
-
-.subbloque3-card-b img{
-
-}
-
-.subbloque3-card-c img{
-
-}
-
-.subbloque3-card-a span,
-.subbloque3-card-b span,
-.subbloque3-card-c span{
-
-
-}
-
-.subbloque3-card-b .bloque2-btn {
-
-}
 
 
 /* Estilos de MAIN - INDEX - Bloque 3 */
-.bloque3{
-
-} 
-
-.bloque3-container-cards{
-   
-} 
-
-.bloque3-card{
-
-} 
-
-.bloque3-card::before {
- 
-}
-
-.bloque3-card img{
-
-} 
-
-.bloque3-container-info{
-
-} 
-
-.bloque3-container-info h2{
- 
-} 
-
-.bloque3-info-bottom{
-} 
-
-.bloque3-texto-boton p{
- 
-} 
-
-.btn-benot {
-
-}
-
-.btn-benot:hover{
-
-}
-
 
 /* Estilos de MAIN - INDEX - Bloque 4 */
-.bloque4{
 
-} 
-
-.bloque4-wrapper {
-
-}
-
-.bloque4-wrapper img{
-   
-} 
-
-.bloque4-container-info{
-  
-}
-
-.bloque4-container-info h2{
-
-
-}
-
-.bloque4-container-info p{
-
-}
-
-.bloque4-btn {
-
-}
 
 
 /* Estilos de MAIN - PAGE 1 */
 /* Main PAGE 1 - Dropdown */
-.dropdown {
 
-
-}
 
 /* Main PAGE 1 - Dropdown - Estilo del botón */
-.dropdown-recetas-btn {
 
-
-
-}
-
-.dropdown-recetas-btn::after {
-
-}
-
-.dropdown-recetas-btn:hover,
-.dropdown-recetas-btn:focus {
-
-}
 
 /* Main PAGE 1 - Dropdown - Menú desplegable */
-.dropdown-recetas-menu {
 
-}
 
 /* Main PAGE 1 - Dropdown - Ítems */
-.dropdown-recetas-menu .dropdown-item {
 
-}
-
-.dropdown-recetas-menu .dropdown-item:hover,
-.dropdown-recetas-menu .dropdown-item:focus {
-
-}
 
 
 /* Main PAGE 1 - Cards cortas */
@@ -307,118 +80,16 @@ header {
 
 
 /* Estilos de MAIN - PAGE 2 y PAGE 3 */
-.grilla-recetas-largas{
-}
 
-.grilla-recetas-largas:nth-child(1){
-
-}
-.grilla-recetas-largas:nth-child(1) .dropdown{
-
-}
-
-.card-receta-larga{
-}
-
-.card-receta-larga-top-salada{
-
-}
-
-.card-receta-larga-top-salada span{
-
-}
-
-.card-receta-larga-top-salada h6{
-
-}
-
-.card-receta-larga-bottom{
-}
-
-.card-receta-larga-bottom-imagen img{
- 
-}
-
-.icono-favorito{
-}
-
-.card-receta-larga-bottom-items{
-
-}
-
-.card-info-item {
-
-}
-
-.card-info-item img{
-
-}
-
-.card-info-item span{
-
-}
 
 
 /* Estilos de MAIN - PAGE 4 */
-
-.titulo-receta{
-
-}
-
-.recetas-botones{
-
-}
-
-.recetas-botones a{
-
-}   
-
-.recetas-caracteristicas{
-
-}
-
-.recetas-productos{
-}
-
-.recetas-desarrollo{
-
-}
-
-.recetas-desarrollo h4{
-
-}
-
-.lista-ordenada{
-
-}
-
-.negrita{
-
-}
-
-.tips h4{
-
-}
-
-.tips p{
-
-}
-
-.probaste{
-
-}
 
 
 /* FOOTER */
 
 
 /* Footer - Botón para subir */
-.footer-boton {
-
-    /* bottom: clamp(1.8rem, 1.063rem + 1.053vw, 2.2rem);
-    bottom: clamp(1.375rem, 0.914rem + 0.658vw, 1.625rem);*/
-
-}
 
 
 

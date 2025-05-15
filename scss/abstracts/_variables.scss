@@ -16,15 +16,15 @@ $color-gris-claro:#AAA;
 $fuente-principal: 'Belfast', serif;
 $fuente-secundaria: 'Lato', sans-serif;
 
-$h1-size: clamp(1.6rem, 0.863rem + 1.053vw, 2rem);
-$h2-size: clamp(1.5rem, 0.763rem + 1.053vw, 1.9rem);
+$h1-size: clamp(1.25rem, 1.053rem + 0.877vw, 2rem);
+$h2-size: clamp(1.25rem, 1.053rem + 0.877vw, 2rem);
 $h3-size: 1.5rem;
-$h4-size: clamp(1.15rem, 0.782rem + 0.526vw, 1.35rem);
+$h4-size: clamp(1rem, 0.908rem + 0.409vw, 1.35rem);
 $h5-size: 2.25rem;
-$h6-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
+$h6-size: clamp(0.875rem, 0.789rem + 0.38vw, 1.2rem);
 $h-line-height: 1.3em;
 
-$body-font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+$body-font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
 $body-line-height: 1.5em;
 
 
@@ -34,7 +34,7 @@ $border-solido-marron-medio: 1px solid $color-marron-medio;
 
 
 // Border radius 
-$border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+$border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
 
 
 // Recetas

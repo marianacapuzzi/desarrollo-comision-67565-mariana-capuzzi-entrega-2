@@ -271,8 +271,16 @@ li {
 .header-4-banner .banner-container .grid-header-4 .banner-text h1 {
   font-family: "Belfast", serif;
   font-weight: normal;
-  font-size: clamp(1.6rem, 0.863rem + 1.053vw, 2rem);
+  font-size: clamp(1.25rem, 1.053rem + 0.877vw, 2rem);
   line-height: 1.3em;
+  text-align: left;
+  color: #FFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.header-4-banner .banner-container .grid-header-4 .banner-text h2 {
+  font-family: "Belfast", serif;
+  font-weight: normal;
+  font-size: clamp(1.25rem, 1.053rem + 0.877vw, 2rem);
   text-align: left;
   color: #FFF;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
@@ -477,30 +485,43 @@ li {
   }
   .header-4-banner {
     padding: 0;
-    margin-bottom: 0.5rem;
+  }
+  .header-4-banner .banner-container {
+    position: static;
+  }
+  .header-4-banner .banner-container img {
+    display: block;
+    width: 100vw;
     height: auto;
-    overflow: hidden;
   }
   .header-4-banner .banner-container .grid-header-4 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     position: static;
+    background-color: transparent;
+    padding: 1rem 0;
   }
   .header-4-banner .banner-container .grid-header-4 .banner-text {
-    position: static;
     grid-column: 1/-1;
+    position: static;
+    transform: none;
     text-align: center;
-    padding: 0;
+    padding: 0 1rem;
   }
   .header-4-banner .banner-container .grid-header-4 .banner-text h1 {
     font-family: "Belfast", serif;
     font-weight: normal;
-    font-size: clamp(1.6rem, 0.863rem + 1.053vw, 2rem);
+    font-size: clamp(1.25rem, 1.053rem + 0.877vw, 2rem);
     line-height: 1.3em;
     text-align: center;
     color: #431C19;
     text-shadow: none;
-    font-size: 1.2rem;
-    padding: 0;
-    margin: 5rem 0 0 0;
+    font-size: clamp(1.2rem, 1rem + 1vw, 1.5rem);
+    line-height: 1.2;
+    margin: 0;
+  }
+  .header-4-banner .banner-container .grid-header-4 .banner-text h2 {
+    display: none;
   }
 }
 @media (min-width: 769px) and (max-width: 1119px) {
@@ -530,16 +551,18 @@ li {
     grid-row: 2;
   }
 }
+/* MAIN - Home - Bloque 1 */
 .bloque1 {
   display: grid;
   grid-column: 2/span 10;
   margin: clamp(3.5rem, 2.579rem + 1.316vw, 4rem) 0;
   gap: clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
 }
-.bloque1 h2 {
+.bloque1 h1 {
   font-family: "Belfast", serif;
   font-weight: normal;
-  font-size: clamp(1.5rem, 0.763rem + 1.053vw, 1.9rem);
+  font-size: clamp(1.25rem, 1.053rem + 0.877vw, 2rem);
+  line-height: 1.3em;
   text-align: center;
   color: #431C19;
 }
@@ -559,7 +582,7 @@ li {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 65%, 38% 65%, 38% 35%, 0 35%);
   overflow: hidden;
 }
@@ -568,11 +591,11 @@ li {
   justify-content: center;
   align-items: center;
   margin: 0;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   background-color: #F6E9DE;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(1.15rem, 0.782rem + 0.526vw, 1.35rem);
+  font-size: clamp(1rem, 0.908rem + 0.409vw, 1.35rem);
   text-align: left;
   color: #431C19;
   white-space: normal;
@@ -589,6 +612,7 @@ li {
   background-color: #431C19;
 }
 
+/* MAIN - Home - Bloque 2 */
 .bloque2 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -599,7 +623,7 @@ li {
 .bloque2 h2 {
   font-family: "Belfast", serif;
   font-weight: normal;
-  font-size: clamp(1.5rem, 0.763rem + 1.053vw, 1.9rem);
+  font-size: clamp(1.25rem, 1.053rem + 0.877vw, 2rem);
   text-align: center;
   color: #431C19;
   grid-column: 1/-1;
@@ -617,7 +641,7 @@ li {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   aspect-ratio: 630/430;
 }
 .bloque2 .subbloque1-container .subbloque1-info {
@@ -631,11 +655,11 @@ li {
   justify-content: center;
   align-items: center;
   margin: 0;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   background-color: #F6E9DE;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(1.15rem, 0.782rem + 0.526vw, 1.35rem);
+  font-size: clamp(1rem, 0.908rem + 0.409vw, 1.35rem);
   text-align: left;
   color: #431C19;
   white-space: normal;
@@ -645,7 +669,7 @@ li {
 .bloque2 .subbloque1-container .subbloque1-info p {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
   line-height: 1.5em;
   text-align: left;
   color: #431C19;
@@ -661,7 +685,7 @@ li {
   height: clamp(2rem, 1.079rem + 1.316vw, 2.5rem);
   padding: 0;
   white-space: nowrap;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
@@ -702,7 +726,7 @@ li {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   grid-column: 1/span 5;
   aspect-ratio: 522/400;
 }
@@ -730,11 +754,11 @@ li {
   justify-content: center;
   align-items: center;
   margin: 0;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   background-color: #F6E9DE;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(1.15rem, 0.782rem + 0.526vw, 1.35rem);
+  font-size: clamp(1rem, 0.908rem + 0.409vw, 1.35rem);
   text-align: left;
   color: #431C19;
   white-space: normal;
@@ -746,7 +770,7 @@ li {
 .bloque2 .subbloque2-container .subbloque2-card p {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
   line-height: 1.5em;
   text-align: left;
   color: #431C19;
@@ -760,7 +784,7 @@ li {
   height: clamp(2rem, 1.079rem + 1.316vw, 2.5rem);
   padding: 0;
   white-space: nowrap;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
@@ -794,7 +818,7 @@ li {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   aspect-ratio: 4/3;
 }
 .bloque2 .subbloque3-container .subbloque3-card-c img {
@@ -802,7 +826,7 @@ li {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   aspect-ratio: 5/3;
 }
 .bloque2 .subbloque3-container .subbloque3-card-b {
@@ -817,7 +841,7 @@ li {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   aspect-ratio: 1/1;
 }
 .bloque2 .subbloque3-container .subbloque3-card-b .bloque2-btn {
@@ -828,7 +852,7 @@ li {
   height: clamp(2rem, 1.079rem + 1.316vw, 2.5rem);
   padding: 0;
   white-space: nowrap;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
@@ -852,17 +876,18 @@ li {
   width: 100%;
   height: clamp(2.5rem, 0.658rem + 2.632vw, 3.5rem);
   padding: 0 0 0 clamp(1.75rem, 0.829rem + 1.316vw, 2.25rem);
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   margin: 0;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
   line-height: 0;
   text-align: left;
   color: #431C19;
   background-color: #F6E9DE;
 }
 
+/* MAIN - Home - Bloque 3 */
 .bloque3 {
   display: grid;
   grid-column: 2/span 10;
@@ -878,7 +903,7 @@ li {
   position: relative;
   width: 100%;
   aspect-ratio: 522/420;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   overflow: hidden;
 }
 .bloque3-container-cards .bloque3-card::before {
@@ -896,7 +921,7 @@ li {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
 }
 .bloque3-container-cards .bloque3-card .bloque3-container-info {
   position: absolute;
@@ -912,7 +937,7 @@ li {
 .bloque3-container-cards .bloque3-card .bloque3-container-info h2 {
   font-family: "Belfast", serif;
   font-weight: normal;
-  font-size: clamp(1.5rem, 0.763rem + 1.053vw, 1.9rem);
+  font-size: clamp(1.25rem, 1.053rem + 0.877vw, 2rem);
   text-align: center;
   color: #FFF;
 }
@@ -931,7 +956,7 @@ li {
   height: clamp(2rem, 1.079rem + 1.316vw, 2.5rem);
   padding: 0;
   white-space: nowrap;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
@@ -948,7 +973,7 @@ li {
 .bloque3-container-cards .bloque3-card .bloque3-container-info .bloque3-info-bottom p {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
   line-height: 1.5em;
   text-align: left;
   color: #431C19;
@@ -956,6 +981,7 @@ li {
   color: #FFF;
 }
 
+/* MAIN - Home - Bloque 4 */
 .bloque4 {
   display: grid;
   grid-column: 1/-1;
@@ -963,7 +989,7 @@ li {
 }
 .bloque4-wrapper {
   position: relative;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   overflow: hidden;
 }
 .bloque4-wrapper img {
@@ -971,7 +997,7 @@ li {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   clip-path: polygon(0 0, 100% 0, 100% 93.5%, 50.4% 93.5%, 50.4% 100%, 0 100%);
 }
 .bloque4-wrapper .bloque4-container-info {
@@ -987,7 +1013,7 @@ li {
 .bloque4-wrapper .bloque4-container-info h2 {
   font-family: "Belfast", serif;
   font-weight: normal;
-  font-size: clamp(1.5rem, 0.763rem + 1.053vw, 1.9rem);
+  font-size: clamp(1.25rem, 1.053rem + 0.877vw, 2rem);
   text-align: center;
   color: #FFF;
   margin: 0;
@@ -995,7 +1021,7 @@ li {
 .bloque4-wrapper .bloque4-container-info p {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
   line-height: 1.5em;
   text-align: left;
   color: #431C19;
@@ -1010,7 +1036,7 @@ li {
   height: clamp(2rem, 1.079rem + 1.316vw, 2.5rem);
   padding: 0;
   white-space: nowrap;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
@@ -1028,6 +1054,267 @@ li {
   border: none;
 }
 
+@media (min-width: 360px) and (max-width: 768px) {
+  .bloque1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column: 1/-1;
+    gap: 1rem;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    grid-auto-rows: auto;
+    align-items: start;
+  }
+  .bloque1 h1 {
+    grid-column: 1/-1;
+    margin-bottom: 0;
+  }
+  .bloque1-container-cards {
+    display: contents;
+  }
+  .bloque1 .bloque1-card {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 2;
+    gap: 0.5rem;
+  }
+  .bloque1 .bloque1-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
+    display: block;
+    aspect-ratio: 1/1;
+    clip-path: none;
+    margin: 0;
+  }
+  .bloque1 .bloque1-card .bloque1-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
+    background-color: #F6E9DE;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 0.908rem + 0.409vw, 1.35rem);
+    text-align: left;
+    color: #431C19;
+    white-space: normal;
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+  .bloque1 .bloque1-card:nth-child(3) {
+    grid-column: 2/span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .bloque2 .subbloque1-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+  }
+  .bloque2 .subbloque1-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
+    aspect-ratio: 522/400;
+    clip-path: polygon(0 21%, 39% 21%, 39% 0%, 100% 0, 100% 100%, 0 100%);
+  }
+  .bloque2 .subbloque1-container .subbloque1-info {
+    position: relative;
+  }
+  .bloque2 .subbloque1-container .subbloque1-info .label-texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
+    background-color: #F6E9DE;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 0.908rem + 0.409vw, 1.35rem);
+    text-align: left;
+    color: #431C19;
+    white-space: normal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 37%;
+    height: 18%;
+    margin-top: -17.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  .bloque2 .subbloque1-container .subbloque1-info p {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
+    line-height: 1.5em;
+    text-align: left;
+    color: #431C19;
+    color: #431C19;
+    margin: 0;
+  }
+  .bloque2 .subbloque1-container .subbloque1-info .bloque2-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bloque2 .subbloque2-container {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-column: 1/-1;
+    gap: 3rem;
+    margin-bottom: 0;
+  }
+  .bloque2 .subbloque2-container .subbloque2-card {
+    width: 100%;
+    gap: 1rem;
+  }
+  .bloque2 .subbloque2-container .subbloque2-card .top-card-b.top-card-b img {
+    clip-path: polygon(0 21%, 39% 21%, 39% 0%, 100% 0, 100% 100%, 0 100%);
+  }
+  .bloque2 .subbloque2-container .subbloque2-card .top-card-b.top-card-b .label-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: auto;
+  }
+  .bloque2 .subbloque2-container .bloque2-btn {
+    margin: 0 auto;
+  }
+  .bloque2 .subbloque3-container {
+    display: none;
+  }
+  .bloque3 {
+    display: flex;
+    grid-column: 1/-1;
+  }
+  .bloque3 .bloque3-container-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .bloque3 .bloque3-card {
+    position: static;
+    border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
+    overflow: visible;
+  }
+  .bloque3 .bloque3-card::before {
+    display: none !important;
+  }
+  .bloque3 .bloque3-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
+  }
+  .bloque3 .bloque3-card .bloque3-container-info {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    padding: 0;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .bloque3 .bloque3-card .bloque3-container-info h2 {
+    font-family: "Belfast", serif;
+    font-weight: normal;
+    font-size: clamp(1.25rem, 1.053rem + 0.877vw, 2rem);
+    text-align: center;
+    color: #431C19;
+    margin: 0;
+  }
+  .bloque3 .bloque3-card .bloque3-container-info .bloque3-info-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .bloque3 .bloque3-card .bloque3-container-info .bloque3-info-bottom p {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
+    line-height: 1.5em;
+    text-align: center;
+    color: #431C19;
+    color: #431C19;
+    text-align: left;
+    margin: 0;
+  }
+  .bloque3 .bloque3-card .bloque3-container-info .bloque3-info-bottom .btn-benot {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: clamp(9.5rem, 7.658rem + 2.632vw, 10.5rem);
+    height: clamp(2rem, 1.079rem + 1.316vw, 2.5rem);
+    padding: 0;
+    white-space: nowrap;
+    border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
+    text-align: center;
+    color: #431C19;
+    background-color: #FFF;
+    border: 1px solid #431C19;
+    margin: 0;
+  }
+  .bloque3 .bloque3-card .bloque3-container-info .bloque3-info-bottom .btn-benot:hover {
+    color: #FFF;
+    background-color: #431C19;
+    border: none;
+  }
+  .bloque4-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    border-radius: 0;
+  }
+  .bloque4-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
+    clip-path: none;
+  }
+  .bloque4-wrapper .bloque4-container-info {
+    position: static;
+    width: 100%;
+    padding: 0;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .bloque4-wrapper .bloque4-container-info h2 {
+    text-align: center;
+    color: #431C19;
+  }
+  .bloque4-wrapper .bloque4-container-info p {
+    text-align: left;
+    color: #431C19;
+  }
+  .bloque4-wrapper .bloque4-btn {
+    position: static;
+    align-self: center;
+    margin: 0;
+  }
+}
 @media (min-width: 769px) and (max-width: 1119px) {
   .bloque1 {
     grid-column: 2/span 6;
@@ -1059,7 +1346,7 @@ li {
     position: relative;
     display: flex;
     flex-direction: column;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
     overflow: hidden;
   }
   .bloque3 .bloque3-card img {
@@ -1067,7 +1354,7 @@ li {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
     aspect-ratio: 522/420;
     display: block;
   }
@@ -1078,7 +1365,7 @@ li {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
     background: linear-gradient(to top, rgb(67, 28, 25), transparent);
     z-index: 1;
   }
@@ -1099,7 +1386,7 @@ li {
     z-index: 2;
     font-family: "Belfast", serif;
     font-weight: normal;
-    font-size: clamp(1.5rem, 0.763rem + 1.053vw, 1.9rem);
+    font-size: clamp(1.25rem, 1.053rem + 0.877vw, 2rem);
     text-align: center;
     color: #FFF;
     margin: 0;
@@ -1118,7 +1405,7 @@ li {
   .bloque3 .bloque3-card .bloque3-container-info .bloque3-info-bottom p {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+    font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
     line-height: 1.5em;
     text-align: left;
     color: #431C19;
@@ -1133,7 +1420,7 @@ li {
     height: clamp(2rem, 1.079rem + 1.316vw, 2.5rem);
     padding: 0;
     white-space: nowrap;
-    border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+    border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
@@ -1161,12 +1448,12 @@ li {
   width: 100%;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
   text-align: left;
   padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem) clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
   color: #431C19;
   border: 1px solid #431C19;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
 }
 .dropdown-recetas-cortas .dropdown-recetas-btn::after {
   display: inline-block;
@@ -1188,7 +1475,7 @@ li {
   left: 0;
   z-index: 1000;
   width: 100%;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   border: 1px solid #ECCFBC;
   text-align: left;
   background-color: #FFF;
@@ -1198,7 +1485,7 @@ li {
   width: 100%;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
   color: #ECCFBC;
   padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem) clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
   text-decoration: none;
@@ -1215,8 +1502,7 @@ li {
   gap: clamp(3.5rem, 2.579rem + 1.316vw, 4rem) clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
   margin: 0;
 }
-
-.card-receta-corta {
+.grilla-recetas-cortas .card-receta-corta {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1224,96 +1510,96 @@ li {
   width: 100%;
   gap: clamp(0.5rem, 0.039rem + 0.658vw, 0.75rem);
 }
-.card-receta-corta-top-dulce {
+.grilla-recetas-cortas .card-receta-corta-top-dulce {
   display: flex;
   width: 100%;
   height: clamp(3.5rem, 1.658rem + 2.632vw, 4.5rem);
   gap: 0;
 }
-.card-receta-corta-top-dulce span {
+.grilla-recetas-cortas .card-receta-corta-top-dulce span {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 13%;
   margin: 0;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem) 0 0 clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   border: 1px solid #431C19;
   border-right: none;
   font-family: "Belfast", serif;
-  font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
+  font-size: clamp(0.875rem, 0.789rem + 0.38vw, 1.2rem);
   color: #FFF;
   text-align: center;
   background-color: #431C19;
 }
-.card-receta-corta-top-dulce h6 {
+.grilla-recetas-cortas .card-receta-corta-top-dulce h6 {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 87%;
   margin: 0;
-  border-radius: 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem) clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0;
+  border-radius: 0 clamp(0.5rem, 0.368rem + 0.585vw, 1rem) clamp(0.5rem, 0.368rem + 0.585vw, 1rem) 0;
   border: 1px solid #431C19;
   border-left: none;
   padding: 0 clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
   font-family: "Belfast", serif;
-  font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
+  font-size: clamp(0.875rem, 0.789rem + 0.38vw, 1.2rem);
   color: #431C19;
   text-align: center;
   word-break: break-word;
   background-color: #FFF;
 }
-.card-receta-corta-top-salada {
+.grilla-recetas-cortas .card-receta-corta-top-salada {
   display: flex;
   width: 100%;
   height: clamp(3.5rem, 1.658rem + 2.632vw, 4.5rem);
   gap: 0;
 }
-.card-receta-corta-top-salada span {
+.grilla-recetas-cortas .card-receta-corta-top-salada span {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 13%;
   margin: 0;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem) 0 0 clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   border: 1px solid #ECCFBC;
   border-right: none;
   font-family: "Belfast", serif;
-  font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
+  font-size: clamp(0.875rem, 0.789rem + 0.38vw, 1.2rem);
   color: #431C19;
   text-align: center;
   background-color: #ECCFBC;
 }
-.card-receta-corta-top-salada h6 {
+.grilla-recetas-cortas .card-receta-corta-top-salada h6 {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 87%;
   margin: 0;
-  border-radius: 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem) clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0;
+  border-radius: 0 clamp(0.5rem, 0.368rem + 0.585vw, 1rem) clamp(0.5rem, 0.368rem + 0.585vw, 1rem) 0;
   border: 1px solid #ECCFBC;
   border-left: none;
   padding: 0 clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
   font-family: "Belfast", serif;
-  font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
+  font-size: clamp(0.875rem, 0.789rem + 0.38vw, 1.2rem);
   color: #431C19;
   text-align: center;
   word-break: break-word;
   background-color: #FFF;
 }
-.card-receta-corta-bottom {
+.grilla-recetas-cortas .card-receta-corta-bottom {
   position: relative;
   width: 100%;
   overflow: hidden;
   aspect-ratio: 305/250;
 }
-.card-receta-corta-bottom-imagen img {
+.grilla-recetas-cortas .card-receta-corta-bottom-imagen img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
 }
-.card-receta-corta-bottom-puntuacion {
+.grilla-recetas-cortas .card-receta-corta-bottom-puntuacion {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1326,10 +1612,10 @@ li {
   width: 23%;
   height: 28%;
   gap: clamp(0.22rem, 0.109rem + 0.158vw, 0.28rem);
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   background-color: #F6E9DE;
 }
-.card-receta-corta-bottom-puntuacion img {
+.grilla-recetas-cortas .card-receta-corta-bottom-puntuacion img {
   width: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
 }
 
@@ -1346,12 +1632,12 @@ li {
   width: 100%;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
   text-align: left;
   padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem) clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
   color: #431C19;
   border: 1px solid #431C19;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
 }
 .dropdown-recetas-largas .dropdown-recetas-btn::after {
   display: inline-block;
@@ -1373,7 +1659,7 @@ li {
   left: 0;
   z-index: 1000;
   width: 100%;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   border: 1px solid #ECCFBC;
   text-align: left;
   background-color: #FFF;
@@ -1383,7 +1669,7 @@ li {
   width: 100%;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
   color: #ECCFBC;
   padding: clamp(0.45rem, 0.266rem + 0.263vw, 0.55rem) clamp(0.95rem, 0.766rem + 0.263vw, 1.05rem);
   text-decoration: none;
@@ -1400,8 +1686,7 @@ li {
   gap: clamp(3.5rem, 2.579rem + 1.316vw, 4rem) clamp(1.125rem, 0.664rem + 0.658vw, 1.375rem);
   margin: 0;
 }
-
-.card-receta-larga {
+.grilla-recetas-largas .card-receta-larga {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1409,114 +1694,136 @@ li {
   width: 100%;
   gap: clamp(0.5rem, 0.039rem + 0.658vw, 0.75rem);
 }
-.card-receta-larga-top-salada {
+.grilla-recetas-largas .card-receta-larga-top-salada {
   display: flex;
   width: 100%;
   height: clamp(3.5rem, 1.658rem + 2.632vw, 4.5rem);
   gap: 0;
 }
-.card-receta-larga-top-salada span {
+.grilla-recetas-largas .card-receta-larga-top-salada span {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 13%;
   margin: 0;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem) 0 0 clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   border: 1px solid #ECCFBC;
   border-right: none;
   font-family: "Belfast", serif;
-  font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
+  font-size: clamp(0.875rem, 0.789rem + 0.38vw, 1.2rem);
   color: #431C19;
   text-align: center;
   background-color: #ECCFBC;
 }
-.card-receta-larga-top-salada h6 {
+.grilla-recetas-largas .card-receta-larga-top-salada h6 {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 87%;
   margin: 0;
-  border-radius: 0 clamp(0.75rem, 0.289rem + 0.658vw, 1rem) clamp(0.75rem, 0.289rem + 0.658vw, 1rem) 0;
+  border-radius: 0 clamp(0.5rem, 0.368rem + 0.585vw, 1rem) clamp(0.5rem, 0.368rem + 0.585vw, 1rem) 0;
   border: 1px solid #ECCFBC;
   border-left: none;
   padding: 0 clamp(0.7rem, 0.516rem + 0.263vw, 0.8rem);
   font-family: "Belfast", serif;
-  font-size: clamp(1rem, 0.632rem + 0.526vw, 1.2rem);
+  font-size: clamp(0.875rem, 0.789rem + 0.38vw, 1.2rem);
   color: #431C19;
   text-align: center;
   word-break: break-word;
   background-color: #FFF;
 }
-.card-receta-larga-bottom {
+.grilla-recetas-largas .card-receta-larga-bottom {
   position: relative;
   width: 100%;
-  aspect-ratio: 341/480;
+  aspect-ratio: 341/530;
 }
-.card-receta-larga-bottom-imagen img {
+.grilla-recetas-largas .card-receta-larga-bottom-imagen img {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 85%, 75% 100%, 0 100%);
 }
-.card-receta-larga-bottom-items {
+.grilla-recetas-largas .card-receta-larga-bottom-items {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: row;
+  justify-content: center;
   position: absolute;
-  clip-path: polygon(0 37%, 78% 37%, 78% 0, 100% 0, 100% 100%, 0 100%);
-  border-radius: clamp(0.75rem, 0.289rem + 0.658vw, 1rem);
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 31%;
+  height: 37.5%;
+  gap: clamp(0.4rem, 0.374rem + 0.117vw, 0.5rem);
+  padding: clamp(1.5rem, 0.711rem + 3.509vw, 4.5rem) clamp(0.75rem, 0.421rem + 1.462vw, 2rem) 0 clamp(0.75rem, 0.421rem + 1.462vw, 2rem);
+  clip-path: polygon(0 29%, 78% 29%, 78% 0, 100% 0, 100% 100%, 0 100%);
+  border-radius: clamp(0.5rem, 0.368rem + 0.585vw, 1rem);
   background-color: #F6E9DE;
-  padding-top: clamp(3rem, 0.237rem + 3.947vw, 4.5rem);
-  gap: clamp(0.8rem, -3.253rem + 5.789vw, 3rem);
 }
-
-.icono-favorito {
+.grilla-recetas-largas .card-receta-larga-bottom-items .card-info-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0;
+}
+.grilla-recetas-largas .card-receta-larga-bottom-items .card-info-items .info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(0.4rem, 0.374rem + 0.117vw, 0.5rem);
+}
+.grilla-recetas-largas .card-receta-larga-bottom-items .card-info-items .info-item img {
+  width: auto;
+  height: clamp(0.875rem, 0.526rem + 1.55vw, 2.2rem);
+  display: block;
+  margin: 0 auto;
+}
+.grilla-recetas-largas .card-receta-larga-bottom-items .card-info-items .info-item span {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.75rem, 0.651rem + 0.439vw, 1.125rem);
+  text-align: center;
+  line-height: 1.2;
+  color: #431C19;
+  white-space: normal;
+}
+.grilla-recetas-largas .card-receta-larga .icono-favorito {
   position: absolute;
-  top: 73%;
+  top: 65%;
   left: 89%;
   transform: translate(-50%);
-  width: 12%;
+  width: 14%;
   height: auto;
   z-index: 10;
 }
 
-.card-info-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  gap: clamp(0.25rem, -0.211rem + 0.658vw, 0.5rem);
-}
-.card-info-item img {
-  width: auto;
-  height: clamp(1.5rem, 0.579rem + 1.316vw, 2rem);
-}
-.card-info-item span {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: clamp(0.875rem, 0.645rem + 0.329vw, 1rem);
-  text-align: center;
-  color: #431C19;
-}
-
 @media (min-width: 360px) and (max-width: 768px) {
-  .grilla-recetas-cortas,
+  .dropdown-recetas-cortas {
+    grid-column: 2/span 1;
+    margin-bottom: 1.5rem;
+  }
+  .grilla-recetas-cortas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+  }
+  .grilla-recetas-cortas .card-receta-corta-top-dulce, .grilla-recetas-cortas .card-receta-corta-top-salada {
+    height: 3rem;
+  }
+  .dropdown-recetas-largas {
+    grid-column: 2/span 1;
+    margin-bottom: 1.5rem;
+  }
   .grilla-recetas-largas {
     grid-column: 1/span 4;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
   }
-  .dropdown-recetas-cortas,
-  .dropdown-recetas-largas {
-    display: none;
+  .grilla-recetas-largas .card-receta-larga-top-salada {
+    height: 3rem;
   }
 }
 @media (min-width: 769px) and (max-width: 1119px) {
@@ -1610,7 +1917,7 @@ li {
   margin-top: clamp(3.5rem, 2.579rem + 1.316vw, 4rem);
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
   line-height: 1.5em;
   text-align: left;
   color: #431C19;
@@ -1701,7 +2008,7 @@ li {
 .footer .footer-container .footer-grid-wrapper .footer-grid-interna .footer-contacto .footer-contacto-datos span, .footer .footer-container .footer-grid-wrapper .footer-grid-interna .footer-contacto .footer-contacto-datos a {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: clamp(0.875rem, 0.414rem + 0.658vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.809rem + 0.292vw, 1.125rem);
   line-height: 1.5em;
   text-align: left;
   color: #431C19;
