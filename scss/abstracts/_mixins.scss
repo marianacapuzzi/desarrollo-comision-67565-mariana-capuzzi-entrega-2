@@ -13,6 +13,17 @@
     grid-template-columns: repeat(8, 1fr);
 }
 
+@mixin grid_7 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+
+@mixin grid_6 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
 @mixin grid_4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
