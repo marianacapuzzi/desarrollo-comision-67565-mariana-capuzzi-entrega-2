@@ -8,6 +8,11 @@
     grid-template-columns: repeat(12, 1fr);
 }
 
+@mixin grid_10 {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
 @mixin grid_8 {
     display: grid;
     grid-template-columns: repeat(8, 1fr);

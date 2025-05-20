@@ -176,7 +176,7 @@
 }
 
 .receta-desarrollo {
-  @include grid_12;
+  @include grid_10;
   grid-column: 2 / span 10;
   grid-template-rows: auto auto;
   width: 100%;

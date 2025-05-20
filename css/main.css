@@ -2108,7 +2108,7 @@ ol {
 
 .receta-desarrollo {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   grid-column: 2/span 10;
   grid-template-rows: auto auto;
   width: 100%;
