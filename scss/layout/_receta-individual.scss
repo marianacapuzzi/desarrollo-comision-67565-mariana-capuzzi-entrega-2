@@ -32,10 +32,27 @@
         display: grid;
         grid-column: 1 / span 5;
         grid-template-rows: min-content auto 50%;
+        margin: 0;
+        padding: 0;
+
+        &-titulo {
+          @include flexbox(center, flex-start);
+          font-family: $fuente-principal;
+          font-weight: normal;
+          font-size: clamp(1.5rem, 1.105rem + 1.754vw, 3rem);
+          line-height: $h-line-height;
+          color: $color-marron-oscuro;
+          text-align: center;
+          text-transform: uppercase;
+          grid-column: 1 / span 5;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
 
         &-botones {
-          @include flexbox(flex-end, center);
-          align-self: start;
+          @include flexbox(center, center);
+          align-self: center;
           gap: 1rem;
           height: auto;
           grid-column: 1 / span 5;
@@ -76,53 +93,41 @@
             }
           }
         }
-        
-        &-titulo {
-          @include flexbox(center, center);
-          font-family: $fuente-principal;
-          font-weight: normal;
-          font-size: clamp(1.5rem, 1.105rem + 1.754vw, 3rem);
-          line-height: $h-line-height;
-          color: $color-marron-oscuro;
-          text-align: center;
-          text-transform: uppercase;
-          grid-column: 1 / span 5;
-          height: 100%;
-          padding: 0 1rem;
-        }
 
         &-caracteristicas {
-          @include flexbox(space-between, flex-start);
-          flex-wrap: wrap;
-          gap: 2rem;
-          padding: 3.2rem 4rem 0 4rem;
+          @include flexbox(center, center);
           grid-column: 1 / span 5;
           border-radius: $border-radius;
           background-color: $color-marron-claro;
 
-          .info-item {
-            @include flexbox(center, center);
-            flex-direction: column;
-            text-align: center;
-            gap: clamp(0.4rem, 0.374rem + 0.117vw, 0.5rem);
+          .wrap-info-item {
+          @include flexbox(space-between, flex-start);
+          gap: 2rem;
 
-            img {
-              @include img-config($width: 3.5rem, $height: 2.5rem, $object-fit: contain);
-              border-radius: 0;
-              margin: 0 auto;
-              aspect-ratio: 1 / 1;
+            .info-item {
+              @include flexbox(center, center);
+              flex-direction: column;
+              text-align: center;
+              gap: clamp(0.4rem, 0.374rem + 0.117vw, 0.5rem);
+
+              img {
+                @include img-config($width: 3.5rem, $height: 2.5rem, $object-fit: contain);
+                border-radius: 0;
+                margin: 0 auto;
+                aspect-ratio: 1 / 1;
+              }
+          
+              span {
+                  font-family: $fuente-secundaria;
+                  font-weight: 400;
+                  font-size: clamp(0.75rem, 0.632rem + 0.526vw, 1.2rem);
+                  text-align: center;
+                  line-height: 1.2;
+                  color: $color-marron-oscuro;
+                  white-space: normal;
+              }
             }
-        
-            span {
-                font-family: $fuente-secundaria;
-                font-weight: 400;
-                font-size: clamp(0.75rem, 0.632rem + 0.526vw, 1.2rem);
-                text-align: center;
-                line-height: 1.2;
-                color: $color-marron-oscuro;
-                white-space: normal;
-            }
-          }
+          } 
         }
       }
 
@@ -317,4 +322,129 @@
     padding-bottom: 1rem;
   }
 }
+
+
+// Mediaqueries Mobile - Cards Recetas
+@include mq-mobile {
+
+}
   
+
+// Mediaqueries Tablet - Cards Recetas
+@include mq-tablet {
+  .receta-top {
+    @include grid_8;
+    grid-column: 1 / -1;
+
+    img {
+      grid-column: 1 / span 4;
+    } 
+
+    &-info {
+      grid-column: 5 / span 4;
+
+      &-uno {
+        @include grid_4;
+        grid-column: 1 / -1;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+  
+        &-izquierda {
+          @include flexbox(center, center);
+          flex-direction: column;
+          grid-column: 1 / -1;
+          gap: 1rem;
+
+          &-caracteristicas {
+            @include flexbox(center, flex-start);
+            grid-column: 1 / -1;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 1rem 0;
+
+            .wrap-info-item {
+
+              .info-item {
+                @include flexbox(center, center);
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            
+                img {
+                  @include img-config($width: 3rem, $height: 1.5rem, $object-fit: contain);
+                  aspect-ratio: 1 / 1;
+                  margin: 0 auto;
+                }
+              }
+            } 
+          }
+        }
+  
+        &-derecha {
+          @include flexbox(center, center);
+          grid-column: 1 / -1;
+          width: 100%;
+
+          ul {
+            @include flexbox(center, center);
+            width: 100%;
+            flex-direction: row;
+            gap: 0.5rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+  
+            img {
+              @include img-config($width: 3.5rem, $height: auto, $object-fit: contain);
+            }
+          }
+        }
+      }
+  
+      &-dos {
+        @include grid_4;
+        grid-column: 1 / -1;
+
+        p {
+          grid-column: 1 / span 3;
+        }
+  
+        img {
+          grid-column: 4 / span 1;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .receta-desarrollo {
+    @include grid_6;
+    grid-column: 2 / span 6;
+
+    h4.titulo-ingredientes {
+      grid-column: 1 / span 2;
+    }
+
+    h4.titulo-preparacion {
+      grid-column: 3 / span 2;
+    }
+
+    .tips {
+      grid-column: 5 / span 2;
+    }
+
+    .listas {
+      @include grid_4;
+      grid-column: 1 / span 4;
+
+      .lista-ingredientes {
+        grid-column: 1 / span 2;
+      }
+
+      .lista-preparacion {
+        grid-column: 3 / span 2;
+      }
+    }
+  }
+}
