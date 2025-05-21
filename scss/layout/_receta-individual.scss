@@ -264,51 +264,43 @@
     }
   }
 
-  .listas {
-    @include grid_7;
-    grid-column: 1 / span 7;
+  .lista-ingredientes {
+    grid-column: 1 / span 3;
     grid-row: 2;
-    border-radius: $border-radius;
-    border: $border-solido-marron;
-    gap: 1rem;
-    padding-top: 1.5rem;
 
-    .lista-ingredientes {
-      grid-column: 1 / span 3;
-
-      .bold {
-        @include body-texto($align: left, $lh: $body-line-height);
-        font-weight: 700;
-        margin: 0;
-        padding-left: 1rem;
-      }
-
-      ul li {
-        @include body-texto($align: left, $lh: $body-line-height);
-        padding-left: 1rem;
-        padding-bottom: 1.5em;
-        margin: 0;
-      }
+    .bold {
+      @include body-texto($align: left, $lh: $body-line-height);
+      font-weight: 700;
+      margin: 0;
     }
 
-    .lista-preparacion {
-      grid-column: 4 / span 4;
-
-      ol li {
-        @include body-texto($align: left, $lh: $body-line-height);
-        list-style: decimal;
-        list-style-position: inside;
-        text-indent: -1rem;
-        padding: 0 1rem 1.5em 1rem;
-        margin: 0;
-      }
-    }
-
-    .lista-ingredientes,
-    .lista-preparacion {
-      @include body-texto($align: left, $lh: $body-line-height); 
+    ul li {
+      @include body-texto($align: left, $lh: $body-line-height);
+      padding-right: 1rem;
+      padding-bottom: 1.5em;
+      margin: 0;
     }
   }
+
+  .lista-preparacion {
+    grid-column: 4 / span 4;
+    grid-row: 2;
+
+    ol li {
+      @include body-texto($align: left, $lh: $body-line-height);
+      list-style: decimal;
+      list-style-position: inside;
+      text-indent: -1rem;
+      padding: 0 1rem 1.5em 1rem;
+      margin: 0;
+    }
+  }
+
+  .lista-ingredientes,
+  .lista-preparacion {
+    @include body-texto($align: left, $lh: $body-line-height); 
+  }
+  
 }
 
 .receta-bottom {
@@ -324,13 +316,174 @@
 }
 
 
-// Mediaqueries Mobile - Cards Recetas
+// Mediaqueries Mobile - Receta individual
 @include mq-mobile {
+  .receta-top {
+    @include flexbox(center, center);
+    flex-direction: column;
+    grid-column: 1 / -1;
+    gap: 1rem;
+    margin: 0.5rem 0 2rem 0;
 
-}
+    img {
+      aspect-ratio: 1 / 0.75;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    &-info {
+      @include flexbox(center, center);
+      flex-direction: column;
+      grid-column: 1 / -1;
+      gap: 1rem;
+      padding: 0;
+      width: 100%;
+
+
+      &-uno {
+        display: flex;
+        flex-direction: column;
+        grid-column: 1 / -1;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+  
+        &-izquierda {
+          @include flexbox(center, center);
+          flex-direction: column;
+          grid-column: 1 / -1;
+          width: 100%;
+          gap: 1rem;
+
+          &-caracteristicas {
+            @include flexbox(center, center);
+            grid-column: 1 / -1;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 1rem 0;
+
+            .wrap-info-item {
+              @include flexbox(center, flex-start);
+              width: 100%;
+              gap: 3rem;
+
+              .info-item {
+                @include flexbox(center, center);
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            
+                img {
+                  @include img-config($width: 3rem, $height: 1.5rem, $object-fit: contain);
+                  aspect-ratio: 1 / 1;
+                  margin: 0 auto;
+                }
+              }
+            } 
+          }
+        }
+  
+        &-derecha {
+          @include flexbox(center, center);
+          grid-column: 1 / -1;
+          width: 100%;
+
+          ul {
+            @include flexbox(center, center);
+            width: 100%;
+            flex-direction: row;
+            gap: 0.2rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+  
+            img {
+              @include img-config($width: 3.5rem, $height: auto, $object-fit: contain);
+            }
+          }
+        }
+      }
+
+      &-dos {
+        @include flexbox(space-between, center);
+        grid-column: 1 / -1;
+        //height: auto;
+        padding: 0.5rem 0 0.5rem 1rem;
+        gap: 0rem;
+        width: 100%;
+  
+        p {
+          @include body-texto($align: center, $lh: $body-line-height);
+          flex-grow: 1;
+        }
+  
+        img {
+          @include img-config($width: 6rem, $height: auto, $object-fit: contain);
+          flex-shrink: 0;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  .receta-desarrollo {
+    @include flexbox(center, center);
+    flex-direction: column;
+    grid-column: 1 / -1;
+    gap: 1rem;
+    width: 100%;
+    padding: 0;
+
+    .titulo-ingredientes, 
+    .titulo-preparacion {
+      width: 66.66%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .lista-ingredientes, 
+    .lista-preparacion {
+      width: 100%;
+      margin: 0;
+    }
+
+    .tips {
+      @include grid_6;
+      grid-template-rows: auto auto;
+      grid-column: 1 / -1;
+      margin: 0 auto;
+      width: 100%;
+      gap: 1rem;
+  
+      .tip-uno{
+        grid-column: 2 / span 4;
+        grid-row: 1;
+      }
+
+      .tip-dos {
+        grid-column: 2 / span 4;
+        grid-row: 2;
+      }
+    }
+  }
+
+  .receta-bottom {
+
+
+    h4 {
+
+    }
+
+    .grilla-recetas-cortas {
+
+      .card-receta-corta {
+      }
+    }
+  }
+}  
   
 
-// Mediaqueries Tablet - Cards Recetas
+// Mediaqueries Tablet - Receta individual
 @include mq-tablet {
   .receta-top {
     @include grid_8;
@@ -421,30 +574,46 @@
   .receta-desarrollo {
     @include grid_6;
     grid-column: 2 / span 6;
+    gap: 1rem 1rem;
 
     h4.titulo-ingredientes {
       grid-column: 1 / span 2;
+      grid-row: 1;
+      margin: 0;
+    }
+
+    .lista-ingredientes {
+      grid-column: 1 / span 4;
+      grid-row: 2;
     }
 
     h4.titulo-preparacion {
-      grid-column: 3 / span 2;
+      grid-column: 1 / span 2;
+      grid-row: 3;
+      margin: 0;
+    }
+
+    .lista-preparacion {
+      grid-column: 1 / span 6;
+      grid-row: 4;
+
+      ol li {
+        padding: 0 0 1.5em 1rem;
+      }
     }
 
     .tips {
       grid-column: 5 / span 2;
-    }
 
-    .listas {
-      @include grid_4;
-      grid-column: 1 / span 4;
+      .tip-uno {
+        padding: 3.3rem 1rem 1rem 1rem;
+  
+        &::before {
+          content: "";
+          clip-path: polygon(0 0, 67% 0, 67% 17.5%, 100% 17.5%, 100% 100%, 0 100%);
 
-      .lista-ingredientes {
-        grid-column: 1 / span 2;
+        }
       }
-
-      .lista-preparacion {
-        grid-column: 3 / span 2;
-      }
-    }
+    } 
   }
 }
