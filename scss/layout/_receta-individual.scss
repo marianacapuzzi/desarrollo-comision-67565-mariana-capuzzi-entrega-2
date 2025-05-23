@@ -15,7 +15,6 @@
 
   &-info {
     @include flexbox(space-between, flex-start);
-    //@include flexbox(center, center);
     grid-column: 7 / span 6;
     flex-direction: column;
     height: auto;
