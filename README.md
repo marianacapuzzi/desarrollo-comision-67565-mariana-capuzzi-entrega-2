@@ -36,7 +36,7 @@ Sitio web responsive y optimizado para **Benot**, empresa dedicada a ofrecer gol
 - Responsive Design (media queries para mobile y tablet)
 - Semántica accesible
 - Git + GitHub
-- GitHub Pages para deploy
+- GitHub Pages + Vercel para deploy
 
 ---
 
@@ -52,7 +52,8 @@ Sitio web responsive y optimizado para **Benot**, empresa dedicada a ofrecer gol
 
 ## Ver sitio en vivo
 
-👉 [Sitio desplegado en GitHub Pages](https://marianacapuzzi.github.io/desarrollo-comision-67565-mariana-capuzzi-entrega-2/)
+- 🔗 [Ver sitio en GitHub Pages](https://marianacapuzzi.github.io/desarrollo-comision-67565-mariana-capuzzi-entrega-2)
+- 🔗 [Ver sitio en Vercel](https://desarrollo-comision-67565-mariana-capuzzi-entrega-2.vercel.app)
 
 ---
 
